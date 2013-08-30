@@ -1,0 +1,7 @@
+
+版本说明：
+
+KKTV为2013-08-30从原faplayer版本分支里面release出来的分支(hls-v1.3.1)，将本地VLC相关代码
+	去除掉，只保留java代码，此后的faplayer分支代码的java的代码暂时不再更新，只供此后
+	调试faplayer的VLC代码所用。
+	kekePlayer的so库目前仍使用togic的NEON库，非NEON使用之前编译的faplayer库。

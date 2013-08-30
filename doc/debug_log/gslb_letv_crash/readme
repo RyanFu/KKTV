@@ -1,0 +1,16 @@
+1、2013-05-22
+	广东卫视letv的源播放会有signal 11的错误，系ffmpeg错误
+	
+	广东卫视letv的源有时候会链接不上，包括在PC上实验也有，但是手机失败的频率较高。
+	
+	【现象】
+		当ffmpeg去探测av_probe_input_buffer时，发现得不到链接，就会掉HLS的free_variant_list，原生的ffmpeg-0.8.14
+	就会SIGNAL 11
+	
+	【方法】
+		参考ffmpeg-0.10.7，当探测失败时，先调用avformat_free_context，然后再free_variant_list，这样，在probe失败，VLC就会提示
+	无法播放，而不会崩溃
+	
+	【存疑】
+		类似广东卫视的letv的源，在手机上时常链接不上，然后VLC找不到模块，报无法播放，这个问题后续跟进
+	

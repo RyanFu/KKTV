@@ -1,0 +1,5 @@
+1、ffmpeg编译问题		2013-05-19
+		v0.3.0版本在新ffmpeg编译的脚本jni/cross-compile/compile.sh中[见log1.txt]，["mv: 无法将
+	"ffmpeg-0.10.7/" 移动至"android/ffmpeg": 没有那个文件或目录]类似的问题，是由于gitignore忽
+	略了jni/cross-compile/android下的源码，因此提交的git库中没有android目录，导致mv命令往
+	android下的ffmpeg拷贝代码时出错了

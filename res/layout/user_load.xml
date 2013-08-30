@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text"
+            android:text="自定义" />
+
+        <ImageView
+            android:id="@+id/help_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_about" />
+
+        <include
+            android:id="@+id/help_devide"
+            layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/edit_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_edit" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/tv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#ffffffff"
+        android:divider="@drawable/list_bottom"
+        android:dividerHeight="1.0px"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/wv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

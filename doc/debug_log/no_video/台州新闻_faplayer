@@ -1,0 +1,363 @@
+04-07 22:09:12.128: D/ChannelInfo(7077):   name = 台州新闻综合[http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8]
+04-07 22:09:12.386: D/DANMAKU-PlayerActivity(7077): createMediaPlayer() http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8
+04-07 22:09:12.386: D/DANMAKU-AbsMediaPlayer(7077): using VlcMediaPlayer
+04-07 22:09:12.386: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-color does not exist
+04-07 22:09:12.386: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-opacity does not exist
+04-07 22:09:12.386: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-position does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-refresh does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-size does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-timeout does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-x does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option marq-y does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-x does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-y does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-delay does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-repeat does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-opacity does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option logo-position does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option contrast does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option brightness does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option hue does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option saturation does not exist
+04-07 22:09:12.390: E/faplayer(7077): [0x2a0ebbe0]main generic: option gamma does not exist
+04-07 22:09:12.398: D/faplayer(7077): [0x2a3ea018]main input: Creating an input for 'http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8'
+04-07 22:09:12.406: D/faplayer(7077): [0x2a3ea018]main input: using timeshift granularity of 50 MiB, in path '/data/local/tmp'
+04-07 22:09:12.410: D/faplayer(7077): [0x2a3ea018]main input: `http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' gives access `http' demux `' path `tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8'
+04-07 22:09:12.410: D/faplayer(7077): [0x2a3ea018]main input: creating demux: access='http' demux='' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' file='(null)'
+04-07 22:09:12.410: D/faplayer(7077): [0x2a123a70]main demux: looking for access_demux module: 0 candidates
+04-07 22:09:12.410: D/faplayer(7077): [0x2a123a70]main demux: no access_demux module matched "http"
+04-07 22:09:12.410: D/faplayer(7077): [0x2a123a70]main demux: TIMER module_need() : 0.699 ms - Total 0.699 ms / 1 intvls (Avg 0.699 ms)
+04-07 22:09:12.410: D/faplayer(7077): [0x2a3ea018]main input: creating access 'http' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8', path='(null)'
+04-07 22:09:12.410: D/faplayer(7077): [0x2a52ad48]main access: looking for access module: 2 candidates
+04-07 22:09:12.410: D/faplayer(7077): [0x2a52ad48]access_http access: http: server='tsl6.hls.cutv.com' port=80 file='/cutvChannelLive/25qamuz.m3u8'
+04-07 22:09:12.410: D/faplayer(7077): [0x2a52ad48]main access: net: connecting to tsl6.hls.cutv.com port 80
+04-07 22:09:12.476: D/faplayer(7077): [0x2a52ad48]main access: connection succeeded (socket = 45)
+04-07 22:09:13.308: D/faplayer(7077): [0x2a52ad48]access_http access: protocol 'HTTP' answer code 206
+04-07 22:09:13.308: D/faplayer(7077): [0x2a52ad48]access_http access: Server: Apache
+04-07 22:09:13.308: D/faplayer(7077): [0x2a52ad48]access_http access: this frame size=225
+04-07 22:09:13.308: D/faplayer(7077): [0x2a52ad48]access_http access: stream size=225,pos=0,remaining=225
+04-07 22:09:13.312: D/faplayer(7077): [0x2a52ad48]access_http access: Content-Type: application/x-mpegurl
+04-07 22:09:13.312: D/faplayer(7077): [0x2a52ad48]access_http access: Connection: close
+04-07 22:09:13.312: D/faplayer(7077): [0x2a52ad48]main access: using access module "access_http"
+04-07 22:09:13.312: D/faplayer(7077): [0x2a52ad48]main access: TIMER module_need() : 903.327 ms - Total 903.327 ms / 1 intvls (Avg 903.327 ms)
+04-07 22:09:13.316: D/faplayer(7077): [0x2a1394c8]main stream: Using stream method for AStream*
+04-07 22:09:13.316: D/faplayer(7077): [0x2a1394c8]main stream: starting pre-buffering
+04-07 22:09:15.359: D/faplayer(7077): [0x2a1394c8]main stream: received first data after 2041 ms
+04-07 22:09:15.359: D/faplayer(7077): [0x2a1394c8]main stream: pre-buffering done 225 bytes in 2s - 0 KiB/s
+04-07 22:09:15.363: D/faplayer(7077): [0x2a1396a0]main stream: looking for stream_filter module: 0 candidates
+04-07 22:09:15.363: D/faplayer(7077): [0x2a1396a0]main stream: no stream_filter module matched "any"
+04-07 22:09:15.363: D/faplayer(7077): [0x2a1396a0]main stream: TIMER module_need() : 2.180 ms - Total 2.180 ms / 1 intvls (Avg 2.180 ms)
+04-07 22:09:15.363: D/faplayer(7077): [0x2a1396a0]main stream: looking for stream_filter module: 1 candidate
+04-07 22:09:15.363: D/faplayer(7077): [0x2a1396a0]main stream: using stream_filter module "stream_filter_record"
+04-07 22:09:15.367: D/faplayer(7077): [0x2a1396a0]main stream: TIMER module_need() : 1.765 ms - Total 1.765 ms / 1 intvls (Avg 1.765 ms)
+04-07 22:09:15.367: D/faplayer(7077): [0x2a3ea018]main input: creating demux: access='http' demux='' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' file='(null)'
+04-07 22:09:15.367: D/faplayer(7077): [0x2a39d6b0]main demux: looking for demux module: 7 candidates
+04-07 22:09:15.367: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: trying url: http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8
+04-07 22:09:17.972: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: detected format: applehttp
+04-07 22:09:18.699: D/faplayer(7077): [0x2a3ea018]main input: selecting program id=0
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: adding es: video codec = h264
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: adding es: audio codec = mp4a
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: adding es: audio codec = mp4a
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux: AVFormat supported stream
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux:     - format = applehttp (Apple HTTP Live Streaming format)
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux:     - start time = 69312700000
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]access_demux_avformat demux:     - duration = -1
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]main demux: using demux module "avformat"
+04-07 22:09:18.699: D/faplayer(7077): [0x2a39d6b0]main demux: TIMER module_need() : 3333.378 ms - Total 3333.378 ms / 1 intvls (Avg 3333.378 ms)
+04-07 22:09:18.703: D/faplayer(7077): [0x2a196620]main decoder: looking for decoder module: 5 candidates
+04-07 22:09:18.703: D/faplayer(7077): [0x2a196620]avcodec decoder: libavcodec already initialized
+04-07 22:09:18.703: D/faplayer(7077): [0x2a196620]avcodec decoder: trying to use direct rendering
+04-07 22:09:18.707: D/faplayer(7077): [0x2a196620]avcodec decoder: allowing 1 thread(s) for decoding
+04-07 22:09:18.707: D/faplayer(7077): [0x2a196620]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) started
+04-07 22:09:18.711: D/faplayer(7077): [0x2a196620]main decoder: using decoder module "avcodec"
+04-07 22:09:18.711: D/faplayer(7077): [0x2a196620]main decoder: TIMER module_need() : 10.764 ms - Total 10.764 ms / 1 intvls (Avg 10.764 ms)
+04-07 22:09:18.718: D/faplayer(7077): [0x2a446b58]main decoder: looking for decoder module: 5 candidates
+04-07 22:09:18.718: D/faplayer(7077): [0x2a446b58]avcodec decoder: libavcodec already initialized
+04-07 22:09:18.808: D/faplayer(7077): [0x2a446b58]avcodec decoder: ffmpeg codec (MPEG AAC Audio) started
+04-07 22:09:18.808: D/faplayer(7077): [0x2a446b58]avcodec decoder: Using 192000 bytes output buffer
+04-07 22:09:18.808: D/faplayer(7077): [0x2a446b58]main decoder: using decoder module "avcodec"
+04-07 22:09:18.808: D/faplayer(7077): [0x2a446b58]main decoder: TIMER module_need() : 92.161 ms - Total 92.161 ms / 1 intvls (Avg 92.161 ms)
+04-07 22:09:18.812: D/faplayer(7077): [0x2a07c450]main demux meta: looking for meta reader module: 0 candidates
+04-07 22:09:18.812: D/faplayer(7077): [0x2a07c450]main demux meta: no meta reader module matched "any"
+04-07 22:09:18.812: D/faplayer(7077): [0x2a07c450]main demux meta: TIMER module_need() : 0.557 ms - Total 0.557 ms / 1 intvls (Avg 0.557 ms)
+04-07 22:09:18.812: D/faplayer(7077): [0x2a3ea018]main input: `http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' successfully opened
+04-07 22:09:18.812: D/faplayer(7077): [0x2a3ea018]main input: Buffering 0%
+04-07 22:09:18.816: D/faplayer(7077): [0x2a3ea018]main input: Buffering 1%
+04-07 22:09:18.816: D/faplayer(7077): [0x2a3ea018]main input: Buffering 3%
+04-07 22:09:18.816: D/faplayer(7077): [0x2a3ea018]main input: Buffering 5%
+04-07 22:09:18.820: D/faplayer(7077): [0x2a3ea018]main input: Buffering 7%
+04-07 22:09:18.820: D/faplayer(7077): [0x2a3ea018]main input: Buffering 9%
+04-07 22:09:18.820: D/faplayer(7077): [0x2a3ea018]main input: Buffering 11%
+04-07 22:09:18.820: D/faplayer(7077): [0x2a3ea018]main input: Buffering 13%
+04-07 22:09:18.820: D/faplayer(7077): [0x2a3ea018]main input: Buffering 15%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 17%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 19%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 21%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 23%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 25%
+04-07 22:09:18.824: D/faplayer(7077): [0x2a3ea018]main input: Buffering 27%
+04-07 22:09:18.828: D/faplayer(7077): [0x2a3ea018]main input: Buffering 29%
+04-07 22:09:18.828: D/faplayer(7077): [0x2a3ea018]main input: Buffering 30%
+04-07 22:09:18.828: D/faplayer(7077): [0x2a3ea018]main input: Buffering 32%
+04-07 22:09:18.828: D/faplayer(7077): [0x2a3ea018]main input: Buffering 34%
+04-07 22:09:18.828: D/faplayer(7077): [0x2a3ea018]main input: Buffering 36%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 38%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 40%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 42%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 44%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 46%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 48%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 50%
+04-07 22:09:18.832: D/faplayer(7077): [0x2a3ea018]main input: Buffering 52%
+04-07 22:09:18.836: D/faplayer(7077): [0x2a3ea018]main input: Buffering 54%
+04-07 22:09:18.836: D/faplayer(7077): [0x2a3ea018]main input: Buffering 56%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 58%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 59%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 61%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 63%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 65%
+04-07 22:09:18.839: D/faplayer(7077): [0x2a3ea018]main input: Buffering 67%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 69%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 71%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 73%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 75%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 77%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 79%
+04-07 22:09:18.843: D/faplayer(7077): [0x2a3ea018]main input: Buffering 81%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 83%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 85%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 87%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 89%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 90%
+04-07 22:09:18.847: D/faplayer(7077): [0x2a3ea018]main input: Buffering 92%
+04-07 22:09:18.851: D/faplayer(7077): [0x2a3ea018]main input: Buffering 94%
+04-07 22:09:18.851: D/faplayer(7077): [0x2a3ea018]main input: Buffering 96%
+04-07 22:09:18.851: D/faplayer(7077): [0x2a3ea018]main input: Buffering 98%
+04-07 22:09:18.855: D/faplayer(7077): [0x2a3ea018]main input: Stream buffering done (1207 ms in 41 ms)
+04-07 22:09:18.855: D/faplayer(7077): [0x2a3ea018]main input: Decoder buffering done in 0 ms
+04-07 22:09:28.285: E/faplayer(7077): [0x2a3ea018]main input: ES_OUT_SET_(GROUP_)PCR  is called too late (pts_delay increased to 1200 ms)
+04-07 22:09:28.289: E/faplayer(7077): [0x2a3ea018]main input: ES_OUT_RESET_PCR called
+04-07 22:09:28.316: D/faplayer(7077): [0x2a0ebbe0]main generic: creating audio output
+04-07 22:09:28.316: D/faplayer(7077): [0x2a196938]main audio output: looking for audio output module: 2 candidates
+04-07 22:09:28.316: D/faplayer(7077): [0x2a196938]main audio output: using audio output module "audiotrack_android"
+04-07 22:09:28.320: D/faplayer(7077): [0x2a196938]main audio output: TIMER module_need() : 3.592 ms - Total 3.592 ms / 1 intvls (Avg 3.592 ms)
+04-07 22:09:28.320: D/faplayer(7077): [0x2a196938]main audio output: output 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:09:28.320: D/faplayer(7077): [0x2a196938]main audio output: mixer 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:09:28.320: D/faplayer(7077): [0x2a196938]main audio output: filter(s) 's16l'->'s16l' 44100 Hz->44100 Hz Mono->Mono
+04-07 22:09:28.324: D/faplayer(7077): [0x2a196938]main audio output: conversion pipeline completed
+04-07 22:09:28.324: D/faplayer(7077): [0x2a51e570]main generic: looking for audio mixer module: 3 candidates
+04-07 22:09:28.324: D/faplayer(7077): [0x2a51e570]main generic: using audio mixer module "fixed32_mixer"
+04-07 22:09:28.324: D/faplayer(7077): [0x2a51e570]main generic: TIMER module_need() : 0.559 ms - Total 0.559 ms / 1 intvls (Avg 0.559 ms)
+04-07 22:09:28.324: D/faplayer(7077): [0x2a196938]main audio output: input 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:09:28.328: D/faplayer(7077): [0x2a196938]main audio output: filter(s) 's16l'->'s16l' 44100 Hz->44100 Hz Mono->Mono
+04-07 22:09:28.328: D/faplayer(7077): [0x2a196938]main audio output: conversion pipeline completed
+04-07 22:09:28.328: D/faplayer(7077): [0x2a196938]main audio output: filter(s) 's16l'->'s16l' 48510 Hz->44100 Hz Mono->Mono
+04-07 22:09:28.328: D/faplayer(7077): [0x2a2a30b0]main audio filter: looking for audio filter module: 5 candidates
+04-07 22:09:28.328: D/faplayer(7077): [0x2a2a30b0]main audio filter: using audio filter module "ugly_resampler"
+04-07 22:09:28.328: D/faplayer(7077): [0x2a2a30b0]main audio filter: TIMER module_need() : 0.484 ms - Total 0.484 ms / 1 intvls (Avg 0.484 ms)
+04-07 22:09:28.328: D/faplayer(7077): [0x2a196938]main audio output: conversion pipeline completed
+04-07 22:09:28.328: D/faplayer(7077): [0x2a446b58]main decoder: End of audio preroll
+04-07 22:09:28.328: W/faplayer(7077): [0x2a446b58]main decoder: received buffer in the future
+04-07 22:09:28.328: D/faplayer(7077): [0x2a3ea018]main input: Buffering 0%
+04-07 22:09:28.332: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (3024 bytes)
+04-07 22:09:28.332: D/faplayer(7077): [0x2a3ea018]main input: Buffering 1%
+04-07 22:09:28.332: D/faplayer(7077): [0x2a3ea018]main input: Buffering 3%
+04-07 22:09:28.332: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (39 bytes)
+04-07 22:09:28.332: D/faplayer(7077): [0x2a3ea018]main input: Buffering 5%
+04-07 22:09:28.332: D/faplayer(7077): [0x2a3ea018]main input: Buffering 7%
+04-07 22:09:28.332: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (39 bytes)
+04-07 22:09:28.332: D/faplayer(7077): [0x2a3ea018]main input: Buffering 9%
+04-07 22:09:28.336: D/faplayer(7077): [0x2a3ea018]main input: Buffering 11%
+04-07 22:09:28.336: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (38 bytes)
+04-07 22:09:28.336: D/faplayer(7077): [0x2a446b58]main decoder: End of audio preroll
+04-07 22:09:28.339: D/faplayer(7077): [0x2a3ea018]main input: Buffering 13%
+04-07 22:09:28.343: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (3406 bytes)
+04-07 22:09:28.343: D/faplayer(7077): [0x2a3ea018]main input: Buffering 15%
+04-07 22:09:28.343: D/faplayer(7077): [0x2a3ea018]main input: Buffering 17%
+04-07 22:09:28.343: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (47 bytes)
+04-07 22:09:28.343: D/faplayer(7077): [0x2a3ea018]main input: Buffering 19%
+04-07 22:09:28.347: D/faplayer(7077): [0x2a3ea018]main input: Buffering 21%
+04-07 22:09:28.347: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (39 bytes)
+04-07 22:09:28.347: D/faplayer(7077): [0x2a3ea018]main input: Buffering 23%
+04-07 22:09:28.347: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (38 bytes)
+04-07 22:09:28.347: D/faplayer(7077): [0x2a3ea018]main input: Buffering 25%
+04-07 22:09:28.351: D/faplayer(7077): [0x2a3ea018]main input: Buffering 27%
+04-07 22:09:28.351: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (4276 bytes)
+04-07 22:09:28.351: D/faplayer(7077): [0x2a3ea018]main input: Buffering 29%
+04-07 22:09:28.351: D/faplayer(7077): [0x2a3ea018]main input: Buffering 30%
+04-07 22:09:28.351: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (160 bytes)
+04-07 22:09:28.351: D/faplayer(7077): [0x2a3ea018]main input: Buffering 32%
+04-07 22:09:28.355: D/faplayer(7077): [0x2a3ea018]main input: Buffering 34%
+04-07 22:09:28.355: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (43 bytes)
+04-07 22:09:28.359: D/faplayer(7077): [0x2a3ea018]main input: Buffering 36%
+04-07 22:09:28.363: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (155 bytes)
+04-07 22:09:28.363: D/faplayer(7077): [0x2a3ea018]main input: Buffering 38%
+04-07 22:09:28.363: D/faplayer(7077): [0x2a3ea018]main input: Buffering 40%
+04-07 22:09:28.363: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (4509 bytes)
+04-07 22:09:28.363: D/faplayer(7077): [0x2a3ea018]main input: Buffering 42%
+04-07 22:09:28.363: D/faplayer(7077): [0x2a3ea018]main input: Buffering 44%
+04-07 22:09:28.367: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (438 bytes)
+04-07 22:09:28.367: D/faplayer(7077): [0x2a3ea018]main input: Buffering 46%
+04-07 22:09:28.367: D/faplayer(7077): [0x2a3ea018]main input: Buffering 48%
+04-07 22:09:28.367: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (295 bytes)
+04-07 22:09:28.367: D/faplayer(7077): [0x2a3ea018]main input: Buffering 50%
+04-07 22:09:28.371: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (5778 bytes)
+04-07 22:09:28.371: D/faplayer(7077): [0x2a3ea018]main input: Buffering 52%
+04-07 22:09:28.371: D/faplayer(7077): [0x2a3ea018]main input: Buffering 54%
+04-07 22:09:28.371: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (667 bytes)
+04-07 22:09:28.371: D/faplayer(7077): [0x2a3ea018]main input: Buffering 56%
+04-07 22:09:28.371: D/faplayer(7077): [0x2a3ea018]main input: Buffering 58%
+04-07 22:09:28.375: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (286 bytes)
+04-07 22:09:28.375: D/faplayer(7077): [0x2a3ea018]main input: Buffering 59%
+04-07 22:09:28.375: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (363 bytes)
+04-07 22:09:28.375: D/faplayer(7077): [0x2a3ea018]main input: Buffering 61%
+04-07 22:09:28.378: D/faplayer(7077): [0x2a3ea018]main input: Buffering 63%
+04-07 22:09:28.378: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (6752 bytes)
+04-07 22:09:28.378: D/faplayer(7077): [0x2a3ea018]main input: Buffering 65%
+04-07 22:09:28.378: D/faplayer(7077): [0x2a3ea018]main input: Buffering 67%
+04-07 22:09:28.378: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (665 bytes)
+04-07 22:09:28.378: D/faplayer(7077): [0x2a3ea018]main input: Buffering 69%
+04-07 22:09:28.382: D/faplayer(7077): [0x2a3ea018]main input: Buffering 71%
+04-07 22:09:28.382: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (350 bytes)
+04-07 22:09:28.382: D/faplayer(7077): [0x2a3ea018]main input: Buffering 73%
+04-07 22:09:28.382: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (197 bytes)
+04-07 22:09:28.382: D/faplayer(7077): [0x2a3ea018]main input: Buffering 75%
+04-07 22:09:28.382: D/faplayer(7077): [0x2a3ea018]main input: Buffering 77%
+04-07 22:09:28.382: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (3724 bytes)
+04-07 22:09:28.382: D/faplayer(7077): [0x2a3ea018]main input: Buffering 79%
+04-07 22:09:28.386: D/faplayer(7077): [0x2a3ea018]main input: Buffering 81%
+04-07 22:09:28.386: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (426 bytes)
+04-07 22:09:28.386: D/faplayer(7077): [0x2a3ea018]main input: Buffering 83%
+04-07 22:09:28.386: D/faplayer(7077): [0x2a3ea018]main input: Buffering 85%
+04-07 22:09:28.386: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (125 bytes)
+04-07 22:09:28.386: D/faplayer(7077): [0x2a3ea018]main input: Buffering 87%
+04-07 22:09:28.386: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (156 bytes)
+04-07 22:09:28.390: D/faplayer(7077): [0x2a3ea018]main input: Buffering 89%
+04-07 22:09:28.390: D/faplayer(7077): [0x2a3ea018]main input: Buffering 90%
+04-07 22:09:28.390: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (3030 bytes)
+04-07 22:09:28.398: D/faplayer(7077): [0x2a3ea018]main input: Buffering 92%
+04-07 22:09:28.398: D/faplayer(7077): [0x2a3ea018]main input: Buffering 94%
+04-07 22:09:28.402: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (346 bytes)
+04-07 22:09:28.406: D/faplayer(7077): [0x2a3ea018]main input: Buffering 96%
+04-07 22:09:28.406: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (100 bytes)
+04-07 22:09:28.406: D/faplayer(7077): [0x2a3ea018]main input: Buffering 98%
+04-07 22:09:28.406: D/faplayer(7077): [0x2a3ea018]main input: Stream buffering done (1207 ms in 76 ms)
+04-07 22:09:28.406: D/faplayer(7077): [0x2a3ea018]main input: Decoder buffering done in 0 ms
+04-07 22:09:28.406: W/faplayer(7077): [0x2a196938]main audio output: PTS is out of range (-9791), dropping buffer
+04-07 22:09:28.406: W/faplayer(7077): [0x2a196938]main audio output: PTS is out of range (-32866), dropping buffer
+04-07 22:09:28.418: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (87 bytes)
+04-07 22:09:28.418: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (4009 bytes)
+04-07 22:09:28.421: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (389 bytes)
+04-07 22:09:28.445: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (83 bytes)
+04-07 22:09:28.507: W/faplayer(7077): [0x2a196620]avcodec decoder: cannot decode one frame (135 bytes)
+04-07 22:09:28.535: D/faplayer(7077): [0x2a23c670]main spu text: looking for text renderer module: 2 candidates
+04-07 22:09:28.535: E/faplayer(7077): [0x2a23c670]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+04-07 22:09:28.535: D/faplayer(7077): [0x2a23c670]main spu text: using text renderer module "dummy"
+04-07 22:09:28.535: D/faplayer(7077): [0x2a23c670]main spu text: TIMER module_need() : 1.125 ms - Total 1.125 ms / 1 intvls (Avg 1.125 ms)
+04-07 22:09:28.535: D/faplayer(7077): [0x2a4b7a10]main scale: looking for video filter2 module: 2 candidates
+04-07 22:09:28.539: D/faplayer(7077): [0x2a4b7a10]swscale scale: 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+04-07 22:09:28.539: D/faplayer(7077): [0x2a4b7a10]main scale: using video filter2 module "swscale"
+04-07 22:09:28.539: D/faplayer(7077): [0x2a4b7a10]main scale: TIMER module_need() : 4.532 ms - Total 4.532 ms / 1 intvls (Avg 4.532 ms)
+04-07 22:09:28.543: D/faplayer(7077): [0x2a398a30]main scale: looking for video filter2 module: 2 candidates
+04-07 22:09:28.543: D/faplayer(7077): [0x2a398a30]main scale: no video filter2 module matching "any" could be loaded
+04-07 22:09:28.543: D/faplayer(7077): [0x2a398a30]main scale: TIMER module_need() : 1.673 ms - Total 1.673 ms / 1 intvls (Avg 1.673 ms)
+04-07 22:09:28.546: D/faplayer(7077): [0x2a2fb0f8]main video output: Deinterlacing available
+04-07 22:09:28.546: E/faplayer(7077): [0x2a2fb0f8]main video output: option sout-deinterlace-mode does not exist
+04-07 22:09:28.546: D/faplayer(7077): [0x2a2fb0f8]main video output: deinterlace 0, mode blend, is_needed 0
+04-07 22:09:28.550: D/faplayer(7077): [0x2a2fb0f8]main video output: Opening vout display wrapper
+04-07 22:09:28.550: D/faplayer(7077): [0x2a514bd8]main vout display: looking for vout display module: 2 candidates
+04-07 22:09:28.550: D/faplayer(7077): [0x2a514bd8]main vout display: VoutDisplayEvent 'fullscreen' 0
+04-07 22:09:28.550: D/faplayer(7077): [0x2a514bd8]main vout display: using vout display module "android_surface"
+04-07 22:09:28.554: D/faplayer(7077): [0x2a514bd8]main vout display: TIMER module_need() : 2.859 ms - Total 2.859 ms / 1 intvls (Avg 2.859 ms)
+04-07 22:09:28.554: D/faplayer(7077): [0x2a514bd8]main vout display: A filter to adapt decoder to display is needed
+04-07 22:09:28.554: D/faplayer(7077): [0x2a52a510]main filter: looking for video filter2 module: 2 candidates
+04-07 22:09:28.554: D/faplayer(7077): [0x2a52a510]main filter: using video filter2 module "yuv2rgb"
+04-07 22:09:28.554: D/faplayer(7077): [0x2a52a510]main filter: TIMER module_need() : 1.595 ms - Total 1.595 ms / 1 intvls (Avg 1.595 ms)
+04-07 22:09:28.558: D/faplayer(7077): [0x2a514bd8]main vout display: Filter 'yuv2rgb' (0x2a52a510) appended to chain
+04-07 22:09:28.562: D/faplayer(7077): [0x2a2fb0f8]main video output: original format sz 640x480, of (0,0), vsz 640x480, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+04-07 22:09:28.562: D/faplayer(7077): [0x2a23c670]main spu text: removing module "dummy"
+04-07 22:09:28.562: D/faplayer(7077): [0x2a23c670]main spu text: looking for text renderer module: 2 candidates
+04-07 22:09:28.566: E/faplayer(7077): [0x2a23c670]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+04-07 22:09:28.566: D/faplayer(7077): [0x2a23c670]main spu text: using text renderer module "dummy"
+04-07 22:09:28.566: D/faplayer(7077): [0x2a23c670]main spu text: TIMER module_need() : 3.626 ms - Total 3.626 ms / 1 intvls (Avg 3.626 ms)
+04-07 22:09:28.566: D/faplayer(7077): [0x2a196620]avcodec decoder: using direct rendering
+04-07 22:09:28.675: E/faplayer(7077): [0x2a514bd8]main vout display: Failed to set on top
+04-07 22:09:28.703: D/faplayer(7077): [0x2a196620]main decoder: End of video preroll
+04-07 22:09:28.711: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:28.711: D/faplayer(7077): [0x2a2fb0f8]main video output: Post-processing available
+04-07 22:09:28.730: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:29.800: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:29.843: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:29.921: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:29.992: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:29.992: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.007: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.082: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.082: D/faplayer(7077): [0x2a514bd8]main vout display: auto hiding mouse
+04-07 22:09:30.117: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.140: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.144: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.246: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.308: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.316: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.343: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.402: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.445: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.449: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.488: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.562: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.605: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.605: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.636: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.722: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.765: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.765: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.839: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.875: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.882: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.933: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.961: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:30.976: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.082: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.128: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.132: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.199: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.253: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.257: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.289: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.359: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.421: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.425: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.503: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.554: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.652: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.695: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.753: D/faplayer(7077): about to destroy 0x2a0ebbe0
+04-07 22:09:31.753: D/faplayer(7077): [0x2a52ad48]main access: waitpipe: object killed
+04-07 22:09:31.753: D/faplayer(7077): [0x2a3ea018]main input: control: stopping input
+04-07 22:09:31.796: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.804: W/faplayer(7077): [0x2a52a510]yuv2rgb filter: can't get output picture
+04-07 22:09:31.804: D/faplayer(7077): [0x2a196620]main decoder: removing module "avcodec"
+04-07 22:09:31.804: D/faplayer(7077): [0x2a196620]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+04-07 22:09:31.804: D/faplayer(7077): [0x2a196620]main decoder: killing decoder fourcc `h264', 15 PES in FIFO
+04-07 22:09:31.808: D/faplayer(7077): [0x2a0ebbe0]main generic: saving a free vout
+04-07 22:09:31.808: D/faplayer(7077): [0x2a0ebbe0]main generic: reusing provided vout
+04-07 22:09:31.816: D/faplayer(7077): [0x2a446b58]main decoder: removing module "avcodec"
+04-07 22:09:31.816: D/faplayer(7077): [0x2a446b58]avcodec decoder: ffmpeg codec (MPEG AAC Audio) stopped
+04-07 22:09:31.820: D/faplayer(7077): [0x2a446b58]main decoder: killing decoder fourcc `mp4a', 50 PES in FIFO
+04-07 22:09:31.820: D/faplayer(7077): [0x2a2a30b0]main audio filter: removing module "ugly_resampler"
+04-07 22:09:31.820: D/faplayer(7077): [0x2a196938]main audio output: removing module "audiotrack_android"
+04-07 22:09:31.820: D/faplayer(7077): [0x2a51e570]main generic: removing module "fixed32_mixer"
+04-07 22:09:31.820: D/faplayer(7077): [0x2a0ebbe0]main generic: releasing audio output
+04-07 22:09:31.824: D/faplayer(7077): [0x2a39d6b0]main demux: removing module "avformat"
+04-07 22:09:31.824: D/faplayer(7077): [0x2a1396a0]main stream: removing module "stream_filter_record"
+04-07 22:09:31.824: D/faplayer(7077): [0x2a52ad48]main access: removing module "access_http"
+04-07 22:09:31.824: D/faplayer(7077): [0x2a3ea018]main input: Program doesn't contain anymore ES
+04-07 22:09:31.824: D/faplayer(7077): [0x2a3ea018]main input: TIMER input launching for 'http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' : 6412.384 ms - Total 6412.384 ms / 1 intvls (Avg 6412.384 ms)
+04-07 22:09:31.824: D/faplayer(7077): [0x2a2fb0f8]main video output: destroying useless vout
+04-07 22:09:31.832: D/faplayer(7077): [0x2a514bd8]main vout display: Filter 0x2a52a510 removed from chain
+04-07 22:09:31.832: D/faplayer(7077): [0x2a52a510]main filter: removing module "yuv2rgb"
+04-07 22:09:31.832: D/faplayer(7077): [0x2a514bd8]main vout display: removing module "android_surface"
+04-07 22:09:31.832: D/faplayer(7077): [0x2a23c670]main spu text: removing module "dummy"
+04-07 22:09:31.832: D/faplayer(7077): [0x2a4b7a10]main scale: removing module "swscale"
+

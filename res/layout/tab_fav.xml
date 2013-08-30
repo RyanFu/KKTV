@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text"
+            android:text="@string/favourite_btn" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_home" />
+
+        <include layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/search"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_search"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/search_devide"
+            layout="@layout/layout_divider_header"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_delete" />
+    </LinearLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <ListView
+                    android:id="@+id/fav_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#ffffffff"
+                    android:divider="@drawable/list_bottom"
+                    android:dividerHeight="1.0px"
+                    android:fastScrollEnabled="true"
+                    android:listSelector="#00000000"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/selffav_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#ffffffff"
+                    android:divider="@drawable/list_bottom"
+                    android:dividerHeight="1.0px"
+                    android:fastScrollEnabled="true"
+                    android:listSelector="#00000000"
+                    android:visibility="gone" />
+
+                <WebView
+                    android:id="@+id/wv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="0"
+                android:background="@color/gainsboro" />
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

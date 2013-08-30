@@ -1,0 +1,16 @@
+1、SD卡媒体初次扫描完毕之后，扫描进度条仍然会错误出现
+
+	这个问题涉及android的sevice知识，特别是startService和bindService的异同，
+有bindService时，activity是无法通过stopService停止该服务的，所以利用MediaScannerService.isRunning()
+是无法正确表明SD是否正在扫描。
+	媒体真正开始扫描是MainActivity调用startService，service运行onStartCommand()方法，而bindService只是会
+启动服务，但是并没有引起onStartCommand()
+
+	具体请参考本目录下的网页文档	http://www.cnblogs.com/trinea/archive/2012/11/08/2699856.html
+	
+	相关修改代码参照2013-05-11当日的git commit
+
+
+	
+2、SD卡媒体初次扫描完毕之后，会有一个Toast通知界面，当若当前不在扫描的界面，这个Toast将会报空指针异常
+	见toast_err.txt

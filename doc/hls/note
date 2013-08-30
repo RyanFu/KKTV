@@ -1,0 +1,17 @@
+1、参照togic的视频源
+	频道地址：
+		http://tv.togic.com:8080/ShowTimeService/channel_list_cn.list.api2
+	可以采用ubuntu的wget命令 #wget url 下载之，其中的各个图标也可以仿照类似方法下载
+	
+	
+2、此目录下的tv_icon目录的图标有重复（相对与aasets目录）
+	【追加】	2013-05-20
+		图标改为第一次运行软件时，从泰捷服务器拉取，然后保存到本地
+	
+3、增加channel_list文件夹，用来备份开发中的频道列表
+	按日期段存放于各目录下，然后将最新的（可能修改过）列表存于assert目录
+	【后续将改为从泰捷服务器或自建服务器拉取频道列表，或提供一个按钮做刷新之用】
+	
+4、2013-07-04泰捷升级为1.4.4版本
+	最新的直播地址下载URL为：
+		http://tv.togic.com/api/channels?api=2

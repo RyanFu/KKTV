@@ -1,0 +1,70 @@
+05-13 13:49:15.515: D/dalvikvm(25306): GC_CONCURRENT freed 1646K, 18% free 14665K/17735K, paused 3ms+7ms, total 38ms
+05-13 13:49:15.515: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 24ms
+05-13 13:49:16.429: D/dalvikvm(25306): GC_CONCURRENT freed 1863K, 18% free 14657K/17735K, paused 3ms+4ms, total 51ms
+05-13 13:49:16.429: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 12ms
+05-13 13:49:17.382: D/dalvikvm(25306): GC_CONCURRENT freed 2095K, 19% free 14417K/17735K, paused 2ms+2ms, total 36ms
+05-13 13:49:17.382: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 19ms
+05-13 13:49:17.839: D/dalvikvm(25306): GC_CONCURRENT freed 1587K, 18% free 14672K/17735K, paused 3ms+2ms, total 33ms
+05-13 13:49:17.839: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 18ms
+05-13 13:49:18.882: D/dalvikvm(25306): GC_CONCURRENT freed 2088K, 19% free 14440K/17735K, paused 3ms+4ms, total 62ms
+05-13 13:49:19.757: D/dalvikvm(25306): GC_CONCURRENT freed 1823K, 19% free 14460K/17735K, paused 3ms+5ms, total 53ms
+05-13 13:49:19.757: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 7ms
+05-13 13:49:20.714: D/dalvikvm(25306): GC_CONCURRENT freed 1838K, 19% free 14390K/17735K, paused 3ms+5ms, total 55ms
+05-13 13:49:22.582: D/dalvikvm(25306): GC_CONCURRENT freed 1753K, 19% free 14480K/17735K, paused 3ms+3ms, total 36ms
+05-13 13:49:22.582: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 18ms
+05-13 13:49:23.421: D/dalvikvm(25306): GC_CONCURRENT freed 1844K, 19% free 14441K/17735K, paused 5ms+6ms, total 76ms
+05-13 13:49:24.066: D/dalvikvm(25306): GC_CONCURRENT freed 1710K, 19% free 14490K/17735K, paused 3ms+3ms, total 55ms
+05-13 13:49:25.050: D/dalvikvm(25306): GC_CONCURRENT freed 1594K, 17% free 14738K/17735K, paused 4ms+4ms, total 43ms
+05-13 13:49:25.050: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 24ms
+05-13 13:49:26.199: D/dalvikvm(25306): GC_CONCURRENT freed 2010K, 18% free 14609K/17735K, paused 4ms+4ms, total 53ms
+05-13 13:49:26.199: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 26ms
+05-13 13:49:26.996: D/dalvikvm(25306): GC_CONCURRENT freed 1775K, 18% free 14681K/17735K, paused 3ms+3ms, total 59ms
+05-13 13:49:27.808: D/dalvikvm(25306): GC_CONCURRENT freed 1983K, 18% free 14547K/17735K, paused 4ms+5ms, total 61ms
+05-13 13:49:28.918: D/dalvikvm(25306): GC_CONCURRENT freed 1752K, 18% free 14570K/17735K, paused 5ms+4ms, total 61ms
+05-13 13:49:29.753: D/dalvikvm(25306): GC_CONCURRENT freed 1762K, 18% free 14554K/17735K, paused 3ms+3ms, total 67ms
+05-13 13:49:51.144: D/FragmentFile(25306): ===>Fragment unbindService
+05-13 13:49:51.996: D/FragmentFile(25306): ===>bind Service
+05-13 13:49:55.519: V/MainActivity(25306): ===>重新扫描SD卡媒体内容
+05-13 13:49:55.527: I/OPlayer(25306): onStartCommand:/storage/sdcard0
+05-13 13:49:56.234: D/dalvikvm(25306): GC_CONCURRENT freed 1415K, 16% free 14936K/17735K, paused 3ms+4ms, total 74ms
+05-13 13:49:57.043: D/FragmentFile(25306): ===>Fragment unbindService
+05-13 13:49:57.753: D/dalvikvm(25306): GC_CONCURRENT freed 2043K, 17% free 14731K/17735K, paused 5ms+4ms, total 99ms
+05-13 13:49:59.089: D/dalvikvm(25306): GC_CONCURRENT freed 1745K, 17% free 14799K/17735K, paused 5ms+13ms, total 88ms
+05-13 13:49:59.992: D/dalvikvm(25306): GC_CONCURRENT freed 1794K, 16% free 14898K/17735K, paused 5ms+7ms, total 83ms
+05-13 13:50:00.613: D/dalvikvm(25306): GC_CONCURRENT freed 1447K, 14% free 15402K/17735K, paused 3ms+5ms, total 65ms
+05-13 13:50:02.019: D/dalvikvm(25306): GC_CONCURRENT freed 2632K, 17% free 14791K/17735K, paused 5ms+6ms, total 67ms
+05-13 13:50:02.882: D/dalvikvm(25306): GC_CONCURRENT freed 1855K, 17% free 14834K/17735K, paused 3ms+3ms, total 41ms
+05-13 13:50:02.882: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 16ms
+05-13 13:50:03.320: D/dalvikvm(25306): GC_CONCURRENT freed 1400K, 15% free 15226K/17735K, paused 3ms+3ms, total 61ms
+05-13 13:50:04.543: D/dalvikvm(25306): GC_CONCURRENT freed 2391K, 17% free 14799K/17735K, paused 5ms+4ms, total 80ms
+05-13 13:50:05.332: D/dalvikvm(25306): GC_CONCURRENT freed 1873K, 17% free 14749K/17735K, paused 3ms+9ms, total 65ms
+05-13 13:50:06.406: D/dalvikvm(25306): GC_CONCURRENT freed 1645K, 17% free 14878K/17735K, paused 4ms+4ms, total 107ms
+05-13 13:50:07.769: D/dalvikvm(25306): GC_CONCURRENT freed 1958K, 17% free 14850K/17735K, paused 5ms+4ms, total 98ms
+05-13 13:50:11.078: D/dalvikvm(25306): GC_CONCURRENT freed 1809K, 16% free 14958K/17735K, paused 6ms+3ms, total 51ms
+05-13 13:50:11.078: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 28ms
+05-13 13:50:11.972: D/dalvikvm(25306): GC_CONCURRENT freed 1962K, 17% free 14893K/17735K, paused 5ms+4ms, total 78ms
+05-13 13:50:13.187: D/dalvikvm(25306): GC_CONCURRENT freed 1619K, 15% free 15086K/17735K, paused 3ms+6ms, total 62ms
+05-13 13:50:14.828: D/dalvikvm(25306): GC_CONCURRENT freed 2055K, 16% free 14991K/17735K, paused 8ms+9ms, total 70ms
+05-13 13:50:15.941: D/dalvikvm(25306): GC_CONCURRENT freed 1893K, 16% free 14964K/17735K, paused 4ms+4ms, total 87ms
+05-13 13:50:16.988: D/dalvikvm(25306): GC_CONCURRENT freed 1877K, 16% free 15022K/17735K, paused 3ms+3ms, total 67ms
+05-13 13:50:17.734: D/dalvikvm(25306): GC_CONCURRENT freed 1977K, 16% free 15021K/17735K, paused 3ms+5ms, total 55ms
+05-13 13:50:17.734: D/dalvikvm(25306): WAIT_FOR_CONCURRENT_GC blocked 29ms
+05-13 13:50:19.679: D/dalvikvm(25306): GC_CONCURRENT freed 1843K, 16% free 15035K/17735K, paused 3ms+11ms, total 67ms
+05-13 13:50:20.546: D/dalvikvm(25306): GC_CONCURRENT freed 1912K, 15% free 15081K/17735K, paused 3ms+13ms, total 65ms
+05-13 13:50:21.753: D/AndroidRuntime(25306): Shutting down VM
+05-13 13:50:21.757: W/dalvikvm(25306): threadid=1: thread exiting with uncaught exception (group=0x40a9a300)
+05-13 13:50:22.023: E/AndroidRuntime(25306): FATAL EXCEPTION: main
+05-13 13:50:22.023: E/AndroidRuntime(25306): java.lang.NullPointerException
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at android.widget.Toast.<init>(Toast.java:102)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at android.widget.Toast.makeText(Toast.java:248)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at com.nmbb.oplayer.ui.FragmentFile.update(FragmentFile.java:151)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at com.nmbb.oplayer.scanner.MediaScannerService$1.handleMessage(MediaScannerService.java:192)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at android.os.Looper.loop(Looper.java:137)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at android.app.ActivityThread.main(ActivityThread.java:4765)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at java.lang.reflect.Method.invokeNative(Native Method)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at java.lang.reflect.Method.invoke(Method.java:511)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:786)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:553)
+05-13 13:50:22.023: E/AndroidRuntime(25306): 	at dalvik.system.NativeStart.main(Native Method)
+

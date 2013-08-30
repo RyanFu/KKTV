@@ -1,0 +1,202 @@
+05-11 11:41:40.136: D/dalvikvm(1289): Late-enabling CheckJNI
+05-11 11:41:40.234: I/dalvikvm(1289): Turning on JNI app bug workarounds for target SDK version 4...
+05-11 11:41:40.785: D/dalvikvm(1289): GC_FOR_ALLOC freed 102K, 26% free 10751K/14339K, paused 29ms, total 31ms
+05-11 11:41:40.796: I/dalvikvm-heap(1289): Grow heap (frag case) to 21.118MB for 3456016-byte allocation
+05-11 11:41:40.828: D/dalvikvm(1289): GC_CONCURRENT freed <1K, 21% free 14125K/17735K, paused 3ms+3ms, total 30ms
+05-11 11:41:42.277: D/dalvikvm(1289): GC_CONCURRENT freed 2163K, 23% free 13688K/17735K, paused 6ms+4ms, total 38ms
+05-11 11:41:43.542: D/dalvikvm(1289): GC_CONCURRENT freed 544K, 16% free 14986K/17735K, paused 4ms+2ms, total 31ms
+05-11 11:41:43.542: D/dalvikvm(1289): WAIT_FOR_CONCURRENT_GC blocked 20ms
+05-11 11:41:53.101: D/PlayerActivity(1289): createMediaPlayer() /storage/sdcard0/VLC/bipbop-gear1-all.ts
+05-11 11:41:53.101: D/dalvikvm(1289): Trying to load lib /data/data/org.stagex.danmaku/lib/libvlccore.so 0x413a4228
+05-11 11:41:53.519: D/dalvikvm(1289): Added shared lib /data/data/org.stagex.danmaku/lib/libvlccore.so 0x413a4228
+05-11 11:41:53.675: D/faplayer(1289): [0x2a210b30]main libvlc: VLC media player - 1.2.0-git Twoflower
+05-11 11:41:53.675: D/faplayer(1289): [0x2a210b30]main libvlc: Copyright © 1996-2011 the VideoLAN team
+05-11 11:41:53.679: D/faplayer(1289): [0x2a210b30]main libvlc: revision \^_^/ - 4dcdc8c4025ea580a69a0b2a512f859b66284c6d
+05-11 11:41:53.679: D/faplayer(1289): [0x2a210b30]main libvlc: configured with ./../../../configure  '--host=arm-eabi-linux' '--build=x86_64-unknown-linux' '--enable-static-modules' '--disable-a52' '--disable-vlc' '--disable-vlm' '--disable-sout' '--disable-httpd' '--disable-dbus' '--disable-lua' '--disable-libgcrypt' '--enable-live555' '--enable-realrtsp' '--disable-vcd' '--disable-v4l2' '--disable-gnomevfs' '--disable-dvdread' '--disable-dvdnav' '--disable-bluray' '--disable-linsys' '--disable-decklink' '--enable-avformat' '--enable-swscale' '--enable-avcodec' '--disable-postproc' '--disable-libva' '--enable-mkv' '--disable-dv' '--disable-mod' '--disable-sid' '--disable-x264' '--disable-mad' '--disable-schroedinger' '--disable-dirac' '--disable-sdl-image' '--disable-zvbi' '--disable-fluidsynth' '--enable-opensles' '--disable-jack' '--disable-pulse' '--disable-alsa' '--disable-portaudio' '--disable-sdl' '--disable-xcb' '--disable-atmo' '--disable-qt4' '--disable-skins2' '--disable-mtp' '--disable-taglib' '--disable-notify' '--enable-freetype' '
+05-11 11:41:53.679: D/faplayer(1289): [0x2a210b30]main libvlc: translation test: code is "C"
+05-11 11:41:53.761: D/faplayer(1289): [0x2a210b30]main libvlc: checking plugin modules
+05-11 11:41:53.761: D/faplayer(1289): [0x2a210b30]main libvlc: ignoring plugins cache file
+05-11 11:41:53.761: D/faplayer(1289): [0x2a210b30]main libvlc: recursively browsing `/datadata/org.stagex.danmaku/lib/vlc/plugins'
+05-11 11:41:53.761: D/faplayer(1289): [0x2a210b30]main libvlc: module bank initialized (62 modules)
+05-11 11:41:53.765: D/faplayer(1289): [0x2a210b30]main libvlc: CPU has capabilities NEONv1 
+05-11 11:41:53.765: D/faplayer(1289): [0x2a210b30]main libvlc: looking for memcpy module: 1 candidate
+05-11 11:41:53.765: D/faplayer(1289): [0x2a210b30]main libvlc: using memcpy module "dummy"
+05-11 11:41:53.765: D/faplayer(1289): [0x2a2465a0]main interface: looking for interface module: 0 candidates
+05-11 11:41:53.765: D/faplayer(1289): [0x2a2465a0]main interface: no interface module matched "hotkeys,none"
+05-11 11:41:53.769: D/faplayer(1289): [0x2a2465a0]main interface: TIMER module_need() : 0.836 ms - Total 0.836 ms / 1 intvls (Avg 0.836 ms)
+05-11 11:41:53.769: E/faplayer(1289): [0x2a2465a0]main interface: no suitable interface module
+05-11 11:41:53.777: D/DANMAKU-AbsMediaPlayer(1289): using VlcMediaPlayer
+05-11 11:41:53.777: D/dalvikvm(1289): Trying to load lib /data/data/org.stagex.danmaku/lib/libvlccore.so 0x413a4228
+05-11 11:41:53.777: D/dalvikvm(1289): Shared lib '/data/data/org.stagex.danmaku/lib/libvlccore.so' already loaded in same CL 0x413a4228
+05-11 11:41:53.792: E/faplayer(1289): [0x2a246f58]main generic: option marq-color does not exist
+05-11 11:41:53.792: E/faplayer(1289): [0x2a246f58]main generic: option marq-opacity does not exist
+05-11 11:41:53.792: E/faplayer(1289): [0x2a246f58]main generic: option marq-position does not exist
+05-11 11:41:53.792: E/faplayer(1289): [0x2a246f58]main generic: option marq-refresh does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option marq-size does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option marq-timeout does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option marq-x does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option marq-y does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-x does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-y does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-delay does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-repeat does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-opacity does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option logo-position does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option contrast does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option brightness does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option hue does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option saturation does not exist
+05-11 11:41:53.796: E/faplayer(1289): [0x2a246f58]main generic: option gamma does not exist
+05-11 11:41:53.804: I/Choreographer(1289): Skipped 40 frames!  The application may be doing too much work on its main thread.
+05-11 11:41:53.820: D/faplayer(1289): [0x2a1e2e90]main input: Creating an input for 'bipbop-gear1-all.ts'
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24cde8]main demux meta: looking for meta fetcher module: 0 candidates
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24cde8]main demux meta: no meta fetcher module matched "any"
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24cde8]main demux meta: TIMER module_need() : 0.682 ms - Total 0.682 ms / 1 intvls (Avg 0.682 ms)
+05-11 11:41:53.828: D/faplayer(1289): [0x2a244f10]main playlist: searching art for bipbop-gear1-all.ts
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24c560]main art finder: looking for art finder module: 0 candidates
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24c560]main art finder: no art finder module matched "any"
+05-11 11:41:53.828: D/faplayer(1289): [0x2a24c560]main art finder: TIMER module_need() : 0.481 ms - Total 0.481 ms / 1 intvls (Avg 0.481 ms)
+05-11 11:41:53.828: D/faplayer(1289): [0x2a244f10]main playlist: art not found for bipbop-gear1-all.ts
+05-11 11:41:55.027: D/faplayer(1289): [0x2a2623e0]main input: Creating an input for 'bipbop-gear1-all.ts'
+05-11 11:41:55.027: D/faplayer(1289): [0x2a244f10]main playlist: no fetch required for (null) (art currently (null))
+05-11 11:41:55.031: D/faplayer(1289): [0x2a2623e0]main input: using timeshift granularity of 50 MiB, in path '/data/local/tmp'
+05-11 11:41:55.031: D/faplayer(1289): [0x2a2623e0]main input: `file:///storage/sdcard0/VLC/bipbop-gear1-all.ts' gives access `file' demux `' path `/storage/sdcard0/VLC/bipbop-gear1-all.ts'
+05-11 11:41:55.031: D/faplayer(1289): [0x2a2623e0]main input: creating demux: access='file' demux='' location='/storage/sdcard0/VLC/bipbop-gear1-all.ts' file='/storage/sdcard0/VLC/bipbop-gear1-all.ts'
+05-11 11:41:55.031: D/faplayer(1289): [0x2a263900]main demux: looking for access_demux module: 0 candidates
+05-11 11:41:55.031: D/faplayer(1289): [0x2a263900]main demux: no access_demux module matched "file"
+05-11 11:41:55.031: D/faplayer(1289): [0x2a263900]main demux: TIMER module_need() : 0.578 ms - Total 0.578 ms / 1 intvls (Avg 0.578 ms)
+05-11 11:41:55.031: D/faplayer(1289): [0x2a2623e0]main input: creating access 'file' location='/storage/sdcard0/VLC/bipbop-gear1-all.ts', path='/storage/sdcard0/VLC/bipbop-gear1-all.ts'
+05-11 11:41:55.031: D/faplayer(1289): [0x2a24c920]main access: looking for access module: 1 candidate
+05-11 11:41:55.031: D/faplayer(1289): [0x2a24c920]filesystem access: opening file `/storage/sdcard0/VLC/bipbop-gear1-all.ts'
+05-11 11:41:55.031: D/faplayer(1289): [0x2a24c920]main access: using access module "filesystem"
+05-11 11:41:55.039: D/faplayer(1289): [0x2a24c920]main access: TIMER module_need() : 7.201 ms - Total 7.201 ms / 1 intvls (Avg 7.201 ms)
+05-11 11:41:55.042: D/faplayer(1289): [0x2a249878]main stream: Using stream method for AStream*
+05-11 11:41:55.042: D/faplayer(1289): [0x2a249878]main stream: starting pre-buffering
+05-11 11:41:55.042: D/faplayer(1289): [0x2a249878]main stream: received first data after 0 ms
+05-11 11:41:55.042: D/faplayer(1289): [0x2a249878]main stream: pre-buffering done 1024 bytes in 0s - 2439 KiB/s
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24cf70]main stream: looking for stream_filter module: 0 candidates
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24cf70]main stream: no stream_filter module matched "any"
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24cf70]main stream: TIMER module_need() : 0.533 ms - Total 0.533 ms / 1 intvls (Avg 0.533 ms)
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24c108]main stream: looking for stream_filter module: 1 candidate
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24c108]main stream: using stream_filter module "stream_filter_record"
+05-11 11:41:55.042: D/faplayer(1289): [0x2a24c108]main stream: TIMER module_need() : 0.505 ms - Total 0.505 ms / 1 intvls (Avg 0.505 ms)
+05-11 11:41:55.042: D/faplayer(1289): [0x2a2623e0]main input: creating demux: access='file' demux='' location='/storage/sdcard0/VLC/bipbop-gear1-all.ts' file='/storage/sdcard0/VLC/bipbop-gear1-all.ts'
+05-11 11:41:55.042: D/faplayer(1289): [0x2a261ef0]main demux: looking for demux module: 7 candidates
+05-11 11:41:55.046: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux: trying url: /storage/sdcard0/VLC/bipbop-gear1-all.ts
+05-11 11:41:55.062: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux: detected format: mpegts
+05-11 11:41:55.230: D/faplayer(1289): [0x2a2623e0]main input: selecting program id=0
+05-11 11:41:55.230: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux: adding es: audio codec = mp4a
+05-11 11:41:55.230: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux: adding es: video codec = h264
+05-11 11:41:55.230: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux: AVFormat supported stream
+05-11 11:41:55.230: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux:     - format = mpegts (MPEG-2 transport stream format)
+05-11 11:41:55.238: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux:     - start time = 10000000
+05-11 11:41:55.238: D/faplayer(1289): [0x2a261ef0]access_demux_avformat demux:     - duration = 1801775600
+05-11 11:41:55.238: D/faplayer(1289): [0x2a261ef0]main demux: using demux module "avformat"
+05-11 11:41:55.242: D/faplayer(1289): [0x2a261ef0]main demux: TIMER module_need() : 195.818 ms - Total 195.818 ms / 1 intvls (Avg 195.818 ms)
+05-11 11:41:55.242: D/faplayer(1289): [0x2a2623e0]main input: looking for a subtitle file in /storage/sdcard0/VLC
+05-11 11:41:55.242: D/faplayer(1289): [0x2a24a410]main decoder: looking for decoder module: 5 candidates
+05-11 11:41:55.242: D/faplayer(1289): [0x2a24a410]avcodec decoder: libavcodec initialized (interface 0x350300)
+05-11 11:41:55.277: D/faplayer(1289): [0x2a24a410]avcodec decoder: ffmpeg codec (MPEG AAC Audio) started
+05-11 11:41:55.277: D/faplayer(1289): [0x2a24a410]avcodec decoder: Using 192000 bytes output buffer
+05-11 11:41:55.277: D/faplayer(1289): [0x2a24a410]main decoder: using decoder module "avcodec"
+05-11 11:41:55.277: D/faplayer(1289): [0x2a24a410]main decoder: TIMER module_need() : 35.044 ms - Total 35.044 ms / 1 intvls (Avg 35.044 ms)
+05-11 11:41:55.281: D/faplayer(1289): [0x2a317238]main decoder: looking for decoder module: 5 candidates
+05-11 11:41:55.281: D/faplayer(1289): [0x2a317238]avcodec decoder: libavcodec already initialized
+05-11 11:41:55.285: D/faplayer(1289): [0x2a317238]avcodec decoder: trying to use direct rendering
+05-11 11:41:55.285: D/faplayer(1289): [0x2a317238]avcodec decoder: allowing 1 thread(s) for decoding
+05-11 11:41:55.292: D/faplayer(1289): [0x2a317238]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) started
+05-11 11:41:55.292: D/faplayer(1289): [0x2a317238]main decoder: using decoder module "avcodec"
+05-11 11:41:55.292: D/faplayer(1289): [0x2a317238]main decoder: TIMER module_need() : 12.271 ms - Total 12.271 ms / 1 intvls (Avg 12.271 ms)
+05-11 11:41:55.296: D/faplayer(1289): [0x2a3187e0]main demux meta: looking for meta reader module: 0 candidates
+05-11 11:41:55.296: D/faplayer(1289): [0x2a3187e0]main demux meta: no meta reader module matched "any"
+05-11 11:41:55.296: D/faplayer(1289): [0x2a3187e0]main demux meta: TIMER module_need() : 0.717 ms - Total 0.717 ms / 1 intvls (Avg 0.717 ms)
+05-11 11:41:55.296: D/faplayer(1289): [0x2a2623e0]main input: `file:///storage/sdcard0/VLC/bipbop-gear1-all.ts' successfully opened
+05-11 11:41:55.296: D/faplayer(1289): [0x2a2623e0]main input: Buffering 0%
+05-11 11:41:55.300: D/faplayer(1289): [0x2a246f58]main generic: creating audio output
+05-11 11:41:55.300: D/faplayer(1289): [0x2a2610d8]main audio output: looking for audio output module: 2 candidates
+05-11 11:41:55.300: D/faplayer(1289): [0x2a2623e0]main input: Buffering 15%
+05-11 11:41:55.316: D/faplayer(1289): [0x2a2cad80]main spu text: looking for text renderer module: 2 candidates
+05-11 11:41:55.320: D/faplayer(1289): [0x2a2623e0]main input: Buffering 30%
+05-11 11:41:55.320: D/faplayer(1289): [0x2a2623e0]main input: Buffering 46%
+05-11 11:41:55.339: D/faplayer(1289): [0x2a2623e0]main input: Buffering 61%
+05-11 11:41:55.339: D/faplayer(1289): [0x2a2623e0]main input: Buffering 77%
+05-11 11:41:55.339: D/faplayer(1289): [0x2a2623e0]main input: Buffering 92%
+05-11 11:41:55.347: D/faplayer(1289): [0x2a2623e0]main input: Stream buffering done (325 ms in 43 ms)
+05-11 11:41:55.386: E/faplayer(1289): [0x2a2cad80]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+05-11 11:41:55.386: D/faplayer(1289): [0x2a2cad80]main spu text: using text renderer module "dummy"
+05-11 11:41:55.386: D/faplayer(1289): [0x2a2cad80]main spu text: TIMER module_need() : 73.743 ms - Total 73.743 ms / 1 intvls (Avg 73.743 ms)
+05-11 11:41:55.390: D/faplayer(1289): [0x2a2cb068]main scale: looking for video filter2 module: 2 candidates
+05-11 11:41:55.394: D/faplayer(1289): [0x2a2cb068]swscale scale: 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+05-11 11:41:55.394: D/faplayer(1289): [0x2a2cb068]main scale: using video filter2 module "swscale"
+05-11 11:41:55.394: D/faplayer(1289): [0x2a2cb068]main scale: TIMER module_need() : 7.843 ms - Total 7.843 ms / 1 intvls (Avg 7.843 ms)
+05-11 11:41:55.398: D/faplayer(1289): [0x2a378910]main scale: looking for video filter2 module: 2 candidates
+05-11 11:41:55.398: D/faplayer(1289): [0x2a378910]main scale: no video filter2 module matching "any" could be loaded
+05-11 11:41:55.398: D/faplayer(1289): [0x2a378910]main scale: TIMER module_need() : 0.592 ms - Total 0.592 ms / 1 intvls (Avg 0.592 ms)
+05-11 11:41:55.398: D/faplayer(1289): [0x2a2ca118]main video output: Deinterlacing available
+05-11 11:41:55.398: E/faplayer(1289): [0x2a2ca118]main video output: option sout-deinterlace-mode does not exist
+05-11 11:41:55.398: D/faplayer(1289): [0x2a2ca118]main video output: deinterlace 0, mode blend, is_needed 0
+05-11 11:41:55.402: D/faplayer(1289): [0x2a2ca118]main video output: Opening vout display wrapper
+05-11 11:41:55.402: D/faplayer(1289): [0x2a37b130]main vout display: looking for vout display module: 2 candidates
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37b130]main vout display: VoutDisplayEvent 'fullscreen' 0
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37b130]main vout display: using vout display module "android_surface"
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37b130]main vout display: TIMER module_need() : 7.947 ms - Total 7.947 ms / 1 intvls (Avg 7.947 ms)
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37b130]main vout display: A filter to adapt decoder to display is needed
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37ba58]main filter: looking for video filter2 module: 2 candidates
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37ba58]main filter: using video filter2 module "yuv2rgb"
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37ba58]main filter: TIMER module_need() : 1.861 ms - Total 1.861 ms / 1 intvls (Avg 1.861 ms)
+05-11 11:41:55.410: D/faplayer(1289): [0x2a37b130]main vout display: Filter 'yuv2rgb' (0x2a37ba58) appended to chain
+05-11 11:41:55.414: D/faplayer(1289): [0x2a2ca118]main video output: original format sz 192x144, of (0,0), vsz 192x144, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+05-11 11:41:55.414: D/faplayer(1289): [0x2a2cad80]main spu text: removing module "dummy"
+05-11 11:41:55.414: D/faplayer(1289): [0x2a2cad80]main spu text: looking for text renderer module: 2 candidates
+05-11 11:41:55.414: E/faplayer(1289): [0x2a2cad80]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+05-11 11:41:55.417: D/faplayer(1289): [0x2a2cad80]main spu text: using text renderer module "dummy"
+05-11 11:41:55.417: D/faplayer(1289): [0x2a2cad80]main spu text: TIMER module_need() : 1.491 ms - Total 1.491 ms / 1 intvls (Avg 1.491 ms)
+05-11 11:41:55.417: D/faplayer(1289): [0x2a317238]avcodec decoder: using direct rendering
+05-11 11:41:55.421: E/faplayer(1289): [0x2a37b130]main vout display: Failed to set on top
+05-11 11:41:55.499: D/faplayer(1289): [0x2a2610d8]main audio output: using audio output module "audiotrack_android"
+05-11 11:41:55.499: D/faplayer(1289): [0x2a2610d8]main audio output: TIMER module_need() : 199.875 ms - Total 199.875 ms / 1 intvls (Avg 199.875 ms)
+05-11 11:41:55.503: D/faplayer(1289): [0x2a2610d8]main audio output: output 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+05-11 11:41:55.503: D/faplayer(1289): [0x2a2610d8]main audio output: mixer 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+05-11 11:41:55.507: D/faplayer(1289): [0x2a2610d8]main audio output: filter(s) 's16l'->'s16l' 22050 Hz->22050 Hz Mono->Mono
+05-11 11:41:55.507: D/faplayer(1289): [0x2a2610d8]main audio output: conversion pipeline completed
+05-11 11:41:55.511: D/faplayer(1289): [0x2a2b25e0]main generic: looking for audio mixer module: 3 candidates
+05-11 11:41:55.511: D/faplayer(1289): [0x2a2b25e0]main generic: using audio mixer module "fixed32_mixer"
+05-11 11:41:55.515: D/faplayer(1289): [0x2a2b25e0]main generic: TIMER module_need() : 3.210 ms - Total 3.210 ms / 1 intvls (Avg 3.210 ms)
+05-11 11:41:55.515: D/faplayer(1289): [0x2a2610d8]main audio output: input 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+05-11 11:41:55.515: D/faplayer(1289): [0x2a2610d8]main audio output: filter(s) 's16l'->'s16l' 22050 Hz->22050 Hz Mono->Mono
+05-11 11:41:55.519: D/faplayer(1289): [0x2a2610d8]main audio output: conversion pipeline completed
+05-11 11:41:55.519: D/faplayer(1289): [0x2a2610d8]main audio output: filter(s) 's16l'->'s16l' 24255 Hz->22050 Hz Mono->Mono
+05-11 11:41:55.523: D/faplayer(1289): [0x2a2e5598]main audio filter: looking for audio filter module: 5 candidates
+05-11 11:41:55.523: D/faplayer(1289): [0x2a2e5598]main audio filter: using audio filter module "ugly_resampler"
+05-11 11:41:55.527: D/faplayer(1289): [0x2a2e5598]main audio filter: TIMER module_need() : 2.997 ms - Total 2.997 ms / 1 intvls (Avg 2.997 ms)
+05-11 11:41:55.527: D/faplayer(1289): [0x2a2610d8]main audio output: conversion pipeline completed
+05-11 11:41:55.527: D/faplayer(1289): [0x2a24a410]main decoder: End of audio preroll
+05-11 11:41:55.535: D/faplayer(1289): [0x2a2623e0]main input: Decoder buffering done in 187 ms
+05-11 11:41:55.535: W/faplayer(1289): [0x2a2610d8]main audio output: PTS is out of range (-9805), dropping buffer
+05-11 11:41:56.917: D/faplayer(1289): [0x2a37b130]main vout display: auto hiding mouse
+05-11 11:42:05.511: D/faplayer(1289): about to destroy 0x2a246f58
+05-11 11:42:05.511: D/faplayer(1289): [0x2a2623e0]main input: control: stopping input
+05-11 11:42:05.675: D/faplayer(1289): [0x2a24a410]main decoder: removing module "avcodec"
+05-11 11:42:05.675: D/faplayer(1289): [0x2a24a410]avcodec decoder: ffmpeg codec (MPEG AAC Audio) stopped
+05-11 11:42:05.675: D/faplayer(1289): [0x2a24a410]main decoder: killing decoder fourcc `mp4a', 4 PES in FIFO
+05-11 11:42:05.675: D/faplayer(1289): [0x2a2e5598]main audio filter: removing module "ugly_resampler"
+05-11 11:42:05.675: D/faplayer(1289): [0x2a2610d8]main audio output: removing module "audiotrack_android"
+05-11 11:42:05.679: D/faplayer(1289): [0x2a2b25e0]main generic: removing module "fixed32_mixer"
+05-11 11:42:05.679: D/faplayer(1289): [0x2a246f58]main generic: releasing audio output
+05-11 11:42:05.679: D/faplayer(1289): [0x2a317238]main decoder: removing module "avcodec"
+05-11 11:42:05.679: D/faplayer(1289): [0x2a317238]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+05-11 11:42:05.679: D/faplayer(1289): [0x2a317238]main decoder: killing decoder fourcc `h264', 0 PES in FIFO
+05-11 11:42:05.679: D/faplayer(1289): [0x2a246f58]main generic: saving a free vout
+05-11 11:42:05.679: D/faplayer(1289): [0x2a246f58]main generic: reusing provided vout
+05-11 11:42:05.679: D/faplayer(1289): [0x2a261ef0]main demux: removing module "avformat"
+05-11 11:42:05.679: D/faplayer(1289): [0x2a24c108]main stream: removing module "stream_filter_record"
+05-11 11:42:05.683: D/faplayer(1289): [0x2a24c920]main access: removing module "filesystem"
+05-11 11:42:05.683: D/faplayer(1289): [0x2a2623e0]main input: Program doesn't contain anymore ES
+05-11 11:42:05.683: D/faplayer(1289): [0x2a2623e0]main input: TIMER input launching for 'bipbop-gear1-all.ts' : 270.996 ms - Total 270.996 ms / 1 intvls (Avg 270.996 ms)
+05-11 11:42:05.683: D/faplayer(1289): [0x2a2ca118]main video output: destroying useless vout
+05-11 11:42:05.683: D/faplayer(1289): [0x2a37b130]main vout display: Filter 0x2a37ba58 removed from chain
+05-11 11:42:05.687: D/faplayer(1289): [0x2a37ba58]main filter: removing module "yuv2rgb"
+05-11 11:42:05.687: D/faplayer(1289): [0x2a37b130]main vout display: removing module "android_surface"
+05-11 11:42:05.691: D/faplayer(1289): [0x2a2cad80]main spu text: removing module "dummy"
+05-11 11:42:05.691: D/faplayer(1289): [0x2a2cb068]main scale: removing module "swscale"
+

@@ -1,0 +1,8 @@
+hls_note:
+	1、vlc hls module method
+		只采用ffmpeg的avformt作为hls的access_demux（到该版本节点支持搜狐、PPTV、CNTV等主流直播，但暂不支持LETV，因其相对地址拼接的特殊性）
+		（如果采用httplive作为access_filter，那么demuxer则可以选两种：ts和avformat，若采用ts，对于CNTV的源会造成音视频不同步；若关掉avformat作为
+		access_demux，然后在input.c中强制设置demuxer为avformat，则使用demux/avformat作为ts流的解析，可以纠正时间戳，保证同步，但也要注意有些机子配置
+		较低，导致视频软件缓慢，造成视频播放落后的音视频不同步。
+			如上述，采用httplive(filter)+avformat(demux)可以播放hls（例如CNTV），但对于搜狐的源，因为httplive解析有问题，故需要avformat(access_demux)
+		作为hls的第二选择，这样的话，在代码中要设计模块的切换，比较麻烦，所以直接采用avformat(access_demux)作为hls的解析最为方便）

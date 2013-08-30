@@ -1,0 +1,74 @@
+以节目源地址的URL的hostname来甄别节目源
+	2013-06-11
+
+1、http://vdn.apps.cntv.cn		央视网[cntv]
+
+2、http://live.gslb.letv.com		乐视网[letv]
+
+3、http://ims.veryhd.net			veryhd
+
+4、http://v.hdplay.cn			VST全聚合[hdplay]
+
+5、http://sw.live.cntv.cn		央视网[CNTV]
+
+6、http://so.52itv.cn			VST全聚合[52itv]
+
+7、http://main.gslb.ku6.com		酷6网[ku6]
+
+8、http://tvie01.ucatv.com.cn	天山云电视[ucatv]
+
+9、http://live.jsntv.com.cn		建始网络电台[jsntv]
+
+10、http://web-play.pptv.com/	PPTV
+
+11、http://gslb.tv.sohu.com		搜狐视频[sohu]
+
+12、http://zb.v.qq.com:1863		腾讯视频[qqlive]
+
+13、http://tsl6.hls.cutv.com		城视网[cutv]
+
+14、http://liveipad.wasu.cn		华数TV
+
+15、http://r1.cztv.com			新蓝网[cztv]
+
+16、http://live.3gv.ifeng.com	凤凰视频[ifeng]
+
+17、http://live-cdn1.smgbb.tv	东方宽频电视[smgbb]
+
+18、http://live.xwei.tv			小微视频[xwei]
+
+19、http://live2.thmz.com		太湖明珠网[thmz]
+
+20、http://media.ntjoy.com		江海明珠网[ntjoy]
+
+21、http://itv.hdpfans.com		hdfans
+
+22、http://live1.cqnews.net		华龙视频[cqnews]
+
+23、http://edge1.yntv.cn			云视网[yntv]
+
+24、http://live2.hoolo.tv		葫芦网[hoolo]
+
+25、http://live-01.ywcity.cn		义务城市网[ywcity]
+
+26、http://dns.36tv.net.cn		广众网[36tv]
+
+27、http://livecdn.ahtv.cn		安徽网络电视台[ahtv]
+
+28、http://live2.hfbtv.com		合肥广电网[hfbtv]
+
+29、http://125.211.216.198		黑龙江网络广播电视台[hljtv]
+
+30、http://222.216.111.87:5100	广西电视网[gxtv]
+
+31、http://ming-live.nbtv.cn		宁波广电网[nbtv]
+
+32、http://media-live-01.ijntv.com	济南网络广播电台[ijntv]
+
+33、http://live9.hbtv.com.cn		湖北网台[hbtv]
+
+34、http://live.hntv.tv			河南网络电视台[hntv]
+
+
+
+

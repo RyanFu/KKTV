@@ -1,0 +1,697 @@
+  {
+    "channel_id": 60006,
+    "channel_name": "八大第一",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/09.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-09.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60007,
+    "channel_name": "八大综合",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/10.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-10.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60008,
+    "channel_name": "八大戏剧",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/11.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-11.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60009,
+    "channel_name": "八大娱乐K台",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/12.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-12.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60010,
+    "channel_name": "龙华偶像",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/13.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-13.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60011,
+    "channel_name": "龙华戏剧",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/24.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-24.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60012,
+    "channel_name": "中天综合",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://veryhd.shntv.cn/stream-1-77.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60013,
+    "channel_name": "中天娱乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://veryhd.shntv.cn/stream-1-22.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60014,
+    "channel_name": "中天亚洲",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://veryhd.shntv.cn/stream-1-74.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60015,
+    "channel_name": "凤凰咨讯",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/37.m3u8",
+    "second_url": [
+      "http://dtv.7drt.com/daili/dtvc50.php/live/id/37"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60016,
+    "channel_name": "东森幼幼",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/39.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-39.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60017,
+    "channel_name": "东森综合",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/40.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-40.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60018,
+    "channel_name": "东森戏剧",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/41.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-41.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60019,
+    "channel_name": "东森电影",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/42.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-42.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60020,
+    "channel_name": "东森洋片",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/43.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-43.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60021,
+    "channel_name": "东森亚洲",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/44.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-44.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60022,
+    "channel_name": "TVBS欢乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/72.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-72.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60023,
+    "channel_name": "TVBS综合",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://www.91kds.net/dl/ha.asp?66/03",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60024,
+    "channel_name": "纬来电影",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/19.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-19.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60025,
+    "channel_name": "纬来综合",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/17.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-17.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60026,
+    "channel_name": "纬来戏剧",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/18.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-18.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60027,
+    "channel_name": "纬来育乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/20.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-20.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60028,
+    "channel_name": "卫视中文台",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://fw01.livem3u8.me.totiptv.com/live/29a09591a6604ff3b798cd7ef809e4bd.m3u8?bitrate=800",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60029,
+    "channel_name": "卫视卡式台",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://fw01.livem3u8.me.totiptv.com/live/c8233976dbba4a06a101780907447375.m3u8?bitrate=800",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60030,
+    "channel_name": "三立台湾",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/53.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-53.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60031,
+    "channel_name": "三立国际",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/70.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-70.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60032,
+    "channel_name": "超视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/69.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-69.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60033,
+    "channel_name": "台视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://imgwnas0wnas5wnasln1.m2wscdn-h.kukuplay.com/ts/380789_1361121851011_1367136970510/playlist.m3u8",
+    "second_url": [
+      "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/87.m3u8",
+      "http://veryhd.shntv.cn/stream-1-87.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60034,
+    "channel_name": "中视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/88.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-88.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60035,
+    "channel_name": "中视综艺",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://61.67.123.92/live/ctv_life_1200k.stream/playlist.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60036,
+    "channel_name": "中视娱乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://www.91kds.net/dl/ha.asp?17/01",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60037,
+    "channel_name": "民视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://www.91kds.net/dl/ha.asp?46/01",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-90.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60035,
+    "channel_name": "民视综艺",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://61.67.123.92/live/ftv-1_1200k.stream/playlist.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60036,
+    "channel_name": "民视影剧",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://61.67.123.92/live/ftv-2_1200k.stream/playlist.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60037,
+    "channel_name": "华视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/89.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-89.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60038,
+    "channel_name": "公视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/91.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-91.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60039,
+    "channel_name": "星空体育",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/66.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60040,
+    "channel_name": "探索频道HD",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/48.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-48.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60041,
+    "channel_name": "国家地理HD1",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/46.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-46.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60042,
+    "channel_name": "国家地理HD2",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://fw01.livem3u8.me.totiptv.com/live/7ad09373f65c48d5bb6aa6c3b2ca519a.m3u8?bitrate=800",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60043,
+    "channel_name": "国家地理野生HD1",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/59.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60044,
+    "channel_name": "国家地理野生HD2",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://fw01.livem3u8.me.totiptv.com/live/607fa33938bc4a3ea6c43ce47ddb8ed8.m3u8?bitrate=800",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60045,
+    "channel_name": "国家地理音乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://fw01.livem3u8.me.totiptv.com/live/69c2eab6794344619a049c5dea60ca22.m3u8?bitrate=800",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60046,
+    "channel_name": "HBO-HD",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/01.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-01.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60047,
+    "channel_name": "HBO-Hits",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/02.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-02.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60048,
+    "channel_name": "好莱坞电影台",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/23.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-23.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60049,
+    "channel_name": "HBO原创巨献",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/82.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-82.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60050,
+    "channel_name": "中天新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://veryhd.shntv.cn/stream-1-50.m3u8",
+    "second_url": [
+      "http://dtv.7drt.com/daili/dtvc50.php/live/id/50"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60051,
+    "channel_name": "东森新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/92.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-92.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60052,
+    "channel_name": "民视新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/73.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-73.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60053,
+    "channel_name": "非凡新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/49.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-49.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60054,
+    "channel_name": "三立新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/54.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-54.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60055,
+    "channel_name": "TVBS新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/55.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-55.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60056,
+    "channel_name": "年代新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/56.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-56.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60057,
+    "channel_name": "东森财经新闻",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/51.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-51.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60058,
+    "channel_name": "星卫娱乐",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/58.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-58.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60059,
+    "channel_name": "BabyFirst",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/06.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-06.m3u8"
+    ],
+    "types": "6"
+  },
+  {
+    "channel_id": 60060,
+    "channel_name": "TVB8",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://112.231.23.20/live/tvb8/playlist.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60061,
+    "channel_name": "华娱卫视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://112.231.23.20/live/hyws/playlist.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60062,
+    "channel_name": "阳光卫视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://101.1.7.13/240k/3g_video_index.m3u8",
+    "second_url": [],
+    "types": "6"
+  },
+  {
+    "channel_id": 60063,
+    "channel_name": "星空卫视",
+    "icon_url": "http://tv.togic.com:8080/ShowTimeService/images/liveTV_default.png",
+    "province": "其他",
+    "mode": "NEW",
+    "url": "http://live.91kds.net/m/k.php/live/site/k/ch/01/id/03.m3u8",
+    "second_url": [
+      "http://veryhd.shntv.cn/stream-1-03.m3u8"
+    ],
+    "types": "6"
+  }

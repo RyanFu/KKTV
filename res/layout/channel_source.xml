@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text" />
+
+        <ImageView
+            android:id="@+id/source_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_prgam" />
+
+        <include layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/applist_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_applist" />
+
+        <include
+            android:id="@+id/applist_devide"
+            layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/tuangou_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_tuangou" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/AdLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fadingEdge="vertical"
+        android:fastScrollEnabled="true"
+        android:scrollbars="vertical" >
+
+        <br.com.dina.ui.widget.UITableView
+            android:id="@+id/tableView"
+            style="@style/UITableView" />
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/channel_source"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#ffffffff"
+        android:divider="@drawable/list_bottom"
+        android:dividerHeight="1.0px"
+        android:listSelector="#00000000"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,898 @@
+04-07 22:08:06.363: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: using timeshift granularity of 50 MiB, in path '/data/local/tmp'
+04-07 22:08:06.367: I/Togic VlcMediaPlayer(7048): ============== mediaplayer state changed: 1
+04-07 22:08:06.367: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 0% ========== [0m
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: `http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' gives access `http' demux `' path `tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8'
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: enforced demux ` avformat'
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: creating demux: access='http' demux='avformat' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' file='(null)'
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a1f4040]main demux: looking for access_demux module: 0 candidates
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a1f4040]main demux: no access_demux module matched "http"
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a1f4040]main demux: TIMER module_need() : 0.309 ms - Total 0.309 ms / 1 intvls (Avg 0.309 ms)
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: creating access 'http' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8', path='(null)'
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: looking for access module: 2 candidates
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: http: server='tsl6.hls.cutv.com' port=80 file='/cutvChannelLive/25qamuz.m3u8'
+04-07 22:08:06.367: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: net: connecting to tsl6.hls.cutv.com port 80
+04-07 22:08:06.414: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: connection succeeded (socket = 75)
+04-07 22:08:06.582: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:06.984: D/com.togic.tv.channel.ChannelDateSourceImpl(7048): url:http://tv.togic.com:8080/ShowTimeService/program/13_04_07/20116
+04-07 22:08:06.988: D/com.togic.tv.channel.Utils(7048): load path:http://tv.togic.com:8080/ShowTimeService/program/13_04_07/20116
+04-07 22:08:07.023: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: protocol 'HTTP' answer code 206
+04-07 22:08:07.023: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: Server: Apache
+04-07 22:08:07.027: D/com.togic.tv.channel.Utils(7048): return network channel list
+04-07 22:08:07.027: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: this frame size=225
+04-07 22:08:07.027: W/System.err(7048): java.io.FileNotFoundException: /data/data/com.togic.mediacenter/cache/E229E0449BF374EB657EFCC8F7072ADB: open failed: ENOENT (No such file or directory)
+04-07 22:08:07.031: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: stream size=225,pos=0,remaining=225
+04-07 22:08:07.031: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: Content-Type: application/x-mpegurl
+04-07 22:08:07.031: D/MediaPlayerEngine(7048): [0x2a13d3d8]access_http access: Connection: close
+04-07 22:08:07.035: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: using access module "access_http"
+04-07 22:08:07.035: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: TIMER module_need() : 668.140 ms - Total 668.140 ms / 1 intvls (Avg 668.140 ms)
+04-07 22:08:07.035: D/MediaPlayerEngine(7048): [0x2a251048]main stream: Using stream method for AStream*
+04-07 22:08:07.039: D/MediaPlayerEngine(7048): [0x2a251048]main stream: starting pre-buffering
+04-07 22:08:07.039: D/MediaPlayerEngine(7048): [0x2a251048]main stream: received first data after 0 ms
+04-07 22:08:07.039: D/MediaPlayerEngine(7048): [0x2a251048]main stream: pre-buffering done 225 bytes in 0s - 629 KiB/s
+04-07 22:08:07.039: D/MediaPlayerEngine(7048): [0x2a2717e8]main stream: looking for stream_filter module: 1 candidate
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a2717e8]main stream: no stream_filter module matching "any" could be loaded
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a2717e8]main stream: TIMER module_need() : 1.279 ms - Total 1.279 ms / 1 intvls (Avg 1.279 ms)
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a25de98]main stream: looking for stream_filter module: 1 candidate
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a25de98]main stream: using stream_filter module "stream_filter_record"
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a25de98]main stream: TIMER module_need() : 0.965 ms - Total 0.965 ms / 1 intvls (Avg 0.965 ms)
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: creating demux: access='http' demux='avformat' location='tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' file='(null)'
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a2182b0]main demux: looking for demux module: 1 candidate
+04-07 22:08:07.043: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: trying url: http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8
+04-07 22:08:07.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: detected format: applehttp
+04-07 22:08:07.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: register interrupt callback(0x54297098 0x2a1c6528)
+04-07 22:08:07.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: register readbyte callback(0x54296680 0x2a1c6528)
+04-07 22:08:07.503: V/FFMPEG_JNI(7048): open segment url=http://tsl6.hls.cutv.com/cutvlive/streams/events/25qamuz/hls/live_sdNum8657.ts
+04-07 22:08:07.597: V/FFMPEG_JNI(7048): segment filesize=455336
+04-07 22:08:08.039: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: AppleHttpStream: need check I frame after seeking
+04-07 22:08:08.043: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: selecting program id=0
+04-07 22:08:08.043: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: adding es: video codec = h264
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: adding es: audio codec = mp4a
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: AVFormat supported stream
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux:     - format = applehttp (Apple HTTP Live Streaming format)
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux:     - start time = -17000
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux:     - duration = -1
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: ========== Enable applehttp stream CAN_SEEK
+04-07 22:08:08.046: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: AppleHttpStream first start need check video I frame
+04-07 22:08:08.050: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: ========== demuxer_Thread running ==========
+04-07 22:08:08.050: D/MediaPlayerEngine(7048): [0x2a2182b0]main demux: using demux module "avformat"
+04-07 22:08:08.050: D/MediaPlayerEngine(7048): [0x2a2182b0]main demux: TIMER module_need() : 1008.485 ms - Total 1008.485 ms / 1 intvls (Avg 1008.485 ms)
+04-07 22:08:08.054: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: looking for decoder module: 5 candidates
+04-07 22:08:08.054: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: libavcodec already initialized
+04-07 22:08:08.054: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: trying to use direct rendering
+04-07 22:08:08.054: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: allowing 1 thread(s) for decoding
+04-07 22:08:08.058: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) started
+04-07 22:08:08.062: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: using decoder module "avcodec"
+04-07 22:08:08.062: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: TIMER module_need() : 8.258 ms - Total 8.258 ms / 1 intvls (Avg 8.258 ms)
+04-07 22:08:08.066: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: looking for decoder module: 5 candidates
+04-07 22:08:08.066: D/MediaPlayerEngine(7048): [0x2a2034d0]avcodec decoder: libavcodec already initialized
+04-07 22:08:08.082: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.082: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 -1 0
+04-07 22:08:08.086: D/MediaPlayerEngine(7048): [0x2a2034d0]avcodec decoder: ffmpeg codec (MPEG AAC Audio) started
+04-07 22:08:08.086: D/MediaPlayerEngine(7048): [0x2a2034d0]avcodec decoder: Using 192000 bytes output buffer
+04-07 22:08:08.086: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: using decoder module "avcodec"
+04-07 22:08:08.086: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: TIMER module_need() : 21.853 ms - Total 21.853 ms / 1 intvls (Avg 21.853 ms)
+04-07 22:08:08.089: D/MediaPlayerEngine(7048): [0x2a2c30f8]main demux meta: looking for meta reader module: 0 candidates
+04-07 22:08:08.089: D/MediaPlayerEngine(7048): [0x2a2c30f8]main demux meta: no meta reader module matched "any"
+04-07 22:08:08.089: D/MediaPlayerEngine(7048): [0x2a2c30f8]main demux meta: TIMER module_need() : 0.493 ms - Total 0.493 ms / 1 intvls (Avg 0.493 ms)
+04-07 22:08:08.089: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: `http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' successfully opened
+04-07 22:08:08.089: I/Togic VlcMediaPlayer(7048): ============== mediaplayer state changed: 3
+04-07 22:08:08.089: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.089: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 -1 0
+04-07 22:08:08.089: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.089: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0 -1
+04-07 22:08:08.093: D/VlcVideoView(7048): ==================== handle event: 16391
+04-07 22:08:08.093: V/VlcVideoView(7048): video size change: com.togic.mediacenter.player.VlcMediaPlayer@4130b2880 0
+04-07 22:08:08.355: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.355: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0 -1
+04-07 22:08:08.589: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 0% ========== [0m
+04-07 22:08:08.589: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: looking for text renderer module: 1 candidate
+04-07 22:08:08.589: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 0%]
+04-07 22:08:08.593: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 0% ========== [0m
+04-07 22:08:08.593: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 0%]
+04-07 22:08:08.593: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 1% ========== [0m
+04-07 22:08:08.593: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 1%]
+04-07 22:08:08.593: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: using text renderer module "dummy"
+04-07 22:08:08.593: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: TIMER module_need() : 3.085 ms - Total 3.085 ms / 1 intvls (Avg 3.085 ms)
+04-07 22:08:08.593: D/MediaPlayerEngine(7048): [0x2a073d38]main scale: looking for video filter2 module: 2 candidates
+04-07 22:08:08.597: D/MediaPlayerEngine(7048): [0x2a073d38]swscale scale: 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a073d38]main scale: using video filter2 module "swscale"
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a073d38]main scale: TIMER module_need() : 10.059 ms - Total 10.059 ms / 1 intvls (Avg 10.059 ms)
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a1a17a0]main scale: looking for video filter2 module: 2 candidates
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a1a17a0]main scale: no video filter2 module matching "any" could be loaded
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a1a17a0]main scale: TIMER module_need() : 0.503 ms - Total 0.503 ms / 1 intvls (Avg 0.503 ms)
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a30a410]main video output: Deinterlacing available
+04-07 22:08:08.605: E/MediaPlayerEngine(7048): [0x2a30a410]main video output: option sout-deinterlace-mode does not exist
+04-07 22:08:08.605: D/MediaPlayerEngine(7048): [0x2a30a410]main video output: deinterlace 0, mode blend, is_needed 0
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a30a410]main video output: Opening vout display wrapper
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: looking for vout display module: 2 candidates
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: VoutDisplayEvent 'fullscreen' 0
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: using vout display module "android_surface"
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: TIMER module_need() : 1.052 ms - Total 1.052 ms / 1 intvls (Avg 1.052 ms)
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: A filter to adapt decoder to display is needed
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a3036c8]main filter: looking for video filter2 module: 2 candidates
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a3036c8]main filter: using video filter2 module "yuv2rgb"
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a3036c8]main filter: TIMER module_need() : 1.118 ms - Total 1.118 ms / 1 intvls (Avg 1.118 ms)
+04-07 22:08:08.613: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: Filter 'yuv2rgb' (0x2a3036c8) appended to chain
+04-07 22:08:08.617: D/MediaPlayerEngine(7048): [0x2a30a410]main video output: original format sz 640x480, of (0,0), vsz 640x480, 4cc I420, sar 1:1, msk r0x0 g0x0 b0x0
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: removing module "dummy"
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: looking for text renderer module: 1 candidate
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: using text renderer module "dummy"
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a0c9bb0]main spu text: TIMER module_need() : 0.537 ms - Total 0.537 ms / 1 intvls (Avg 0.537 ms)
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: using direct rendering
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a3b04b8]main generic: creating audio output
+04-07 22:08:08.621: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: looking for audio output module: 2 candidates
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: using audio output module "audiotrack_android"
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: TIMER module_need() : 5.236 ms - Total 5.236 ms / 1 intvls (Avg 5.236 ms)
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: output 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: mixer 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: filter(s) 's16l'->'s16l' 44100 Hz->44100 Hz Mono->Mono
+04-07 22:08:08.625: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: conversion pipeline completed
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a1b3ed0]main generic: looking for audio mixer module: 3 candidates
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a1b3ed0]main generic: using audio mixer module "fixed32_mixer"
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a1b3ed0]main generic: TIMER module_need() : 1.984 ms - Total 1.984 ms / 1 intvls (Avg 1.984 ms)
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: input 's16l' 44100 Hz Mono frame=1 samples/2 bytes
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: filter(s) 's16l'->'s16l' 44100 Hz->44100 Hz Mono->Mono
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: conversion pipeline completed
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: filter(s) 's16l'->'s16l' 48510 Hz->44100 Hz Mono->Mono
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a176008]main audio filter: looking for audio filter module: 5 candidates
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a176008]main audio filter: using audio filter module "ugly_resampler"
+04-07 22:08:08.628: D/MediaPlayerEngine(7048): [0x2a176008]main audio filter: TIMER module_need() : 0.644 ms - Total 0.644 ms / 1 intvls (Avg 0.644 ms)
+04-07 22:08:08.632: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: conversion pipeline completed
+04-07 22:08:08.632: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: End of audio preroll
+04-07 22:08:08.632: D/MediaPlayerEngine(7048): [0x2a21b958]audiotrack_android audio output: Flush AudioTrack!
+04-07 22:08:08.683: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:08.687: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0
+04-07 22:08:08.687: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:08.687: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:08.687: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0
+04-07 22:08:08.687: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:08.687: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:08.691: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1
+04-07 22:08:08.691: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:08.695: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.699: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:08.738: E/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: Failed to set on top
+04-07 22:08:08.796: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: End of video preroll
+04-07 22:08:08.796: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: For android: do not flush vout
+04-07 22:08:08.796: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: Received first picture
+04-07 22:08:08.808: W/MediaPlayerEngine(7048): [0x2a3036c8]yuv2rgb filter: can't get output picture
+04-07 22:08:08.808: D/MediaPlayerEngine(7048): [0x2a30a410]main video output: Post-processing available
+04-07 22:08:08.863: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:08.863: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:08.914: W/MediaPlayerEngine(7048): [0x2a3036c8]yuv2rgb filter: can't get output picture
+04-07 22:08:09.003: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 2% ========== [0m
+04-07 22:08:09.007: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 2%]
+04-07 22:08:09.007: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 3% ========== [0m
+04-07 22:08:09.007: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 3%]
+04-07 22:08:09.007: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 3% ========== [0m
+04-07 22:08:09.007: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 3%]
+04-07 22:08:09.007: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 4% ========== [0m
+04-07 22:08:09.007: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 4%]
+04-07 22:08:09.011: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 5% ========== [0m
+04-07 22:08:09.011: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 5%]
+04-07 22:08:09.011: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 6% ========== [0m
+04-07 22:08:09.015: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 6%]
+04-07 22:08:09.015: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 6% ========== [0m
+04-07 22:08:09.015: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 6%]
+04-07 22:08:09.050: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.054: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 2
+04-07 22:08:09.054: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 7% ========== [0m
+04-07 22:08:09.054: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 7%]
+04-07 22:08:09.058: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 8% ========== [0m
+04-07 22:08:09.058: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 8%]
+04-07 22:08:09.058: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 9% ========== [0m
+04-07 22:08:09.058: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 9%]
+04-07 22:08:09.058: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 10% ========== [0m
+04-07 22:08:09.058: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 10%]
+04-07 22:08:09.058: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 10% ========== [0m
+04-07 22:08:09.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 10%]
+04-07 22:08:09.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 11% ========== [0m
+04-07 22:08:09.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 11%]
+04-07 22:08:09.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 12% ========== [0m
+04-07 22:08:09.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 12%]
+04-07 22:08:09.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 13% ========== [0m
+04-07 22:08:09.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 13%]
+04-07 22:08:09.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 13% ========== [0m
+04-07 22:08:09.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 13%]
+04-07 22:08:09.066: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 14% ========== [0m
+04-07 22:08:09.066: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 14%]
+04-07 22:08:09.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 15% ========== [0m
+04-07 22:08:09.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 15%]
+04-07 22:08:09.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 16% ========== [0m
+04-07 22:08:09.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 16%]
+04-07 22:08:09.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 17% ========== [0m
+04-07 22:08:09.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 17%]
+04-07 22:08:09.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 17% ========== [0m
+04-07 22:08:09.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 17%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 18% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 18%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 19% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 19%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 20% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 20%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 20% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 20%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 21% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 21%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 22% ========== [0m
+04-07 22:08:09.074: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 22%]
+04-07 22:08:09.074: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 23% ========== [0m
+04-07 22:08:09.078: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.078: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 23%]
+04-07 22:08:09.078: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.078: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 3
+04-07 22:08:09.078: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.078: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.078: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 3
+04-07 22:08:09.078: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.078: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.078: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 4
+04-07 22:08:09.078: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.082: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.082: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 5
+04-07 22:08:09.082: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.082: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.082: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 6
+04-07 22:08:09.082: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.082: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.082: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 6
+04-07 22:08:09.086: V/LIBVLC_JNI(7048): Bitrate=0 KB/S
+04-07 22:08:09.089: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 23% ========== [0m
+04-07 22:08:09.089: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 23%]
+04-07 22:08:09.089: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 24% ========== [0m
+04-07 22:08:09.089: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 24%]
+04-07 22:08:09.089: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 25% ========== [0m
+04-07 22:08:09.089: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 25%]
+04-07 22:08:09.093: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 26% ========== [0m
+04-07 22:08:09.093: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 26%]
+04-07 22:08:09.093: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 27% ========== [0m
+04-07 22:08:09.093: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 27%]
+04-07 22:08:09.093: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 27% ========== [0m
+04-07 22:08:09.093: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 27%]
+04-07 22:08:09.093: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 28% ========== [0m
+04-07 22:08:09.097: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 28%]
+04-07 22:08:09.156: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.156: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 7
+04-07 22:08:09.160: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.164: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.164: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 8
+04-07 22:08:09.164: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.164: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.164: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 9
+04-07 22:08:09.164: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.164: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.164: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 10
+04-07 22:08:09.164: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.168: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.168: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 10
+04-07 22:08:09.168: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.168: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.168: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 11
+04-07 22:08:09.168: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.168: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.168: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 12
+04-07 22:08:09.168: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.168: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.168: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 13
+04-07 22:08:09.175: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.175: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.175: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 13
+04-07 22:08:09.175: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.175: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 29% ========== [0m
+04-07 22:08:09.179: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 29%]
+04-07 22:08:09.179: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 30% ========== [0m
+04-07 22:08:09.179: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 30%]
+04-07 22:08:09.179: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 30% ========== [0m
+04-07 22:08:09.179: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 30%]
+04-07 22:08:09.179: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 31% ========== [0m
+04-07 22:08:09.179: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 31%]
+04-07 22:08:09.179: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 32% ========== [0m
+04-07 22:08:09.179: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 32%]
+04-07 22:08:09.179: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 33% ========== [0m
+04-07 22:08:09.183: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 33%]
+04-07 22:08:09.183: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 34% ========== [0m
+04-07 22:08:09.183: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 34%]
+04-07 22:08:09.183: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.183: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 14
+04-07 22:08:09.183: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.183: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.183: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 15
+04-07 22:08:09.183: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.187: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.187: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 16
+04-07 22:08:09.187: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.187: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.187: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 17
+04-07 22:08:09.187: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.187: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.187: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 17
+04-07 22:08:09.187: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.191: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.191: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 18
+04-07 22:08:09.191: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.195: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.195: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 19
+04-07 22:08:09.195: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.195: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.195: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 20
+04-07 22:08:09.195: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.195: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.199: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 20
+04-07 22:08:09.199: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.199: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.199: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 21
+04-07 22:08:09.199: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.199: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.199: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 22
+04-07 22:08:09.203: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.203: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.203: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 23
+04-07 22:08:09.203: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.203: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.203: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 23
+04-07 22:08:09.203: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.203: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.203: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 24
+04-07 22:08:09.203: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.207: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.207: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 25
+04-07 22:08:09.207: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.207: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.207: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 26
+04-07 22:08:09.211: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.211: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.211: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 27
+04-07 22:08:09.211: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.211: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.211: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 27
+04-07 22:08:09.211: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.214: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.214: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 28
+04-07 22:08:09.214: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.214: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:09.214: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:09.261: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.261: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 29
+04-07 22:08:09.265: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.269: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.269: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 30
+04-07 22:08:09.269: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.269: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.269: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 30
+04-07 22:08:09.269: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.269: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.269: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 31
+04-07 22:08:09.269: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.273: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.273: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 32
+04-07 22:08:09.273: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.273: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.273: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 33
+04-07 22:08:09.273: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.273: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.273: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 34
+04-07 22:08:09.273: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.336: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 34% ========== [0m
+04-07 22:08:09.336: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 34%]
+04-07 22:08:09.336: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 35% ========== [0m
+04-07 22:08:09.336: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 35%]
+04-07 22:08:09.336: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 36% ========== [0m
+04-07 22:08:09.336: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 36%]
+04-07 22:08:09.339: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 37% ========== [0m
+04-07 22:08:09.339: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 37%]
+04-07 22:08:09.339: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 37% ========== [0m
+04-07 22:08:09.339: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 37%]
+04-07 22:08:09.355: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.355: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 34
+04-07 22:08:09.355: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.355: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.355: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 35
+04-07 22:08:09.355: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.355: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.359: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 36
+04-07 22:08:09.359: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.359: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.359: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 37
+04-07 22:08:09.359: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.359: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.359: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 37
+04-07 22:08:09.359: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.378: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 38% ========== [0m
+04-07 22:08:09.378: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 38%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 39% ========== [0m
+04-07 22:08:09.382: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 39%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 40% ========== [0m
+04-07 22:08:09.382: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 40%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 41% ========== [0m
+04-07 22:08:09.382: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 41%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 41% ========== [0m
+04-07 22:08:09.382: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 41%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 42% ========== [0m
+04-07 22:08:09.382: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 42%]
+04-07 22:08:09.382: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 43% ========== [0m
+04-07 22:08:09.386: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 43%]
+04-07 22:08:09.410: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:09.410: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:09.410: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.410: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 38
+04-07 22:08:09.410: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.410: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.410: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 39
+04-07 22:08:09.410: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.410: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.414: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 40
+04-07 22:08:09.414: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.414: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 44% ========== [0m
+04-07 22:08:09.418: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 44%]
+04-07 22:08:09.418: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 44% ========== [0m
+04-07 22:08:09.418: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 44%]
+04-07 22:08:09.418: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 45% ========== [0m
+04-07 22:08:09.418: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 45%]
+04-07 22:08:09.421: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 46% ========== [0m
+04-07 22:08:09.421: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 46%]
+04-07 22:08:09.421: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 47% ========== [0m
+04-07 22:08:09.421: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 47%]
+04-07 22:08:09.421: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 47% ========== [0m
+04-07 22:08:09.421: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 47%]
+04-07 22:08:09.421: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 48% ========== [0m
+04-07 22:08:09.421: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 48%]
+04-07 22:08:09.421: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 49% ========== [0m
+04-07 22:08:09.425: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 49%]
+04-07 22:08:09.425: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 50% ========== [0m
+04-07 22:08:09.425: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 50%]
+04-07 22:08:09.425: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 51% ========== [0m
+04-07 22:08:09.425: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 51%]
+04-07 22:08:09.425: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 51% ========== [0m
+04-07 22:08:09.425: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 51%]
+04-07 22:08:09.425: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 52% ========== [0m
+04-07 22:08:09.425: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 52%]
+04-07 22:08:09.429: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.429: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 41
+04-07 22:08:09.429: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.429: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.429: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 41
+04-07 22:08:09.429: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.429: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.429: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 42
+04-07 22:08:09.429: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.429: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.433: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 43
+04-07 22:08:09.433: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.464: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.468: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 44
+04-07 22:08:09.468: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.468: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.468: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 44
+04-07 22:08:09.468: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.468: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.468: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 45
+04-07 22:08:09.468: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.472: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.472: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 46
+04-07 22:08:09.472: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.472: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.472: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 47
+04-07 22:08:09.472: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.472: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.472: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 47
+04-07 22:08:09.472: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.472: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.472: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 48
+04-07 22:08:09.476: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.476: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.476: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 49
+04-07 22:08:09.476: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.476: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.476: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 50
+04-07 22:08:09.476: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.476: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.476: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 51
+04-07 22:08:09.476: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.476: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.480: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 51
+04-07 22:08:09.480: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.480: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.480: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 52
+04-07 22:08:09.480: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 53% ========== [0m
+04-07 22:08:09.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 53%]
+04-07 22:08:09.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 54% ========== [0m
+04-07 22:08:09.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 54%]
+04-07 22:08:09.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 54% ========== [0m
+04-07 22:08:09.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 54%]
+04-07 22:08:09.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 55% ========== [0m
+04-07 22:08:09.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 55%]
+04-07 22:08:09.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 56% ========== [0m
+04-07 22:08:09.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 56%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 57% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 57%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 58% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 58%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 58% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 58%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 59% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 59%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 60% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 60%]
+04-07 22:08:09.586: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 61% ========== [0m
+04-07 22:08:09.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 61%]
+04-07 22:08:09.589: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 61% ========== [0m
+04-07 22:08:09.589: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 61%]
+04-07 22:08:09.589: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 62% ========== [0m
+04-07 22:08:09.589: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 62%]
+04-07 22:08:09.589: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 63% ========== [0m
+04-07 22:08:09.589: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 63%]
+04-07 22:08:09.593: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.593: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 53
+04-07 22:08:09.593: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.593: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.593: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 54
+04-07 22:08:09.593: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.597: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.597: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 54
+04-07 22:08:09.597: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.597: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.597: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 55
+04-07 22:08:09.597: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.597: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.601: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 56
+04-07 22:08:09.601: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.601: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.601: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 57
+04-07 22:08:09.605: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.605: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.605: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 58
+04-07 22:08:09.605: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.609: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.609: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 58
+04-07 22:08:09.609: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.609: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.609: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 59
+04-07 22:08:09.609: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.609: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.609: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 60
+04-07 22:08:09.609: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.609: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.609: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 61
+04-07 22:08:09.609: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.613: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.613: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 61
+04-07 22:08:09.613: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.613: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.613: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 62
+04-07 22:08:09.613: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.613: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.613: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 63
+04-07 22:08:09.613: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:09.640: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:09.640: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:09.886: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:09.886: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:09.937: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 64% ========== [0m
+04-07 22:08:09.937: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 64%]
+04-07 22:08:09.961: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:09.961: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 64
+04-07 22:08:09.961: V/LIBVLC_JNI(7048): Bitrate=38 KB/S
+04-07 22:08:10.058: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 65% ========== [0m
+04-07 22:08:10.058: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 65%]
+04-07 22:08:10.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 65% ========== [0m
+04-07 22:08:10.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 65%]
+04-07 22:08:10.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 66% ========== [0m
+04-07 22:08:10.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 66%]
+04-07 22:08:10.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 67% ========== [0m
+04-07 22:08:10.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 67%]
+04-07 22:08:10.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 68% ========== [0m
+04-07 22:08:10.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 68%]
+04-07 22:08:10.062: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 68% ========== [0m
+04-07 22:08:10.062: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 68%]
+04-07 22:08:10.066: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 69% ========== [0m
+04-07 22:08:10.066: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 69%]
+04-07 22:08:10.066: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 70% ========== [0m
+04-07 22:08:10.066: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 70%]
+04-07 22:08:10.066: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 71% ========== [0m
+04-07 22:08:10.066: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 71%]
+04-07 22:08:10.066: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 71% ========== [0m
+04-07 22:08:10.066: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 71%]
+04-07 22:08:10.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 72% ========== [0m
+04-07 22:08:10.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 72%]
+04-07 22:08:10.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 73% ========== [0m
+04-07 22:08:10.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 73%]
+04-07 22:08:10.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 74% ========== [0m
+04-07 22:08:10.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 74%]
+04-07 22:08:10.070: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 75% ========== [0m
+04-07 22:08:10.070: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 75%]
+04-07 22:08:10.093: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.093: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 65
+04-07 22:08:10.093: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.093: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.097: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 65
+04-07 22:08:10.097: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.097: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.097: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 66
+04-07 22:08:10.097: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.097: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.097: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 67
+04-07 22:08:10.097: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.097: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.097: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 68
+04-07 22:08:10.097: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.097: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.101: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 68
+04-07 22:08:10.101: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.101: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.101: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 69
+04-07 22:08:10.101: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.101: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.101: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 70
+04-07 22:08:10.101: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.101: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.101: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 71
+04-07 22:08:10.101: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.101: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.105: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 71
+04-07 22:08:10.105: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.105: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.105: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 72
+04-07 22:08:10.105: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.105: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.105: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 73
+04-07 22:08:10.109: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.109: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.109: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 74
+04-07 22:08:10.109: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.109: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.109: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 75
+04-07 22:08:10.109: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.113: D/MediaPlayerEngine(7048): [0x2a4829d8]main vout display: auto hiding mouse
+04-07 22:08:10.132: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:10.132: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:10.503: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:10.503: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:10.503: D/dalvikvm(7048): GC_CONCURRENT freed 2263K, 26% free 12536K/16903K, paused 4ms+26ms, total 106ms
+04-07 22:08:10.566: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 75% ========== [0m
+04-07 22:08:10.566: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 75%]
+04-07 22:08:10.566: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 76% ========== [0m
+04-07 22:08:10.570: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 76%]
+04-07 22:08:10.570: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 77% ========== [0m
+04-07 22:08:10.570: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 77%]
+04-07 22:08:10.570: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 78% ========== [0m
+04-07 22:08:10.570: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 78%]
+04-07 22:08:10.574: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 78% ========== [0m
+04-07 22:08:10.574: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 78%]
+04-07 22:08:10.574: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 79% ========== [0m
+04-07 22:08:10.574: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 79%]
+04-07 22:08:10.574: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 80% ========== [0m
+04-07 22:08:10.574: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 80%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 81% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 81%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 82% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 82%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 82% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 82%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 83% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 83%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 84% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 84%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 85% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 85%]
+04-07 22:08:10.578: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 85% ========== [0m
+04-07 22:08:10.578: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 85%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 86% ========== [0m
+04-07 22:08:10.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 86%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 87% ========== [0m
+04-07 22:08:10.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 87%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 88% ========== [0m
+04-07 22:08:10.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 88%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 89% ========== [0m
+04-07 22:08:10.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 89%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 89% ========== [0m
+04-07 22:08:10.582: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 89%]
+04-07 22:08:10.582: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 90% ========== [0m
+04-07 22:08:10.586: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 90%]
+04-07 22:08:10.601: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.601: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 75
+04-07 22:08:10.601: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.601: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.601: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 76
+04-07 22:08:10.601: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.601: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.601: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 77
+04-07 22:08:10.605: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.605: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.605: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 78
+04-07 22:08:10.605: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.605: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.605: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 78
+04-07 22:08:10.613: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.613: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.613: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 91% ========== [0m
+04-07 22:08:10.617: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 91%]
+04-07 22:08:10.617: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 92% ========== [0m
+04-07 22:08:10.617: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 92%]
+04-07 22:08:10.617: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 92% ========== [0m
+04-07 22:08:10.617: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 92%]
+04-07 22:08:10.617: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 93% ========== [0m
+04-07 22:08:10.617: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 93%]
+04-07 22:08:10.617: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 94% ========== [0m
+04-07 22:08:10.617: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 94%]
+04-07 22:08:10.621: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 95% ========== [0m
+04-07 22:08:10.621: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 95%]
+04-07 22:08:10.621: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 95% ========== [0m
+04-07 22:08:10.621: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 95%]
+04-07 22:08:10.621: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 96% ========== [0m
+04-07 22:08:10.621: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 96%]
+04-07 22:08:10.621: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 79
+04-07 22:08:10.621: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.621: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.621: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 80
+04-07 22:08:10.625: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.625: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.625: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 81
+04-07 22:08:10.625: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.625: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.625: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 82
+04-07 22:08:10.625: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.625: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.625: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 82
+04-07 22:08:10.625: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.628: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.628: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 83
+04-07 22:08:10.628: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.628: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.628: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 84
+04-07 22:08:10.628: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.628: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.628: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 85
+04-07 22:08:10.632: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.632: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.632: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 85
+04-07 22:08:10.632: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.632: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.632: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 86
+04-07 22:08:10.632: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.632: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.632: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 87
+04-07 22:08:10.632: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.632: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.636: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 88
+04-07 22:08:10.636: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.636: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.636: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 89
+04-07 22:08:10.636: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.636: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.636: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 89
+04-07 22:08:10.636: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.636: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.636: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 90
+04-07 22:08:10.636: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.668: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.668: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 91
+04-07 22:08:10.668: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.668: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.668: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 92
+04-07 22:08:10.668: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.668: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.668: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 92
+04-07 22:08:10.671: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.671: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.671: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 93
+04-07 22:08:10.671: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.671: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.671: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 94
+04-07 22:08:10.671: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.671: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.671: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 95
+04-07 22:08:10.671: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.671: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.671: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 95
+04-07 22:08:10.671: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.671: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.675: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 96
+04-07 22:08:10.675: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.675: D/VlcVideoView(7048): ==================== handle event: 16390
+04-07 22:08:10.675: D/VlcVideoView(7048): player progress: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 1573 -1
+04-07 22:08:10.859: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 97% ========== [0m
+04-07 22:08:10.859: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 97%]
+04-07 22:08:10.886: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 98% ========== [0m
+04-07 22:08:10.890: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 98%]
+04-07 22:08:10.890: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 99% ========== [0m
+04-07 22:08:10.890: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 99%]
+04-07 22:08:10.890: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 99% ========== [0m
+04-07 22:08:10.890: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [Caching finished 99%]
+04-07 22:08:10.890: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 100% ========== [0m
+04-07 22:08:10.890: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 0% ========== [0m
+04-07 22:08:10.894: I/Togic VlcMediaPlayer(7048): [0;32m in java, MediaParsedChanged info received [0m
+04-07 22:08:10.894: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: Stream buffering done (3018 ms in 2302 ms)
+04-07 22:08:10.894: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: Decoder buffering done in 0 ms
+04-07 22:08:10.898: W/MediaPlayerEngine(7048): [0x2a21b958]main audio output: PTS is out of range (-3402), dropping buffer
+04-07 22:08:10.898: W/MediaPlayerEngine(7048): [0x2a21b958]main audio output: PTS is out of range (-26473), dropping buffer
+04-07 22:08:10.902: D/MediaPlayerEngine(7048): [0x2a21b958]audiotrack_android audio output: Start AudioTrack!
+04-07 22:08:10.902: W/MediaPlayerEngine(7048): [0x2a3036c8]yuv2rgb filter: can't get output picture
+04-07 22:08:10.910: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.914: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 97
+04-07 22:08:10.914: D/MediaPlayerEngine(7048): [0x2a21b958]audiotrack_android audio output: Pause AudioTrack!
+04-07 22:08:10.918: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: playback already paused, pause audio output
+04-07 22:08:10.918: D/MediaPlayerEngine(7048): [0x2a21b958]audiotrack_android audio output: Pause AudioTrack!
+04-07 22:08:10.918: I/Togic VlcMediaPlayer(7048): ============== mediaplayer state changed: 4
+04-07 22:08:10.918: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.953: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.953: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 98
+04-07 22:08:10.957: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.961: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.961: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 99
+04-07 22:08:10.961: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.961: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.961: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 99
+04-07 22:08:10.961: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.961: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.964: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 100
+04-07 22:08:10.964: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:10.964: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0
+04-07 22:08:10.964: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:10.964: D/VlcVideoView(7048): ==================== handle event: 16389
+04-07 22:08:10.964: D/VlcVideoView(7048): player prepared: com.togic.mediacenter.player.VlcMediaPlayer@4130b288
+04-07 22:08:10.964: V/LIBVLC_JNI(7048): ========== set flag doSeeking=1 ==========
+04-07 22:08:10.964: V/Togic VlcMediaPlayer(7048): [1;30m ========== Buffering percentage = 0% ========== [0m
+04-07 22:08:10.964: W/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: early picture skipped
+04-07 22:08:10.964: W/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: received buffer in the future
+04-07 22:08:10.996: D/MediaPlayerEngine(7048): [0x2a21b958]audiotrack_android audio output: Flush AudioTrack!
+04-07 22:08:11.000: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: DEMUX_SET_TIME: 1556000
+04-07 22:08:11.003: V/LIBVLC_JNI(7048): ========== set flag doPause=0 ==========
+04-07 22:08:11.003: V/LIBVLC_JNI(7048): ========== is doSeeking, will start player after seek complete!
+04-07 22:08:11.003: D/VlcVideoView(7048): ==================== handle event: 16391
+04-07 22:08:11.003: V/VlcVideoView(7048): video size change: com.togic.mediacenter.player.VlcMediaPlayer@4130b288640 480
+04-07 22:08:11.023: I/VlcVideoView(7048): surface change, holder: android.view.SurfaceView$4@4110ff58 W:640 H:480 format:4
+04-07 22:08:11.050: D/VlcVideoView(7048): ==================== handle event: 16385
+04-07 22:08:11.050: D/VlcVideoView(7048): player buffering update: com.togic.mediacenter.player.VlcMediaPlayer@4130b288 0
+04-07 22:08:11.050: V/LIBVLC_JNI(7048): Bitrate=76 KB/S
+04-07 22:08:11.089: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: seeking: don't enqueue packet!
+04-07 22:08:11.089: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: demuxer_Thread: seek to 1556000
+04-07 22:08:26.257: I/VlcVideoView(7048): surface destroy, holder: android.view.SurfaceView$4@4110ff58
+04-07 22:08:26.257: I/VlcVideoView(7048): ============= stop play back.
+04-07 22:08:26.257: I/VlcVideoView(7048): ============= stop play back =============
+04-07 22:08:26.257: I/Togic VlcMediaPlayer(7048): ==================== will detach display
+04-07 22:08:26.257: V/LIBVLC_JNI(7048): [0;34m kill_player in: number of instances 1 [0m
+04-07 22:08:26.257: D/MediaPlayerEngine(7048): about to destroy 0x2a3b04b8
+04-07 22:08:26.257: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a2182b0]main demux: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: waitpipe: object killed
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a251048]main stream: [0;32;31m b_die = true [0m
+04-07 22:08:26.261: D/MediaPlayerEngine(7048): [0x2a25de98]main stream: [0;32;31m b_die = true [0m
+04-07 22:08:26.265: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: control: stopping input
+04-07 22:08:26.265: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [1;32m End of the input thread: start... [0m
+04-07 22:08:26.308: W/MediaPlayerEngine(7048): [0x2a3036c8]yuv2rgb filter: can't get output picture
+04-07 22:08:26.308: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: removing module "avcodec"
+04-07 22:08:26.308: D/MediaPlayerEngine(7048): [0x2a26f8e8]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+04-07 22:08:26.308: W/MediaPlayerEngine(7048): [0x2a3036c8]yuv2rgb filter: can't get output picture
+04-07 22:08:26.308: D/MediaPlayerEngine(7048): [0x2a26f8e8]main decoder: killing decoder fourcc `h264', 8 PES in FIFO
+04-07 22:08:26.308: D/MediaPlayerEngine(7048): [0x2a3b04b8]main generic: saving a free vout
+04-07 22:08:26.312: D/MediaPlayerEngine(7048): [0x2a3b04b8]main generic: reusing provided vout
+04-07 22:08:26.328: D/com.togic.tv.channel.ChannelDateSourceImpl(7048): url:http://tv.togic.com:8080/ShowTimeService/program/13_04_07/309
+04-07 22:08:26.328: D/com.togic.tv.channel.Utils(7048): load path:http://tv.togic.com:8080/ShowTimeService/program/13_04_07/309
+04-07 22:08:26.332: D/com.togic.tv.channel.Utils(7048): return cache channel list
+04-07 22:08:26.332: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: removing module "avcodec"
+04-07 22:08:26.332: D/MediaPlayerEngine(7048): [0x2a2034d0]avcodec decoder: ffmpeg codec (MPEG AAC Audio) stopped
+04-07 22:08:26.332: D/MediaPlayerEngine(7048): [0x2a2034d0]main decoder: killing decoder fourcc `mp4a', 13 PES in FIFO
+04-07 22:08:26.332: D/MediaPlayerEngine(7048): [0x2a176008]main audio filter: removing module "ugly_resampler"
+04-07 22:08:26.336: D/MediaPlayerEngine(7048): [0x2a21b958]main audio output: removing module "audiotrack_android"
+04-07 22:08:26.339: D/com.togic.tv.channel.Utils(7048): return network channel list
+04-07 22:08:26.339: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: avformat_interrupt_cb: ========== interrupted! ==========
+04-07 22:08:26.339: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: avformat_interrupt_cb: ========== interrupted! ==========
+04-07 22:08:26.339: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: demuxer_Thread EOF - signal wait
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a1b3ed0]main generic: removing module "fixed32_mixer"
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a3b04b8]main generic: releasing audio output
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]main demux: removing module "avformat"
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: CloseDemux
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: CloseDemux - signal demuxer_Thread to exit
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: CloseDemux - signal wait!
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: demuxer_Thread EOF - signal rx'd
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: demuxer_Thread exit!
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a2182b0]avformat demux: CloseDemux - rx'd!
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a25de98]main stream: removing module "stream_filter_record"
+04-07 22:08:26.343: D/MediaPlayerEngine(7048): [0x2a13d3d8]main access: removing module "access_http"
+04-07 22:08:26.347: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: Program doesn't contain anymore ES
+04-07 22:08:26.347: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: [1;32m End of the input thread: finished... [0m
+04-07 22:08:26.347: D/MediaPlayerEngine(7048): [0x2a24cc58]main input: TIMER input launching for 'http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8' : 1727.460 ms - Total 1727.460 ms / 1 intvls (Avg 1727.460 ms)

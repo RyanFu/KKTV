@@ -1,0 +1,10 @@
+bin/*
+gen/*
+libs/*
+obj/*
+assets/bin/*
+assets/index.txt
+
+local.properties
+
+!libs/*.jar

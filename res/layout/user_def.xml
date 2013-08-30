@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text"
+            android:text="输入网址" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_home"
+            android:visibility="gone" />
+
+        <include layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/search"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_search"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/search_devide"
+            layout="@layout/layout_divider_header"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/refresh_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/ic_refresh"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/user_def_note"
+        android:textColor="#ff4b4949"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/test_uri"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/user_def_hint"
+        android:textColorHint="#238745" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/test_play"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/user_def_open" />
+
+        <Button
+            android:id="@+id/clear_play"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@id/test_play"
+            android:text="@string/user_def_clear" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/example1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/example1"
+        android:textColor="#ff4b4949"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/example2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/example2"
+        android:textColor="#ff4b4949"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/example3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/example3"
+        android:textColor="#ff4b4949"
+        android:textSize="15sp" />
+
+</LinearLayout>

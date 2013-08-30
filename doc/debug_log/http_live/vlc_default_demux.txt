@@ -1,0 +1,180 @@
+03-22 22:24:51.957: D/DANMAKU-PlayerActivity(6519): createMediaPlayer() http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 22:24:51.957: D/DANMAKU-AbsMediaPlayer(6519): using VlcMediaPlayer
+03-22 22:24:51.957: E/faplayer(6519): [0x2a20b558]main generic: option marq-color does not exist
+03-22 22:24:51.957: E/faplayer(6519): [0x2a20b558]main generic: option marq-opacity does not exist
+03-22 22:24:51.957: E/faplayer(6519): [0x2a20b558]main generic: option marq-position does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option marq-refresh does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option marq-size does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option marq-timeout does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option marq-x does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option marq-y does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-x does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-y does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-delay does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-repeat does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-opacity does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option logo-position does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option contrast does not exist
+03-22 22:24:51.960: E/faplayer(6519): [0x2a20b558]main generic: option brightness does not exist
+03-22 22:24:51.964: E/faplayer(6519): [0x2a20b558]main generic: option hue does not exist
+03-22 22:24:51.964: E/faplayer(6519): [0x2a20b558]main generic: option saturation does not exist
+03-22 22:24:51.964: E/faplayer(6519): [0x2a20b558]main generic: option gamma does not exist
+03-22 22:24:51.968: D/faplayer(6519): [0x2a2249d0]main input: Creating an input for 'http://web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 22:24:51.992: D/faplayer(6519): [0x2a2249d0]main input: using timeshift granularity of 50 MiB, in path '/data/local/tmp'
+03-22 22:24:51.992: D/faplayer(6519): [0x2a2249d0]main input: `http://web-play.pptv.com/web-m3u8-300164.m3u8' gives access `http' demux `' path `web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 22:24:51.992: D/faplayer(6519): [0x2a2249d0]main input: creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8' file='(null)'
+03-22 22:24:51.996: D/faplayer(6519): [0x2a22f7d8]main demux: looking for access_demux module: 0 candidates
+03-22 22:24:51.996: D/faplayer(6519): [0x2a22f7d8]main demux: no access_demux module matched "http"
+03-22 22:24:52.003: D/faplayer(6519): [0x2a22f7d8]main demux: TIMER module_need() : 10.814 ms - Total 10.814 ms / 1 intvls (Avg 10.814 ms)
+03-22 22:24:52.003: D/faplayer(6519): [0x2a2249d0]main input: creating access 'http' location='web-play.pptv.com/web-m3u8-300164.m3u8', path='(null)'
+03-22 22:24:52.007: D/faplayer(6519): [0x2a22c2c0]main access: looking for access module: 2 candidates
+03-22 22:24:52.007: D/faplayer(6519): [0x2a22c2c0]access_http access: http: server='web-play.pptv.com' port=80 file='/web-m3u8-300164.m3u8'
+03-22 22:24:52.007: D/faplayer(6519): [0x2a22c2c0]main access: net: connecting to web-play.pptv.com port 80
+03-22 22:24:52.035: W/IInputConnectionWrapper(6519): getExtractedText on inactive InputConnection
+03-22 22:24:52.082: D/faplayer(6519): [0x2a22c2c0]main access: connection succeeded (socket = 48)
+03-22 22:24:52.148: W/IInputConnectionWrapper(6519): getExtractedText on inactive InputConnection
+03-22 22:24:52.222: D/faplayer(6519): [0x2a22c2c0]access_http access: protocol 'HTTP' answer code 200
+03-22 22:24:52.222: D/faplayer(6519): [0x2a22c2c0]access_http access: Server: PPWS/1.0.0
+03-22 22:24:52.226: D/faplayer(6519): [0x2a22c2c0]access_http access: Content-Type: text/plain; charset=UTF-8
+03-22 22:24:52.230: D/faplayer(6519): [0x2a22c2c0]access_http access: Transfer-Encoding: chunked
+03-22 22:24:52.230: D/faplayer(6519): [0x2a22c2c0]access_http access: Connection: close
+03-22 22:24:52.230: D/faplayer(6519): [0x2a22c2c0]access_http access: Accepting Cookie: JSESSIONID=abcmY_HGUgDg89eHoFs2t; path=/
+03-22 22:24:52.230: D/faplayer(6519): [0x2a22c2c0]main access: using access module "access_http"
+03-22 22:24:52.234: D/faplayer(6519): [0x2a22c2c0]main access: TIMER module_need() : 226.503 ms - Total 226.503 ms / 1 intvls (Avg 226.503 ms)
+03-22 22:24:52.234: D/faplayer(6519): [0x2a241990]main stream: Using stream method for AStream*
+03-22 22:24:52.234: D/faplayer(6519): [0x2a241990]main stream: starting pre-buffering
+03-22 22:24:52.234: D/faplayer(6519): [0x2a241990]main stream: received first data after 0 ms
+03-22 22:24:52.238: D/faplayer(6519): [0x2a241990]main stream: pre-buffering done 299 bytes in 0s - 600 KiB/s
+03-22 22:24:52.238: D/faplayer(6519): [0x2a241ac0]main stream: looking for stream_filter module: 1 candidate
+03-22 22:24:52.238: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: HTTP Live Streaming (web-play.pptv.com/web-m3u8-300164.m3u8)
+03-22 22:24:52.238: D/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: parse_M3U8
+03-22 22:24:52.238: D/faplayer(6519): #EXTM3U
+03-22 22:24:52.238: D/faplayer(6519): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 22:24:52.238: D/faplayer(6519): http://117.135.161.14:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 22:24:52.238: D/faplayer(6519): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 22:24:52.238: D/faplayer(6519): http://112.25.19.199:80:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 22:24:52.238: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: Meta playlist
+03-22 22:24:52.238: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: bandwidth adaption detected (program-id=1, bandwidth=400000).
+03-22 22:24:52.238: D/faplayer(6519): [0x2a241ac0]main stream: creating access 'http' location='117.135.161.14:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 22:24:52.238: D/faplayer(6519): [0x2a23c8a8]main access: looking for access module: 2 candidates
+03-22 22:24:52.238: D/faplayer(6519): [0x2a23c8a8]access_http access: http: server='117.135.161.14' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 22:24:52.238: D/faplayer(6519): [0x2a23c8a8]main access: net: connecting to 117.135.161.14 port 80
+03-22 22:24:52.281: D/faplayer(6519): [0x2a23c8a8]main access: connection succeeded (socket = 53)
+03-22 22:24:52.363: D/faplayer(6519): [0x2a23c8a8]access_http access: protocol 'HTTP' answer code 200
+03-22 22:24:52.363: D/faplayer(6519): [0x2a23c8a8]access_http access: Server: nginx/5.1
+03-22 22:24:52.367: D/faplayer(6519): [0x2a23c8a8]access_http access: Content-Type: application/x-mpegURL
+03-22 22:24:52.367: D/faplayer(6519): [0x2a23c8a8]access_http access: Transfer-Encoding: chunked
+03-22 22:24:52.367: D/faplayer(6519): [0x2a23c8a8]access_http access: Connection: close
+03-22 22:24:52.367: D/faplayer(6519): [0x2a23c8a8]main access: using access module "access_http"
+03-22 22:24:52.367: D/faplayer(6519): [0x2a23c8a8]main access: TIMER module_need() : 129.467 ms - Total 129.467 ms / 1 intvls (Avg 129.467 ms)
+03-22 22:24:52.367: D/faplayer(6519): [0x2a22fcd0]main stream: Using stream method for AStream*
+03-22 22:24:52.371: D/faplayer(6519): [0x2a22fcd0]main stream: starting pre-buffering
+03-22 22:24:52.371: D/faplayer(6519): [0x2a22fcd0]main stream: received first data after 0 ms
+03-22 22:24:52.371: D/faplayer(6519): [0x2a22fcd0]main stream: pre-buffering done 1024 bytes in 0s - 4329 KiB/s
+03-22 22:24:52.484: D/faplayer(6519): [0x2a23c8a8]main access: removing module "access_http"
+03-22 22:24:52.488: D/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: parse_M3U8
+03-22 22:24:52.488: D/faplayer(6519): #EXTM3U
+03-22 22:24:52.488: D/faplayer(6519): #EXT-X-TARGETDURATION:5
+03-22 22:24:52.488: D/faplayer(6519): #EXT-X-MEDIA-SEQUENCE:272792089
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960445.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960450.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960455.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960460.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960465.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960470.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960475.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363960480.ts?chid=300164&pre=ikan&
+03-22 22:24:52.488: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.488: D/faplayer(6519): http://117.135.161
+03-22 22:24:52.488: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: Live Playlist HLS protocol version: 1
+03-22 22:24:52.519: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: bandwidth adaption detected (program-id=1, bandwidth=400000).
+03-22 22:24:52.519: D/faplayer(6519): [0x2a241ac0]main stream: creating access 'http' location='112.25.19.199:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 22:24:52.519: D/faplayer(6519): [0x2a2575b0]main access: looking for access module: 2 candidates
+03-22 22:24:52.519: D/faplayer(6519): [0x2a2575b0]access_http access: http: server='112.25.19.199' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 22:24:52.519: D/faplayer(6519): [0x2a2575b0]main access: net: connecting to 112.25.19.199 port 80
+03-22 22:24:52.562: D/faplayer(6519): [0x2a2575b0]main access: connection succeeded (socket = 53)
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]access_http access: protocol 'HTTP' answer code 200
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]access_http access: Server: nginx/5.1
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]access_http access: Content-Type: application/x-mpegURL
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]access_http access: Transfer-Encoding: chunked
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]access_http access: Connection: close
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]main access: using access module "access_http"
+03-22 22:24:52.671: D/faplayer(6519): [0x2a2575b0]main access: TIMER module_need() : 152.495 ms - Total 152.495 ms / 1 intvls (Avg 152.495 ms)
+03-22 22:24:52.671: D/faplayer(6519): [0x2a258cf8]main stream: Using stream method for AStream*
+03-22 22:24:52.671: D/faplayer(6519): [0x2a258cf8]main stream: starting pre-buffering
+03-22 22:24:52.671: D/faplayer(6519): [0x2a258cf8]main stream: received first data after 0 ms
+03-22 22:24:52.671: D/faplayer(6519): [0x2a258cf8]main stream: pre-buffering done 1024 bytes in 0s - 5917 KiB/s
+03-22 22:24:52.796: D/faplayer(6519): [0x2a2575b0]main access: removing module "access_http"
+03-22 22:24:52.796: D/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: parse_M3U8
+03-22 22:24:52.796: D/faplayer(6519): #EXTM3U
+03-22 22:24:52.796: D/faplayer(6519): #EXT-X-TARGETDURATION:5
+03-22 22:24:52.796: D/faplayer(6519): #EXT-X-MEDIA-SEQUENCE:272792089
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960445.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960450.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960455.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960460.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960465.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960470.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960475.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363960480.ts?chid=300164&pre=ikan&
+03-22 22:24:52.796: D/faplayer(6519): #EXTINF:5,
+03-22 22:24:52.796: D/faplayer(6519): http://112.25.19.199/live/
+03-22 22:24:52.796: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: Live Playlist HLS protocol version: 1
+03-22 22:24:52.816: I/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: Choose segment 360/363 (sequence=272792449)
+03-22 22:24:52.816: D/faplayer(6519): [0x2a241ac0]main stream: creating access 'http' location='117.135.161.14:80/live/847a4e1e97584d39a961f5604e90c1c4/1363962245.ts?chid=300164&pre=ikan&
+', path='(null)'
+03-22 22:24:52.820: D/faplayer(6519): [0x2a269fd0]main access: looking for access module: 2 candidates
+03-22 22:24:52.820: D/faplayer(6519): [0x2a269fd0]access_http access: http: server='117.135.161.14' port=80 file='/live/847a4e1e97584d39a961f5604e90c1c4/1363962245.ts?chid=300164&pre=ikan&
+'
+03-22 22:24:52.820: D/faplayer(6519): [0x2a269fd0]main access: net: connecting to 117.135.161.14 port 80
+03-22 22:24:52.859: D/faplayer(6519): [0x2a269fd0]main access: connection succeeded (socket = 53)
+03-22 22:24:52.894: E/faplayer(6519): [0x2a269fd0]access_http access: invalid HTTP reply '<html>'
+03-22 22:24:52.894: D/faplayer(6519): [0x2a269fd0]access_http access: switching to HTTP version 1.0
+03-22 22:24:52.894: D/faplayer(6519): [0x2a269fd0]main access: net: connecting to 117.135.161.14 port 80
+03-22 22:24:52.933: D/faplayer(6519): [0x2a269fd0]main access: connection succeeded (socket = 53)
+03-22 22:24:52.964: E/faplayer(6519): [0x2a269fd0]access_http access: invalid HTTP reply '<html>'
+03-22 22:24:52.964: D/faplayer(6519): [0x2a269fd0]main access: net: connecting to 117.135.161.14 port 80
+03-22 22:24:53.003: D/faplayer(6519): [0x2a269fd0]main access: connection succeeded (socket = 53)
+03-22 22:24:53.039: E/faplayer(6519): [0x2a269fd0]access_mms access: invalid HTTP reply '<html>'
+03-22 22:24:53.039: D/faplayer(6519): [0x2a269fd0]main access: no access module matching "http" could be loaded
+03-22 22:24:53.039: D/faplayer(6519): [0x2a269fd0]main access: TIMER module_need() : 219.701 ms - Total 219.701 ms / 1 intvls (Avg 219.701 ms)
+03-22 22:24:53.039: E/faplayer(6519): [0x2a241ac0]main stream: no suitable access module for `http://117.135.161.14:80/live/847a4e1e97584d39a961f5604e90c1c4/1363962245.ts?chid=300164&pre=ikan&
+'
+03-22 22:24:53.039: E/faplayer(6519): [0x2a241ac0]stream_filter_httplive stream: fetching first segment failed.
+03-22 22:24:53.039: D/faplayer(6519): [0x2a241ac0]main stream: no stream_filter module matching "any" could be loaded
+03-22 22:24:53.039: D/faplayer(6519): [0x2a241ac0]main stream: TIMER module_need() : 803.648 ms - Total 803.648 ms / 1 intvls (Avg 803.648 ms)
+03-22 22:24:53.039: D/faplayer(6519): [0x2a26ab38]main stream: looking for stream_filter module: 1 candidate
+03-22 22:24:53.039: D/faplayer(6519): [0x2a26ab38]main stream: using stream_filter module "stream_filter_record"
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ab38]main stream: TIMER module_need() : 0.768 ms - Total 0.768 ms / 1 intvls (Avg 0.768 ms)
+03-22 22:24:53.043: D/faplayer(6519): [0x2a2249d0]main input: creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8' file='(null)'
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ace8]main demux: looking for demux module: 8 candidates
+03-22 22:24:53.043: E/faplayer(6519): [0x2a26ace8]mpgv demux: cannot peek
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ace8]avformat demux: trying url: http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 22:24:53.043: W/faplayer(6519): [0x2a26ace8]avformat demux: cannot peek
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ace8]main demux: no demux module matching "any" could be loaded
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ace8]main demux: TIMER module_need() : 1.299 ms - Total 1.299 ms / 1 intvls (Avg 1.299 ms)
+03-22 22:24:53.043: E/faplayer(6519): [0x2a2249d0]main input: no suitable demux module for `http/://web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 22:24:53.043: E/faplayer(6519): [0x2a2249d0]main input: VLC can't recognize the input's format
+03-22 22:24:53.043: E/faplayer(6519): [0x2a2249d0]main input: The format of 'http://web-play.pptv.com/web-m3u8-300164.m3u8' cannot be detected. Have a look at the log for details.
+03-22 22:24:53.043: D/faplayer(6519): [0x2a26ab38]main stream: removing module "stream_filter_record"
+03-22 22:24:53.043: D/faplayer(6519): [0x2a22c2c0]main access: removing module "access_http"
+03-22 22:24:53.046: D/faplayer(6519): about to destroy 0x2a20b558
+03-22 22:24:53.046: D/faplayer(6519): [0x2a2249d0]main input: TIMER input launching for 'http://web-play.pptv.com/web-m3u8-300164.m3u8' : 1078.424 ms - Total 1078.424 ms / 1 intvls (Avg 1078.424 ms)
+03-22 22:25:09.195: W/InputEventReceiver(6519): Attempted to finish an input event but the input event receiver has already been disposed.
+

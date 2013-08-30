@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Android Service介绍 - Trinea - 博客园</title>
+<link type="text/css" rel="stylesheet" href="http://common.cnblogs.com/blog/css/common.css?id=20130323"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="http://common.cnblogs.com/Skins/coffee/style.css?id=20130323"/>
+<link type="text/css" rel="stylesheet" href="http://common.cnblogs.com/blog/css/common2.css"/>
+<link type="text/css" rel="stylesheet" href="http://common.cnblogs.com/css/shStyle.css"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/trinea/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/trinea/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/trinea/wlwmanifest.xml"/>
+<script src="http://common.cnblogs.com/script/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">
+var currentBlogApp = 'trinea';
+</script>
+<script src="http://common.cnblogs.com/blog/script/common.js?id=20130323" type="text/javascript"></script> 
+<script src="http://common.cnblogs.com/script/json2.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://common.cnblogs.com/script/syntaxHighlighter.js"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/trinea/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/trinea/">Trinea</a></h1>
+<h2>博客迁移至 http://www.trinea.cn/ 欢迎关注^_^</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<!--done-->
+			<ul id="navList">
+				<li><a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+				<li><a id="MyLinks1_IngLink" class="menu" href="http://home.cnblogs.com/ing/">闪存</a></li>
+				<li><a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/trinea/">首页</a></li>
+				<li><a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://www.cnblogs.com/trinea/admin/EditPosts.aspx?opt=1">新随笔</a></li>
+				<li></li>
+				<li><a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://www.cnblogs.com/trinea/admin/EditPosts.aspx">管理</a></li>
+				<li><a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/trinea/rss">订阅</a>
+				<a id="MyLinks1_XMLLink" class="aHeaderXML" href="http://www.cnblogs.com/trinea/rss"><img src="/Skins/Custom/images/rss.gif" alt="订阅" /></a></li>
+			</ul>
+
+
+			<div class="blogStats">
+				
+				
+<!--done-->
+随笔- 53&nbsp;
+文章- 0&nbsp;
+评论- 11&nbsp;
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+	
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/trinea/archive/2012/11/08/2699856.html">Android Service介绍</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p>本文主要介绍<strong>Service的概念及作用、使用(包括长时间运行的服务、应用内交互的服务、应用间交互的服务的分别举例、生命周期、使用场景)、特殊的</strong><strong>Service</strong>。代码地址<a href="https://code.google.com/p/trinea-android-demo/source/browse/trunk/src/cn/trinea/android/demo/ServiceDemo.java" target="_blank">AndroidServiceDemo@GoogleCode</a>。示例APK地址可见<a href="https://code.google.com/p/trinea-android-demo/downloads/list" target="_blank">TrineaAndroidDemo@GoogleCode</a>。</p>
+<div>&nbsp;</div>
+<div><strong><span>1、概念及作用</span></strong></div>
+<p>由于ANR对Activity和BroadcastReceiver响应时间的限制（Activity对事件响应不超过5秒，BroadcastReceiver执行不超过10秒），使得在其中都不适合执行较耗时操作，这样像网络、数据库、复杂计算这类耗时操作的执行就需要一个组件来承担。Service作为Android四大组件之一，其功能之一就是耗时操作的执行，主要功能如下：</p>
+<p><strong>a. 执行需要长时间运行的操作</strong>，这个操作不与用户进行交互，如网络下载、大文件I/O、复杂计算。<br /><strong>b. 应用内或应用间数据通信</strong>，Android每个应用程序都在自己的dalvik虚拟机中运行，一个应用是不允许访问其他应用的内存信息的，为此Android引入了Content Provider在不同应用间共享数据，BroadcastReceiver广播信息给不同应用程序，但Content Provider更多用于数据的共享，BroadcastReceiver广播的信息会被所有应用接收较耗费系统资源，对于两个应用间动态的进行交互还需要通过Service来完成。</p>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px;">2、使用</span></strong><br /><strong>(1) startService启动不可进行交互的Service</strong></p>
+<p><strong>a. 示例代码及介绍</strong></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('6dc6b0b1-353b-4446-be84-772e9b873338')"><img id="code_img_closed_6dc6b0b1-353b-4446-be84-772e9b873338" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_6dc6b0b1-353b-4446-be84-772e9b873338" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('6dc6b0b1-353b-4446-be84-772e9b873338',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" /><span class="cnblogs_code_collapse">Service示例</span>
+<div id="cnblogs_code_open_6dc6b0b1-353b-4446-be84-772e9b873338" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> MyService <span style="color: #0000ff;">extends</span><span style="color: #000000;"> Service {
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onCreate() {
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onCreate();
+        Toast.makeText(</span><span style="color: #0000ff;">this</span>, "Service Create"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onDestroy() {
+        Toast.makeText(</span><span style="color: #0000ff;">this</span>, "Service Destroty"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onDestroy();
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span> onStartCommand(Intent intent, <span style="color: #0000ff;">int</span> flags, <span style="color: #0000ff;">int</span><span style="color: #000000;"> startId) {
+        Toast.makeText(</span><span style="color: #0000ff;">this</span>, "Service Start"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">super</span><span style="color: #000000;">.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> IBinder onBind(Intent intent) {
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+    }
+}</span></pre>
+</div>
+</div>
+<p>服务都必须在AndroidManifest.xml文件中注册&lt;service android:name=".MyService"/&gt;，在Activity中定义对象private Intent myServiceIntent&nbsp;= new Intent(this, MyService.class);在onCreate函数中startService(myServiceIntent)启动服务; onDestroy函数中stopService(myServiceIntent)关闭服务;</p>
+<p>&nbsp;</p>
+<p><strong>b. 生命周期</strong><br /><strong>通过startService启动服务，若服务未启动，会先执行onCreate函数(若服务已启动则不执行此函数)，再执行onStartCommand函数</strong>。由此可知多次调用startService传入相同参数不会启动多个服务(onStartCommand函数会执行多次)，所以最终只需要调用一次stopService或stopSelf函数停止服务；我们可以将service的处理逻辑放入onStartCommand函数中。服务一直运行，在程序退出后服务也不会停止，直到stopService或stopSelf函数被调用，当然可能被系统回收。</p>
+<p>对于onStartCommand的返回值，若返回<a href="http://developer.android.com/reference/android/app/Service.html#START_STICKY">START_STICKY</a>表示服务通过显式调用启动或停止，若返回<code><a href="http://developer.android.com/reference/android/app/Service.html#START_NOT_STICKY">START_NOT_STICKY</a></code><span>&nbsp;or</span><code><a href="http://developer.android.com/reference/android/app/Service.html#START_REDELIVER_INTENT">START_REDELIVER_INTENT</a>表示服务仅在有请求发送过来处理时才处于运行状态。</code></p>
+<p>&nbsp;</p>
+<p><strong>c. 使用场景</strong></p>
+<p>因为这种方式Service无法与外部进行方便的动态交互，所以<strong>适合做后台服务</strong>，如网络下载(用户通过Intent传入Url到Service，推荐使用IntentService).</p>
+<p>&nbsp;</p>
+<p><strong>(2) bindService启动的Service应用内交互</strong></p>
+<p><strong>a. 示例代码及介绍</strong></p>
+<p>在上面的方式中Context可以通过Intent向Service传入简单的信息，但是如果希望调用Service的接口进行操作或是获取Service的属性则无法实现，这里我们可以通过bindService实现，如下先定义自己的服务</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('2c5f9176-d5d2-4c83-9ca5-d5873988d47d')"><img id="code_img_closed_2c5f9176-d5d2-4c83-9ca5-d5873988d47d" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_2c5f9176-d5d2-4c83-9ca5-d5873988d47d" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('2c5f9176-d5d2-4c83-9ca5-d5873988d47d',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" /><span class="cnblogs_code_collapse">自定义Service</span>
+<div id="cnblogs_code_open_2c5f9176-d5d2-4c83-9ca5-d5873988d47d" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> MyService <span style="color: #0000ff;">extends</span><span style="color: #000000;"> Service {
+
+    </span><span style="color: #0000ff;">private</span> <span style="color: #0000ff;">int</span><span style="color: #000000;">      count;
+    </span><span style="color: #0000ff;">private</span> MyBinder myBinder = <span style="color: #0000ff;">new</span><span style="color: #000000;"> MyBinder();
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onCreate() {
+        Toast.makeText(</span><span style="color: #0000ff;">this</span>, "Service onCreate"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+        count </span>= 0<span style="color: #000000;">;
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onCreate();
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onDestroy() {
+        Toast.makeText(</span><span style="color: #0000ff;">this</span>, "Service onDestroy"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+        </span><span style="color: #0000ff;">super</span><span style="color: #000000;">.onDestroy();
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span> onStartCommand(Intent intent, <span style="color: #0000ff;">int</span> flags, <span style="color: #0000ff;">int</span><span style="color: #000000;"> startId) {
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">super</span><span style="color: #000000;">.onStartCommand(intent, flags, startId);
+    }
+
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * 服务被绑定时调用
+     * 返回值用于让调用者和服务通信，传入ServiceConnection的public void onServiceConnected(ComponentName name, IBinder service)函数第二个参数
+     </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+    @Override
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> IBinder onBind(Intent intent) {
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> myBinder;
+    }
+
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> getCount() {
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> count;
+    }
+
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> increaseCount() {
+        </span><span style="color: #0000ff;">return</span> ++<span style="color: #000000;">count;
+    }
+
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">int</span><span style="color: #000000;"> decreaseCount() {
+        </span><span style="color: #0000ff;">return</span> --<span style="color: #000000;">count;
+    }
+
+    </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> MyBinder <span style="color: #0000ff;">extends</span><span style="color: #000000;"> Binder {
+
+        MyService getService() {
+            </span><span style="color: #0000ff;">return</span> MyService.<span style="color: #0000ff;">this</span><span style="color: #000000;">;
+        }
+    }
+}</span></pre>
+</div>
+</div>
+<p>从上可以看出我们重写onBind函数并返回自己的Binder用于调用者和服务之间通信。下面我们在调用者中进行调用</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('90ea7f1a-2801-4346-a0e2-130d90ace1a7')"><img id="code_img_closed_90ea7f1a-2801-4346-a0e2-130d90ace1a7" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_90ea7f1a-2801-4346-a0e2-130d90ace1a7" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('90ea7f1a-2801-4346-a0e2-130d90ace1a7',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" /><span class="cnblogs_code_collapse">定义自己的Service、Intent、ServiceConnection对象</span>
+<div id="cnblogs_code_open_90ea7f1a-2801-4346-a0e2-130d90ace1a7" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">private</span><span style="color: #000000;"> MyService         myService;
+</span><span style="color: #0000ff;">private</span><span style="color: #000000;"> Intent            myServiceIntent;
+</span><span style="color: #0000ff;">private</span> ServiceConnection con = <span style="color: #0000ff;">new</span><span style="color: #000000;"> ServiceConnection() {
+
+                                  </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+                                   * 服务所在进程被kill或是crash时系统调用，而不是unbindService时调用
+                                   </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+                                  @Override
+                                  </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onServiceDisconnected(ComponentName name) {
+                                      Toast.makeText(getApplicationContext(), </span>"Service disconnect"<span style="color: #000000;">,
+                                                     Toast.LENGTH_SHORT).show();
+                                  }
+
+                                  </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+                                   * 服务连接时调用，若已经连接不进行调用
+                                   </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+                                  @Override
+                                  </span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onServiceConnected(ComponentName name, IBinder service) {
+                                      myService </span>=<span style="color: #000000;"> ((MyBinder)service).getService();
+                                      Toast.makeText(getApplicationContext(), </span>"Service Connect"<span style="color: #000000;">, Toast.LENGTH_SHORT).show();
+                                  }
+                              };</span></pre>
+</div>
+</div>
+<p>接着调用bindService(myServiceIntent, con, Context.BIND_AUTO_CREATE);绑定服务，绑定成功返回true。这时会执行ServiceConnection对象的onServiceConnected函数为myService变量赋值。接着我们就可以通过myService.increaseCount();操作Service的属性，myService.getCount()获得Service的属性，这样我们就成功和Service进行了通信。在不需要通信时通过unbindService(con);解除服务绑定。</p>
+<p>&nbsp;</p>
+<p><strong>b. 生命周期</strong><br />通过bindService绑定服务，若服务未启动，会先执行Service的onCreate函数，再执行onBind函数，最后执行ServiceConnection对象的onServiceConnected函数。若服务已启动但尚未绑定，先执行onBind函数，再执行ServiceConnection对象的onServiceConnected函数。若服务已绑定成功，则直接返回。这里不会自动调用onStartCommand函数。</p>
+<p>通过unbindService解除绑定服务，若已绑定成功，会先执行Service的onUnbind函数，再执行onDestroy函数，注意这里不会执行ServiceConnection对象的onServiceDisconnected函数，因为该函数是在服务所在进程被kill或是crash时被调用。若服务尚未绑定系统会报服务尚未注册异常，我们可以通过如下代码解决</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">if</span> (myService != <span style="color: #0000ff;">null</span><span style="color: #000000;">) {
+    unbindService(con);
+    myService </span>= <span style="color: #0000ff;">null</span><span style="color: #000000;">;
+}</span></pre>
+</div>
+<p>与startService启动的Service不同，<strong>若服务通过bindService启动并且没有通过startService启动过后，则在连接断开时服务就会自动解绑(onUnbind)并终止(onDestroy)，而在调用者(Activity)退出后会自动断开连接，所以这时服务会自己解绑并终止。若存在某个组件绑定了该服务，则调用该服务的stopService不会停止服务</strong>。</p>
+<p>&nbsp;</p>
+<p><strong>c. 使用场景</strong></p>
+<p>应用内通信，如音乐播放器，在服务中控制播放器的播放、暂停、停止，在Activity中通过对服务操作控制播放器。</p>
+<p><br /><strong>(3)&nbsp;bindService启动的Service应用间交互&mdash;&mdash;AIDL</strong></p>
+<p>在Android AIDL应用间交互中 详细介绍见<a href="http://www.cnblogs.com/trinea/archive/2012/11/08/2701390.html">Android AIDL交互</a>。</p>
+<p>&nbsp;</p>
+<p><code>通过上面的三个例子我们可以看出<strong><a href="http://developer.android.com/reference/android/content/Context.html#startService(android.content.Intent)">Context.startService()</a></strong></code><strong>和<code><a href="http://developer.android.com/reference/android/content/Context.html#bindService(android.content.Intent,%20android.content.ServiceConnection,%20int)">Context.bindService()</a></code>的区别</strong></p>
+<p>a.&nbsp;bindService启动的Service可以和Context进行交互，而startService启动的Service不可以交互，因而使用场景也不同</p>
+<p>b. 执行的生命周期不同</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;"><strong>3、特殊的Service</strong></span></p>
+<p><strong>(1). <strong>异步服务</strong>IntentService</strong></p>
+<p>默认Service是运行在主线程内的 ，如果在Service内运行一个耗时操作就会阻塞主线程，可能导致ANR，为此我们可以在Service中自己新建线程去执行耗时操作，不过Android系统引入了IntentService方便的解决了这个问题，<strong>&nbsp;IntentService会启动一个工作线程去完成用户onHandleIntent中定义的操作</strong>，需要注意的是对于同一个IntentService的多次请求(startService调用)，在同一个线程中处理，一次只会执行一个请求的onHandleIntent函数。对于不同IntentService的同时请求，在不同的线程中处理，所以每个请求的onHandleIntent函数可以并发执行。示例代码如下：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('81ac539a-2d66-4349-b482-f49f0ad8d40f')"><img id="code_img_closed_81ac539a-2d66-4349-b482-f49f0ad8d40f" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="" /><img id="code_img_opened_81ac539a-2d66-4349-b482-f49f0ad8d40f" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('81ac539a-2d66-4349-b482-f49f0ad8d40f',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="" /><span class="cnblogs_code_collapse">IntentService示例</span>
+<div id="cnblogs_code_open_81ac539a-2d66-4349-b482-f49f0ad8d40f" class="cnblogs_code_hide">
+<pre><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> MyIntentService <span style="color: #0000ff;">extends</span><span style="color: #000000;"> IntentService {
+
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> MyIntentService(){
+        </span><span style="color: #0000ff;">super</span>("MyIntentService"<span style="color: #000000;">);
+    }
+
+    @Override
+    </span><span style="color: #0000ff;">protected</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> onHandleIntent(Intent intent) {
+        </span><span style="color: #0000ff;">try</span><span style="color: #000000;"> {
+            System.out.println(</span>"IntentService1 Begin Sleep. " + "Thread name: " +<span style="color: #000000;"> Thread.currentThread().getName()
+                               </span>+ ", Thread Id: " +<span style="color: #000000;"> Thread.currentThread().getId());
+            Thread.sleep(</span>3000<span style="color: #000000;">);
+            System.out.println(</span>"IntentService1 End. "<span style="color: #000000;">);
+        } </span><span style="color: #0000ff;">catch</span><span style="color: #000000;"> (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}</span></pre>
+</div>
+</div>
+<p>在AndroidManifest.xml文件中注册服务&lt;service android:name=".MyIntentService"/&gt;，在Activity中定义service对象private Intent myIntentServiceIntent&nbsp;= new Intent(ServiceDemo.this, MyIntentService.class);在onCreate函数中startService(myIntentServiceIntent)启动服务;</p>
+<p>从上面我们可以看出<br />a. IntentService只需要重定义onHandleIntent函数并定义一个无参构造函数(xml中服务注册初始化时使用)即可。<br />b. IntentService服务在onHandleIntent执行结束后会自动关闭。</p>
+<p>&nbsp;</p>
+<p><strong>IntentService和普通Service的区别如下</strong>：<br />a. 普通Service运行在主线程中，IntentService运行在一个工作线程中不会阻塞主线程。<br />b. 普通Service需要手动调用停止接口，IntentService自动停止。<br />c. IntentService的onStartCommand函数根据mRedelivery属性值返回START_REDELIVER_INTENT或START_NOT_STICKY，而普通Service自定义返回。</p>
+<p>&nbsp;</p>
+<p>参考：<br /><a href="http://developer.android.com/reference/android/app/Service.html">http://developer.android.com/reference/android/app/Service.html</a></p>
+<p><a href="http://developer.android.com/guide/components/services.html">http://developer.android.com/guide/components/services.html</a></p>
+<p><a href="http://developer.android.com/reference/android/app/IntentService.html">http://developer.android.com/reference/android/app/IntentService.html</a></p></div><div id="MySignature"></div>
+<script type="text/javascript">
+var isLogined = true;
+var cb_blogId = 113052;
+var cb_entryId = 2699856;
+var cb_blogApp = currentBlogApp;
+var cb_blogUserGuid = "21439273-c777-e111-aa3f-842b2b196315";
+var cb_entryCreatedDate = '2012/11/8 23:42:00';
+var enableGoogleAd = true;
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+</script>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+<script type="text/javascript">
+    //SyntaxHighlighter.config.strings.expandSource = '<span><img src="http://static.cnblogs.com/images/expand-code.gif" alt="" class="expand-code-icon"/>View Code</span>';
+    $(function () {             
+        fixPostBodyFormat();
+        loadAdUnderPost();
+        loadBlogSignature();
+        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);        
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);        
+    });
+</script>
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2012-11-08 23:42</span> <a href='http://www.cnblogs.com/trinea/'>Trinea</a> 阅读(2991) 评论(<span id="post-comment-count">0</span>)  <a href ="http://www.cnblogs.com/trinea/admin/EditPosts.aspx?postid=2699856" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(2699856);return false;">收藏</a></div>
+	</div>
+	<img src ="http://www.cnblogs.com/trinea/aggbug/2699856.html?type=1&amp;webview=1" width="1" height="1" alt=""/>
+	
+</div><!--end: topics 文章、评论容器-->
+<div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.loadComments();</script>
+<div id="comment_form" class="commentform">
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" id="lnk_RefreshComments" onclick="return RefreshCommentList();">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"></div>
+
+<script type="text/javascript">
+    if (typeof commentManager === 'undefined') {
+        commentManager = new blogCommentManager();
+    }
+    commentManager.loadCommentForm();   
+</script>
+
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="site_nav_under"><a href="http://www.cnblogs.com/" target="_blank" title="程序员的网上家园">博客园首页</a><a href="http://q.cnblogs.com/" target="_blank" title="程序员问答社区">博问</a><a href="http://news.cnblogs.com/" target="_blank" title="IT新闻">新闻</a><a href="http://home.cnblogs.com/ing/" target="_blank">闪存</a><a href="http://job.cnblogs.com/" target="_blank">程序员招聘</a><a href="http://kb.cnblogs.com/" target="_blank">知识库</a></div>
+<div id="ad_under_post_holder"></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+</div>
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style="displya:none"></div></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2013 Trinea
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<script type="text/javascript" src="http://common.cnblogs.com/script/google-analytics.js"></script>
+</body>
+</html>

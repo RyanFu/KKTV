@@ -1,0 +1,25 @@
+T959的手机刷了几个系统，有的时候运行faplayer播放本地的ts文件（录制的央视8套的电视剧），会造成音视频不同步，而有的时候又不出现
+==============================
+问题原因：
+	鉴于togic的软件每次都是正常的，所以还是怀疑faplayer没有优化好或者是编译除了问题（优化应该指的是NEON的问题）
+	togic每次编译成的lib库都是armeabi-v7a的，而faplayer编译的却是armeabi
+	
+	查看软件的启动信息，分别是togic和faplayer，注意到有这一行信息
+	main libvlc: CPU has capabilities NEONv1 
+	
+	这个是决定了你的软件是否采用了NEON图形加速指令，编译的区别是
+	
+	之前：		./build.sh ABI=armeabi	采用这个版本，系统检测不到（系统为CM10的android4.0）
+	修改后：	./build.sh ABI=armeabi-v7a FPU=vfpv3-d16 TUNE=cortex-a9		这个就可以让系统识别到NEON
+	
+	
+	
+==============================
+重新修复：	2013-05-18
+	之前的修复方式是错误的
+	如果要编译NEON版本，直接./build.sh ABI=armeabi	（但是，这样只能保证VLC是NEON的，由于将ffmpeg的版本更新了，并且
+				不采用之前的NDK编译，可能导致ffmpeg没有经过neon优化，需要特别注意，该commit会作出修复，下一个commit
+				会给出编译方式）
+	
+	并且做了一个重大修改，改变ffmpeg的编译方式，采用的是实现编译好的ffmpeg-0.10.7版本
+

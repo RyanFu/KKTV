@@ -1,0 +1,17 @@
+#EXTM3U
+#EXT-X-MEDIA-SEQUENCE:8781
+#EXT-X-ALLOW-CACHE:NO
+#EXT-X-VERSION:2
+#EXT-X-TARGETDURATION:8
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8781.ts
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8782.ts
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8783.ts
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8784.ts
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8785.ts
+#EXTINF:8,
+../../../cutvlive/streams/events/25qamuz/hls/live_aNum8786.ts

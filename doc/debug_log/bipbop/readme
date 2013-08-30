@@ -1,0 +1,21 @@
+bipbop-gear1-all.ts视频只有声音没有画面，而原生的faplayer是能够播放的
+
+	faplayer-err.txt为目前不能播放的log信息
+	
+	方法：
+		1、将版本退回原来的faplayer，抓取该log对比，看看什么模块错误了
+			faplayer-err2.txt也是不能播放
+		2、再将版本退回到不强制使用avformat解析ts之前的，即使用VLC自身的TS解析，仍然不能播放出画面
+			怀疑手机刷机之后产生了影响
+			
+		3、togic.txt为能够播放正确的log信息，做对比
+		
+		4、经过定位（查看time_ok.c和time_nok.c的调试信息），发现该视频不能播放的原因是av_read_frame得到的视频帧的pts和dts为0，导致VLC调用ffmpeg解码后，
+			不将图片送后端解码（但是该ffmpeg版本在PC上却是正常获取正确的pts和dts的，原因未知）
+			
+		5、采用传统交叉编译方式编译ffmpeg版本，由于VLC限制了ffmpeg的版本号（函数接口），目前初步测试过的ffmpeg版本为0.7.15和0.8.14
+		
+		6、解决了该ts视频无画面的问题
+		
+		7、注意一个问题，time_nok.c的log信息中VLC没有成功识别是NEON设备（怀疑跟编译了C库有关系，而且是公司的PC，并且前段时间出现过，很奇怪）
+	

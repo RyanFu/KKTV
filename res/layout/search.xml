@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text"
+            android:text="@string/search_txt" />
+
+        <ImageView
+            android:id="@+id/home_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_home"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/layout_divider_header"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/search"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_search"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/search_devide"
+            layout="@layout/layout_divider_header"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/delete_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/sel_delete" >
+        </ImageView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/search_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/search_hint"
+        android:textColorHint="#238745" />
+
+    <ListView
+        android:id="@+id/search_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#ffffffff"
+        android:divider="@drawable/list_bottom"
+        android:dividerHeight="1.0px"
+        android:fastScrollEnabled="true"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

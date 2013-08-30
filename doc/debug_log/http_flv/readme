@@ -1,0 +1,13 @@
+1、当前节点（2013-04-06）（git branch: livetv:	commit -> 839d0582ff3f0543801995fc489a50fb7bc368db)
+	播放直播FLV视频，几秒后退出，URL:	http://125.211.216.198/channels/hljtv/wypd/flv:sd/live?1348477116718
+
+	其他测试：
+		ubuntu上测试VLC，现象一样，秒退
+		测试libav0.8.1的avplay，播放正常
+		测试togic也是播放正常
+		
+	手段：
+		单独拿出faplayer的ffmpeg，本地编译，看看是否可以播放，以确认ffmpeg的功能
+		
+	解决方法：
+		modify access/avformat.c[Avoid EOF if av_read_frame returns AVERROR(EAGAIN)]

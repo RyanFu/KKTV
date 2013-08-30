@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10.0dip" >
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="120.0dip"
+        android:layout_height="120.0dip"
+        android:layout_margin="30.0dip"
+        android:src="@drawable/television" />
+
+    <LinearLayout
+        android:layout_width="250.0dip"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/first_line_parent"
+            style="@style/style_home_item_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/go_live"
+                style="@style/style_home_item"
+                android:background="@drawable/sel_home_bg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/live_media"
+                    style="@style/style_home_item_img"
+                    android:src="@drawable/ic_live" />
+
+                <TextView
+                    style="@style/style_home_item_text"
+                    android:text="@string/live_btn" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divider1"
+                layout="@layout/layout_divider_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/go_local"
+                style="@style/style_home_item"
+                android:background="@drawable/sel_home_bg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/local_media"
+                    style="@style/style_home_item_img"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    style="@style/style_home_item_text"
+                    android:text="@string/favourite_btn" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/divider"
+            layout="@layout/layout_divider_vertical" />
+
+        <LinearLayout
+            android:id="@+id/second_line_parent"
+            style="@style/style_home_item_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/go_userdef"
+                style="@style/style_home_item"
+                android:background="@drawable/sel_home_bg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/userdef_media"
+                    style="@style/style_home_item_img"
+                    android:src="@drawable/ic_userdef" />
+
+                <TextView
+                    style="@style/style_home_item_text"
+                    android:text="@string/selfdef_btn" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divider2"
+                layout="@layout/layout_divider_horizontal" />
+
+            <LinearLayout
+                android:id="@+id/go_setup"
+                style="@style/style_home_item"
+                android:background="@drawable/sel_home_bg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/setup_media"
+                    style="@style/style_home_item_img"
+                    android:src="@drawable/ic_setup" />
+
+                <TextView
+                    style="@style/style_home_item_text"
+                    android:text="@string/setup_btn" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

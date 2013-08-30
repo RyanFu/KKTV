@@ -1,0 +1,25 @@
+1、FTP客户端与服务器交互时，存在超时无响应的错误
+	2013-06-06
+	
+	ftpClient.connect("xxx");
+	ftpClient.login("xxx", "xxx");
+	
+	如果网络没有打开，会直接报错，抛出异常；
+	但是，如果网络可用，而该网络无法链接该站点，会导致connect一直无法返回，进而导致apk超时错误。
+	
+	解决方法：
+		需要在connect之前，加上超时设置
+		ftpClient.setConnectTimeout(2000);
+		
+
+2、FTP所谓下载数据超时，导致UI挂死的问题
+	2013-06-08
+	
+		在当前activity的button的监听时间中，利用mHander.postDelayed(mRunnable, 2000)方式创建线程，
+	其实该线程仍然会跑在UI的线程里面，所以在该线程中FTP下载数据时，会阻塞住UI线程，并且右上角加上的
+	旋转图标加上之后，会报警告：skip xxx frames, may be doing to much thing in the main thread
+	
+		Runnable代码见当前目录的runnable.java
+	
+		修改为在button的响应中，创建普通的thread线程来操作，并且注意【在该线程中不要进行UI操作】，应该利用
+	handler事件通知主线程，例如，FTP下载完毕了，弹出一个对话框等等。

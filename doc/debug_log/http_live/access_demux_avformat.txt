@@ -1,0 +1,382 @@
+03-22 21:55:25.039: I/ActivityManager(323): START {cmp=org.stagex.danmaku/.activity.PlayerActivity (has extras) u=0} from pid 2721
+03-22 21:55:25.066: I/InputReader(323): Reconfiguring input devices.  changes=0x00000004
+03-22 21:55:25.066: I/InputReader(323): Device reconfigured: id=9, name='mxt224_ts_input', surface size is now 480x800, mode is 1
+03-22 21:55:25.085: I/ActivityManager(323): Config changed: {1.0 460mcc1mnc zh_CN sw320dp w533dp h294dp nrml long land finger -keyb/v/h -nav/h s.11 themeResource=null}
+03-22 21:55:25.281: D/SizeAdaptiveLayout(395): com.android.internal.widget.SizeAdaptiveLayout@40f6ad60child view android.widget.FrameLayout@40fbc0f8 measured out of bounds at 95px clamped to 96px
+03-22 21:55:25.292: D/SizeAdaptiveLayout(395): com.android.internal.widget.SizeAdaptiveLayout@40e14df0child view android.widget.FrameLayout@40f07138 measured out of bounds at 95px clamped to 96px
+03-22 21:55:25.316: D/DANMAKU-PlayerActivity(2721): createMediaPlayer() http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 21:55:25.320: D/DANMAKU-AbsMediaPlayer(2721): using VlcMediaPlayer
+03-22 21:55:25.320: E/faplayer(2721): [0x2a097568]main generic: option marq-color does not exist
+03-22 21:55:25.320: E/faplayer(2721): [0x2a097568]main generic: option marq-opacity does not exist
+03-22 21:55:25.320: E/faplayer(2721): [0x2a097568]main generic: option marq-position does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option marq-refresh does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option marq-size does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option marq-timeout does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option marq-x does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option marq-y does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-x does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-y does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-delay does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-repeat does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-opacity does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option logo-position does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option contrast does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option brightness does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option hue does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option saturation does not exist
+03-22 21:55:25.324: E/faplayer(2721): [0x2a097568]main generic: option gamma does not exist
+03-22 21:55:25.332: D/faplayer(2721): [0x2a8403a0]main input: Creating an input for 'http://web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 21:55:25.359: D/faplayer(2721): [0x2a8403a0]main input: using timeshift granularity of 50 MiB, in path '/data/local/tmp'
+03-22 21:55:25.363: D/faplayer(2721): [0x2a8403a0]main input: `http://web-play.pptv.com/web-m3u8-300164.m3u8' gives access `http' demux `' path `web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 21:55:25.363: D/faplayer(2721): [0x2a8403a0]main input: creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8' file='(null)'
+03-22 21:55:25.363: D/faplayer(2721): [0x2a920060]main demux: looking for access_demux module: 0 candidates
+03-22 21:55:25.363: D/faplayer(2721): [0x2a920060]main demux: no access_demux module matched "http"
+03-22 21:55:25.363: D/faplayer(2721): [0x2a920060]main demux: TIMER module_need() : 0.963 ms - Total 0.963 ms / 1 intvls (Avg 0.963 ms)
+03-22 21:55:25.363: D/faplayer(2721): [0x2a8403a0]main input: creating access 'http' location='web-play.pptv.com/web-m3u8-300164.m3u8', path='(null)'
+03-22 21:55:25.367: D/faplayer(2721): [0x2a920060]main access: looking for access module: 2 candidates
+03-22 21:55:25.367: D/faplayer(2721): [0x2a920060]access_http access: http: server='web-play.pptv.com' port=80 file='/web-m3u8-300164.m3u8'
+03-22 21:55:25.367: D/faplayer(2721): [0x2a920060]main access: net: connecting to web-play.pptv.com port 80
+03-22 21:55:25.398: I/ActivityManager(323): Displayed org.stagex.danmaku/.activity.PlayerActivity: +336ms (total +7m28s364ms)
+03-22 21:55:25.417: V/PhoneStatusBar(395): setLightsOn(true)
+03-22 21:55:25.460: D/faplayer(2721): [0x2a920060]main access: connection succeeded (socket = 46)
+03-22 21:55:25.648: D/faplayer(2721): [0x2a920060]access_http access: protocol 'HTTP' answer code 200
+03-22 21:55:25.648: D/faplayer(2721): [0x2a920060]access_http access: Server: PPWS/1.0.0
+03-22 21:55:25.648: D/faplayer(2721): [0x2a920060]access_http access: Content-Type: text/plain; charset=UTF-8
+03-22 21:55:25.652: D/faplayer(2721): [0x2a920060]access_http access: Transfer-Encoding: chunked
+03-22 21:55:25.652: D/faplayer(2721): [0x2a920060]access_http access: Connection: close
+03-22 21:55:25.652: D/faplayer(2721): [0x2a920060]access_http access: Accepting Cookie: JSESSIONID=abc3TbREHTNhB-enFys2t; path=/
+03-22 21:55:25.652: D/faplayer(2721): [0x2a920060]main access: using access module "access_http"
+03-22 21:55:25.652: D/faplayer(2721): [0x2a920060]main access: TIMER module_need() : 287.323 ms - Total 287.323 ms / 1 intvls (Avg 287.323 ms)
+03-22 21:55:25.652: D/faplayer(2721): [0x2a91c818]main stream: Using stream method for AStream*
+03-22 21:55:25.652: D/faplayer(2721): [0x2a91c818]main stream: starting pre-buffering
+03-22 21:55:25.652: D/faplayer(2721): [0x2a91c818]main stream: received first data after 0 ms
+03-22 21:55:25.652: D/faplayer(2721): [0x2a91c818]main stream: pre-buffering done 298 bytes in 0s - 829 KiB/s
+03-22 21:55:25.652: D/faplayer(2721): [0x2a91c8e8]main stream: looking for stream_filter module: 1 candidate
+03-22 21:55:25.656: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: HTTP Live Streaming (web-play.pptv.com/web-m3u8-300164.m3u8)
+03-22 21:55:25.656: D/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: parse_M3U8
+03-22 21:55:25.656: D/faplayer(2721): #EXTM3U
+03-22 21:55:25.656: D/faplayer(2721): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 21:55:25.656: D/faplayer(2721): http://117.135.161.13:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 21:55:25.656: D/faplayer(2721): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 21:55:25.656: D/faplayer(2721): http://112.25.19.95:80:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 21:55:25.656: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: Meta playlist
+03-22 21:55:25.656: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: bandwidth adaption detected (program-id=1, bandwidth=400000).
+03-22 21:55:25.656: D/faplayer(2721): [0x2a91c8e8]main stream: creating access 'http' location='117.135.161.13:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 21:55:25.656: D/faplayer(2721): [0x2a848d98]main access: looking for access module: 2 candidates
+03-22 21:55:25.656: D/faplayer(2721): [0x2a848d98]access_http access: http: server='117.135.161.13' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 21:55:25.656: D/faplayer(2721): [0x2a848d98]main access: net: connecting to 117.135.161.13 port 80
+03-22 21:55:25.695: D/faplayer(2721): [0x2a848d98]main access: connection succeeded (socket = 53)
+03-22 21:55:25.789: D/faplayer(2721): [0x2a848d98]access_http access: protocol 'HTTP' answer code 200
+03-22 21:55:25.789: D/faplayer(2721): [0x2a848d98]access_http access: Server: nginx/5.1
+03-22 21:55:25.792: D/faplayer(2721): [0x2a848d98]access_http access: Content-Type: application/x-mpegURL
+03-22 21:55:25.792: D/faplayer(2721): [0x2a848d98]access_http access: Transfer-Encoding: chunked
+03-22 21:55:25.792: D/faplayer(2721): [0x2a848d98]access_http access: Connection: close
+03-22 21:55:25.792: D/faplayer(2721): [0x2a848d98]main access: using access module "access_http"
+03-22 21:55:25.792: D/faplayer(2721): [0x2a848d98]main access: TIMER module_need() : 137.374 ms - Total 137.374 ms / 1 intvls (Avg 137.374 ms)
+03-22 21:55:25.792: D/faplayer(2721): [0x2a9095a0]main stream: Using stream method for AStream*
+03-22 21:55:25.792: D/faplayer(2721): [0x2a9095a0]main stream: starting pre-buffering
+03-22 21:55:25.792: D/faplayer(2721): [0x2a9095a0]main stream: received first data after 0 ms
+03-22 21:55:25.792: D/faplayer(2721): [0x2a9095a0]main stream: pre-buffering done 1024 bytes in 0s - 2941 KiB/s
+03-22 21:55:25.921: D/faplayer(2721): [0x2a848d98]main access: removing module "access_http"
+03-22 21:55:25.921: D/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: parse_M3U8
+03-22 21:55:25.921: D/faplayer(2721): #EXTM3U
+03-22 21:55:25.921: D/faplayer(2721): #EXT-X-TARGETDURATION:5
+03-22 21:55:25.921: D/faplayer(2721): #EXT-X-MEDIA-SEQUENCE:272791736
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958680.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958685.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958690.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958695.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958700.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958705.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958710.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161.13/live/847a4e1e97584d39a961f5604e90c1c4/1363958715.ts?chid=300164&pre=ikan&
+03-22 21:55:25.921: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:25.921: D/faplayer(2721): http://117.135.161
+03-22 21:55:25.921: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: Live Playlist HLS protocol version: 1
+03-22 21:55:25.945: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: bandwidth adaption detected (program-id=1, bandwidth=400000).
+03-22 21:55:25.945: D/faplayer(2721): [0x2a91c8e8]main stream: creating access 'http' location='112.25.19.95:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 21:55:25.945: D/faplayer(2721): [0x2a99a8b0]main access: looking for access module: 2 candidates
+03-22 21:55:25.945: D/faplayer(2721): [0x2a99a8b0]access_http access: http: server='112.25.19.95' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 21:55:25.945: D/faplayer(2721): [0x2a99a8b0]main access: net: connecting to 112.25.19.95 port 80
+03-22 21:55:25.988: D/faplayer(2721): [0x2a99a8b0]main access: connection succeeded (socket = 53)
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]access_http access: protocol 'HTTP' answer code 200
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]access_http access: Server: nginx/5.1
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]access_http access: Content-Type: application/x-mpegURL
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]access_http access: Transfer-Encoding: chunked
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]access_http access: Connection: close
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]main access: using access module "access_http"
+03-22 21:55:26.082: D/faplayer(2721): [0x2a99a8b0]main access: TIMER module_need() : 138.949 ms - Total 138.949 ms / 1 intvls (Avg 138.949 ms)
+03-22 21:55:26.082: D/faplayer(2721): [0x2a848f08]main stream: Using stream method for AStream*
+03-22 21:55:26.085: D/faplayer(2721): [0x2a848f08]main stream: starting pre-buffering
+03-22 21:55:26.085: D/faplayer(2721): [0x2a848f08]main stream: received first data after 0 ms
+03-22 21:55:26.085: D/faplayer(2721): [0x2a848f08]main stream: pre-buffering done 1024 bytes in 0s - 2881 KiB/s
+03-22 21:55:26.199: D/faplayer(2721): [0x2a99a8b0]main access: removing module "access_http"
+03-22 21:55:26.199: D/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: parse_M3U8
+03-22 21:55:26.199: D/faplayer(2721): #EXTM3U
+03-22 21:55:26.199: D/faplayer(2721): #EXT-X-TARGETDURATION:5
+03-22 21:55:26.199: D/faplayer(2721): #EXT-X-MEDIA-SEQUENCE:272791736
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958680.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958685.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958690.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958695.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958700.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958705.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958710.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e97584d39a961f5604e90c1c4/1363958715.ts?chid=300164&pre=ikan&
+03-22 21:55:26.199: D/faplayer(2721): #EXTINF:5,
+03-22 21:55:26.199: D/faplayer(2721): http://112.25.19.95/live/847a4e1e9
+03-22 21:55:26.199: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: Live Playlist HLS protocol version: 1
+03-22 21:55:26.218: I/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: Choose segment 360/363 (sequence=272792096)
+03-22 21:55:26.218: D/faplayer(2721): [0x2a91c8e8]main stream: creating access 'http' location='117.135.161.13:80/live/847a4e1e97584d39a961f5604e90c1c4/1363960480.ts?chid=300164&pre=ikan&
+', path='(null)'
+03-22 21:55:26.218: D/faplayer(2721): [0x2a9691a0]main access: looking for access module: 2 candidates
+03-22 21:55:26.218: D/faplayer(2721): [0x2a9691a0]access_http access: http: server='117.135.161.13' port=80 file='/live/847a4e1e97584d39a961f5604e90c1c4/1363960480.ts?chid=300164&pre=ikan&
+'
+03-22 21:55:26.218: D/faplayer(2721): [0x2a9691a0]main access: net: connecting to 117.135.161.13 port 80
+03-22 21:55:26.296: D/faplayer(2721): [0x2a9691a0]main access: connection succeeded (socket = 53)
+03-22 21:55:26.367: E/faplayer(2721): [0x2a9691a0]access_http access: invalid HTTP reply '<html>'
+03-22 21:55:26.367: D/faplayer(2721): [0x2a9691a0]access_http access: switching to HTTP version 1.0
+03-22 21:55:26.367: D/faplayer(2721): [0x2a9691a0]main access: net: connecting to 117.135.161.13 port 80
+03-22 21:55:26.410: D/faplayer(2721): [0x2a9691a0]main access: connection succeeded (socket = 53)
+03-22 21:55:26.445: E/faplayer(2721): [0x2a9691a0]access_http access: invalid HTTP reply '<html>'
+03-22 21:55:26.445: D/faplayer(2721): [0x2a9691a0]main access: net: connecting to 117.135.161.13 port 80
+03-22 21:55:26.480: D/faplayer(2721): [0x2a9691a0]main access: connection succeeded (socket = 53)
+03-22 21:55:26.515: E/faplayer(2721): [0x2a9691a0]access_mms access: invalid HTTP reply '<html>'
+03-22 21:55:26.515: D/faplayer(2721): [0x2a9691a0]main access: no access module matching "http" could be loaded
+03-22 21:55:26.515: D/faplayer(2721): [0x2a9691a0]main access: TIMER module_need() : 295.688 ms - Total 295.688 ms / 1 intvls (Avg 295.688 ms)
+03-22 21:55:26.515: E/faplayer(2721): [0x2a91c8e8]main stream: no suitable access module for `http://117.135.161.13:80/live/847a4e1e97584d39a961f5604e90c1c4/1363960480.ts?chid=300164&pre=ikan&
+'
+03-22 21:55:26.515: E/faplayer(2721): [0x2a91c8e8]stream_filter_httplive stream: fetching first segment failed.
+03-22 21:55:26.515: D/faplayer(2721): [0x2a91c8e8]main stream: no stream_filter module matching "any" could be loaded
+03-22 21:55:26.515: D/faplayer(2721): [0x2a91c8e8]main stream: TIMER module_need() : 862.957 ms - Total 862.957 ms / 1 intvls (Avg 862.957 ms)
+03-22 21:55:26.515: D/faplayer(2721): [0x2a91c8e8]main stream: looking for stream_filter module: 1 candidate
+03-22 21:55:26.515: D/faplayer(2721): [0x2a91c8e8]main stream: using stream_filter module "stream_filter_record"
+03-22 21:55:26.515: D/faplayer(2721): [0x2a91c8e8]main stream: TIMER module_need() : 0.305 ms - Total 0.305 ms / 1 intvls (Avg 0.305 ms)
+03-22 21:55:26.519: D/faplayer(2721): [0x2a8403a0]main input: creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8' file='(null)'
+03-22 21:55:26.519: D/faplayer(2721): [0x2a786dc8]main demux: looking for demux module: 8 candidates
+03-22 21:55:26.519: E/faplayer(2721): [0x2a786dc8]mpgv demux: cannot peek
+03-22 21:55:26.519: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: trying url: http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 21:55:27.542: D/dalvikvm(323): GC_EXPLICIT freed 531K, 42% free 8782K/14919K, paused 12ms+5ms, total 132ms
+03-22 21:55:30.687: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: detected format: applehttp
+03-22 21:55:31.468: D/faplayer(2721): [0x2a8403a0]main input: selecting program id=0
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: adding es: video codec = h264
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: adding es: audio codec = mp4a
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: adding es: video codec = h264
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: adding es: audio codec = mp4a
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux: AVFormat supported stream
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux:     - format = applehttp (Apple HTTP Live Streaming format)
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux:     - start time = 44507783311
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]access_demux_avformat demux:     - duration = -1
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]main demux: using demux module "avformat"
+03-22 21:55:31.468: D/faplayer(2721): [0x2a786dc8]main demux: TIMER module_need() : 4952.709 ms - Total 4952.709 ms / 1 intvls (Avg 4952.709 ms)
+03-22 21:55:31.472: D/faplayer(2721): [0x2a91b5d8]main decoder: looking for decoder module: 5 candidates
+03-22 21:55:31.472: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: libavcodec already initialized
+03-22 21:55:31.476: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: trying to use direct rendering
+03-22 21:55:31.476: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: allowing 1 thread(s) for decoding
+03-22 21:55:31.476: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) started
+03-22 21:55:31.476: D/faplayer(2721): [0x2a91b5d8]main decoder: using decoder module "avcodec"
+03-22 21:55:31.476: D/faplayer(2721): [0x2a91b5d8]main decoder: TIMER module_need() : 4.827 ms - Total 4.827 ms / 1 intvls (Avg 4.827 ms)
+03-22 21:55:31.476: D/faplayer(2721): [0x2a89c6b0]main decoder: looking for decoder module: 5 candidates
+03-22 21:55:31.476: D/faplayer(2721): [0x2a89c6b0]avcodec decoder: libavcodec already initialized
+03-22 21:55:31.527: D/faplayer(2721): [0x2a89c6b0]avcodec decoder: ffmpeg codec (MPEG AAC Audio) started
+03-22 21:55:31.527: D/faplayer(2721): [0x2a89c6b0]avcodec decoder: Using 192000 bytes output buffer
+03-22 21:55:31.527: D/faplayer(2721): [0x2a89c6b0]main decoder: using decoder module "avcodec"
+03-22 21:55:31.527: D/faplayer(2721): [0x2a89c6b0]main decoder: TIMER module_need() : 51.226 ms - Total 51.226 ms / 1 intvls (Avg 51.226 ms)
+03-22 21:55:31.531: D/faplayer(2721): [0x2a22aed0]main decoder: looking for decoder module: 5 candidates
+03-22 21:55:31.531: D/faplayer(2721): [0x2a22aed0]avcodec decoder: libavcodec already initialized
+03-22 21:55:31.535: D/faplayer(2721): [0x2a22aed0]avcodec decoder: trying to use direct rendering
+03-22 21:55:31.535: D/faplayer(2721): [0x2a22aed0]avcodec decoder: allowing 1 thread(s) for decoding
+03-22 21:55:31.535: D/faplayer(2721): [0x2a22aed0]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) started
+03-22 21:55:31.535: D/faplayer(2721): [0x2a22aed0]main decoder: using decoder module "avcodec"
+03-22 21:55:31.535: D/faplayer(2721): [0x2a22aed0]main decoder: TIMER module_need() : 4.766 ms - Total 4.766 ms / 1 intvls (Avg 4.766 ms)
+03-22 21:55:31.535: D/faplayer(2721): [0x2aa57bb0]main demux meta: looking for meta reader module: 0 candidates
+03-22 21:55:31.535: D/faplayer(2721): [0x2aa57bb0]main demux meta: no meta reader module matched "any"
+03-22 21:55:31.535: D/faplayer(2721): [0x2aa57bb0]main demux meta: TIMER module_need() : 0.456 ms - Total 0.456 ms / 1 intvls (Avg 0.456 ms)
+03-22 21:55:31.535: D/faplayer(2721): [0x2a8403a0]main input: `http://web-play.pptv.com/web-m3u8-300164.m3u8' successfully opened
+03-22 21:55:31.535: D/faplayer(2721): [0x2a8403a0]main input: Buffering 0%
+03-22 21:55:31.539: D/faplayer(2721): [0x2a8403a0]main input: Buffering 3%
+03-22 21:55:31.539: D/faplayer(2721): [0x2a8ec3d0]main spu text: looking for text renderer module: 2 candidates
+03-22 21:55:31.539: E/faplayer(2721): [0x2a8ec3d0]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+03-22 21:55:31.539: D/faplayer(2721): [0x2a8ec3d0]main spu text: using text renderer module "dummy"
+03-22 21:55:31.539: D/faplayer(2721): [0x2a8ec3d0]main spu text: TIMER module_need() : 1.684 ms - Total 1.684 ms / 1 intvls (Avg 1.684 ms)
+03-22 21:55:31.542: D/faplayer(2721): [0x2a8403a0]main input: Buffering 7%
+03-22 21:55:31.542: D/faplayer(2721): [0x2a9987a0]main scale: looking for video filter2 module: 2 candidates
+03-22 21:55:31.542: D/faplayer(2721): [0x2a8403a0]main input: Buffering 11%
+03-22 21:55:31.546: D/faplayer(2721): [0x2a8403a0]main input: Buffering 15%
+03-22 21:55:31.546: D/faplayer(2721): [0x2a8403a0]main input: Buffering 19%
+03-22 21:55:31.546: D/faplayer(2721): [0x2a8403a0]main input: Buffering 23%
+03-22 21:55:31.546: D/faplayer(2721): [0x2a8403a0]main input: Buffering 27%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a8403a0]main input: Buffering 30%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a8403a0]main input: Buffering 34%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a8403a0]main input: Buffering 38%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a9987a0]swscale scale: 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+03-22 21:55:31.550: D/faplayer(2721): [0x2a8403a0]main input: Buffering 42%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a8403a0]main input: Buffering 46%
+03-22 21:55:31.550: D/faplayer(2721): [0x2a9987a0]main scale: using video filter2 module "swscale"
+03-22 21:55:31.554: D/faplayer(2721): [0x2a8403a0]main input: Buffering 50%
+03-22 21:55:31.554: D/faplayer(2721): [0x2a9987a0]main scale: TIMER module_need() : 11.049 ms - Total 11.049 ms / 1 intvls (Avg 11.049 ms)
+03-22 21:55:31.554: D/faplayer(2721): [0x2a83f2f0]main scale: looking for video filter2 module: 2 candidates
+03-22 21:55:31.554: D/faplayer(2721): [0x2a8403a0]main input: Buffering 54%
+03-22 21:55:31.554: D/faplayer(2721): [0x2a83f2f0]main scale: no video filter2 module matching "any" could be loaded
+03-22 21:55:31.554: D/faplayer(2721): [0x2a83f2f0]main scale: TIMER module_need() : 1.078 ms - Total 1.078 ms / 1 intvls (Avg 1.078 ms)
+03-22 21:55:31.554: D/faplayer(2721): [0x2a8403a0]main input: Buffering 58%
+03-22 21:55:31.554: D/faplayer(2721): [0x2a8403a0]main input: Buffering 61%
+03-22 21:55:31.554: D/faplayer(2721): [0x2a6d99b0]main video output: Deinterlacing available
+03-22 21:55:31.558: D/faplayer(2721): [0x2a8403a0]main input: Buffering 65%
+03-22 21:55:31.558: D/faplayer(2721): [0x2a8403a0]main input: Buffering 69%
+03-22 21:55:31.558: E/faplayer(2721): [0x2a6d99b0]main video output: option sout-deinterlace-mode does not exist
+03-22 21:55:31.558: D/faplayer(2721): [0x2a6d99b0]main video output: deinterlace 0, mode blend, is_needed 0
+03-22 21:55:31.558: D/faplayer(2721): [0x2a8403a0]main input: Buffering 73%
+03-22 21:55:31.562: D/faplayer(2721): [0x2a8403a0]main input: Buffering 77%
+03-22 21:55:31.562: D/faplayer(2721): [0x2a8403a0]main input: Buffering 81%
+03-22 21:55:31.562: D/faplayer(2721): [0x2a8403a0]main input: Buffering 85%
+03-22 21:55:31.566: D/faplayer(2721): [0x2a8403a0]main input: Buffering 89%
+03-22 21:55:31.566: D/faplayer(2721): [0x2a8403a0]main input: Buffering 92%
+03-22 21:55:31.566: D/faplayer(2721): [0x2a6d99b0]main video output: Opening vout display wrapper
+03-22 21:55:31.566: D/faplayer(2721): [0x2a8403a0]main input: Buffering 96%
+03-22 21:55:31.566: D/faplayer(2721): [0x2a903728]main vout display: looking for vout display module: 2 candidates
+03-22 21:55:31.566: D/faplayer(2721): [0x2a903728]main vout display: VoutDisplayEvent 'fullscreen' 0
+03-22 21:55:31.566: D/faplayer(2721): [0x2a903728]main vout display: using vout display module "android_surface"
+03-22 21:55:31.570: D/faplayer(2721): [0x2a903728]main vout display: TIMER module_need() : 1.807 ms - Total 1.807 ms / 1 intvls (Avg 1.807 ms)
+03-22 21:55:31.570: D/faplayer(2721): [0x2a8403a0]main input: Stream buffering done (1207 ms in 31 ms)
+03-22 21:55:31.570: D/faplayer(2721): [0x2a903728]main vout display: A filter to adapt decoder to display is needed
+03-22 21:55:31.570: D/faplayer(2721): [0x2a7cc590]main filter: looking for video filter2 module: 2 candidates
+03-22 21:55:31.570: D/faplayer(2721): [0x2a7cc590]main filter: using video filter2 module "yuv2rgb"
+03-22 21:55:31.570: D/faplayer(2721): [0x2a7cc590]main filter: TIMER module_need() : 0.315 ms - Total 0.315 ms / 1 intvls (Avg 0.315 ms)
+03-22 21:55:31.570: D/faplayer(2721): [0x2a903728]main vout display: Filter 'yuv2rgb' (0x2a7cc590) appended to chain
+03-22 21:55:31.570: D/faplayer(2721): [0x2a6d99b0]main video output: original format sz 640x480, of (0,0), vsz 640x480, 4cc I420, sar 4:3, msk r0x0 g0x0 b0x0
+03-22 21:55:31.570: D/faplayer(2721): [0x2a8ec3d0]main spu text: removing module "dummy"
+03-22 21:55:31.570: D/faplayer(2721): [0x2a8ec3d0]main spu text: looking for text renderer module: 2 candidates
+03-22 21:55:31.570: E/faplayer(2721): [0x2a8ec3d0]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+03-22 21:55:31.574: D/faplayer(2721): [0x2a8ec3d0]main spu text: using text renderer module "dummy"
+03-22 21:55:31.574: D/faplayer(2721): [0x2a8ec3d0]main spu text: TIMER module_need() : 0.768 ms - Total 0.768 ms / 1 intvls (Avg 0.768 ms)
+03-22 21:55:31.574: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: using direct rendering
+03-22 21:55:31.574: D/faplayer(2721): [0x2a097568]main generic: creating audio output
+03-22 21:55:31.574: D/faplayer(2721): [0x2a7f8c10]main audio output: looking for audio output module: 2 candidates
+03-22 21:55:31.574: D/faplayer(2721): [0x2a6d9110]main spu text: looking for text renderer module: 2 candidates
+03-22 21:55:31.574: E/faplayer(2721): [0x2a6d9110]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+03-22 21:55:31.574: D/faplayer(2721): [0x2a6d9110]main spu text: using text renderer module "dummy"
+03-22 21:55:31.574: D/faplayer(2721): [0x2a6d9110]main spu text: TIMER module_need() : 1.505 ms - Total 1.505 ms / 1 intvls (Avg 1.505 ms)
+03-22 21:55:31.574: D/faplayer(2721): [0x2a6d93f8]main scale: looking for video filter2 module: 2 candidates
+03-22 21:55:31.585: D/faplayer(2721): [0x2a6d93f8]swscale scale: 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+03-22 21:55:31.589: D/faplayer(2721): [0x2a6d93f8]main scale: using video filter2 module "swscale"
+03-22 21:55:31.589: D/faplayer(2721): [0x2a6d93f8]main scale: TIMER module_need() : 13.381 ms - Total 13.381 ms / 1 intvls (Avg 13.381 ms)
+03-22 21:55:31.589: D/faplayer(2721): [0x2aa0f4b0]main scale: looking for video filter2 module: 2 candidates
+03-22 21:55:31.589: D/faplayer(2721): [0x2aa0f4b0]main scale: no video filter2 module matching "any" could be loaded
+03-22 21:55:31.589: D/faplayer(2721): [0x2aa0f4b0]main scale: TIMER module_need() : 0.502 ms - Total 0.502 ms / 1 intvls (Avg 0.502 ms)
+03-22 21:55:31.589: D/faplayer(2721): [0x2a968f98]main video output: Deinterlacing available
+03-22 21:55:31.593: E/faplayer(2721): [0x2a968f98]main video output: option sout-deinterlace-mode does not exist
+03-22 21:55:31.593: D/faplayer(2721): [0x2a968f98]main video output: deinterlace 0, mode blend, is_needed 0
+03-22 21:55:31.605: D/faplayer(2721): [0x2a968f98]main video output: Opening vout display wrapper
+03-22 21:55:31.605: D/faplayer(2721): [0x2aa69940]main vout display: looking for vout display module: 2 candidates
+03-22 21:55:31.605: E/faplayer(2721): [0x2aa69940]android_surface vout display: Can't start more than one instance at a time
+03-22 21:55:31.605: D/faplayer(2721): [0x2aa69940]main vout display: using vout display module "dummy"
+03-22 21:55:31.605: D/faplayer(2721): [0x2aa69940]main vout display: TIMER module_need() : 0.738 ms - Total 0.738 ms / 1 intvls (Avg 0.738 ms)
+03-22 21:55:31.605: D/faplayer(2721): [0x2a968f98]main video output: original format sz 640x480, of (0,0), vsz 640x480, 4cc I420, sar 4:3, msk r0x0 g0x0 b0x0
+03-22 21:55:31.613: D/faplayer(2721): [0x2a6d9110]main spu text: removing module "dummy"
+03-22 21:55:31.613: D/faplayer(2721): [0x2a6d9110]main spu text: looking for text renderer module: 2 candidates
+03-22 21:55:31.613: E/faplayer(2721): [0x2a6d9110]freetype spu text: failed to load font file /usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
+03-22 21:55:31.613: D/faplayer(2721): [0x2a6d9110]main spu text: using text renderer module "dummy"
+03-22 21:55:31.617: D/faplayer(2721): [0x2a6d9110]main spu text: TIMER module_need() : 1.175 ms - Total 1.175 ms / 1 intvls (Avg 1.175 ms)
+03-22 21:55:31.617: D/faplayer(2721): [0x2a22aed0]avcodec decoder: using direct rendering
+03-22 21:55:31.699: E/faplayer(2721): [0x2a903728]main vout display: Failed to set on top
+03-22 21:55:31.753: D/AudioHardware(141): AudioStreamOutALSA::setParameters() routing=2
+03-22 21:55:31.753: D/AudioHardware(141): ### setVoiceVolume_l
+03-22 21:55:31.753: D/faplayer(2721): [0x2a7f8c10]main audio output: using audio output module "audiotrack_android"
+03-22 21:55:31.753: D/faplayer(2721): [0x2a7f8c10]main audio output: TIMER module_need() : 182.472 ms - Total 182.472 ms / 1 intvls (Avg 182.472 ms)
+03-22 21:55:31.753: D/faplayer(2721): [0x2a7f8c10]main audio output: output 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: mixer 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: filter(s) 's16l'->'s16l' 22050 Hz->22050 Hz Mono->Mono
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: conversion pipeline completed
+03-22 21:55:31.757: D/faplayer(2721): [0x2aa69b90]main generic: looking for audio mixer module: 3 candidates
+03-22 21:55:31.757: D/faplayer(2721): [0x2aa69b90]main generic: using audio mixer module "fixed32_mixer"
+03-22 21:55:31.757: D/faplayer(2721): [0x2aa69b90]main generic: TIMER module_need() : 1.825 ms - Total 1.825 ms / 1 intvls (Avg 1.825 ms)
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: input 's16l' 22050 Hz Mono frame=1 samples/2 bytes
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: filter(s) 's16l'->'s16l' 22050 Hz->22050 Hz Mono->Mono
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: conversion pipeline completed
+03-22 21:55:31.757: D/faplayer(2721): [0x2a7f8c10]main audio output: filter(s) 's16l'->'s16l' 24255 Hz->22050 Hz Mono->Mono
+03-22 21:55:31.761: D/faplayer(2721): [0x2a661dd8]main audio filter: looking for audio filter module: 5 candidates
+03-22 21:55:31.761: D/faplayer(2721): [0x2a661dd8]main audio filter: using audio filter module "ugly_resampler"
+03-22 21:55:31.761: D/faplayer(2721): [0x2a661dd8]main audio filter: TIMER module_need() : 1.023 ms - Total 1.023 ms / 1 intvls (Avg 1.023 ms)
+03-22 21:55:31.761: D/faplayer(2721): [0x2a7f8c10]main audio output: conversion pipeline completed
+03-22 21:55:31.761: D/faplayer(2721): [0x2a89c6b0]main decoder: End of audio preroll
+03-22 21:55:31.781: D/faplayer(2721): [0x2a91b5d8]main decoder: End of video preroll
+03-22 21:55:31.785: D/faplayer(2721): [0x2a91b5d8]main decoder: Received first picture
+03-22 21:55:31.808: D/faplayer(2721): [0x2a6d99b0]main video output: Post-processing available
+03-22 21:55:31.808: D/faplayer(2721): [0x2a22aed0]main decoder: End of video preroll
+03-22 21:55:31.808: D/faplayer(2721): [0x2a22aed0]main decoder: Received first picture
+03-22 21:55:31.812: D/faplayer(2721): [0x2a968f98]main video output: Post-processing available
+03-22 21:55:32.281: D/faplayer(2721): [0x2a8403a0]main input: Decoder buffering done in 710 ms
+03-22 21:55:32.285: W/faplayer(2721): [0x2a7f8c10]main audio output: PTS is out of range (-6771), dropping buffer
+03-22 21:55:32.289: D/AudioHardware(141): AudioHardware pcm playback is exiting standby.
+03-22 21:55:32.289: V/AudioHardware(141): open pcm_out driver
+03-22 21:55:32.289: D/AudioHardware(141): openPcmOut_l() mPcmOpenCnt: 0
+03-22 21:55:32.351: V/AudioHardware(141): openMixer_l() mMixerOpenCnt: 0
+03-22 21:55:32.351: V/AudioHardware(141): open playback normal
+03-22 21:55:32.351: V/AudioHardware(141): write() wakeup setting route SPK
+03-22 21:55:33.128: D/faplayer(2721): [0x2a903728]main vout display: auto hiding mouse
+03-22 21:55:33.156: D/faplayer(2721): [0x2aa69940]main vout display: auto hiding mouse
+03-22 21:55:33.460: W/faplayer(2721): [0x2a7f8c10]main audio output: PTS is out of range (-38680), dropping buffer
+03-22 21:55:33.460: W/faplayer(2721): [0x2a7f8c10]main audio output: buffer too early (-46437), down-sampling
+03-22 21:55:34.855: I/InputReader(323): Reconfiguring input devices.  changes=0x00000004
+03-22 21:55:34.855: I/InputReader(323): Device reconfigured: id=9, name='mxt224_ts_input', surface size is now 480x800, mode is 1
+03-22 21:55:34.878: I/ActivityManager(323): Config changed: {1.0 460mcc1mnc zh_CN sw320dp w320dp h508dp nrml long port finger -keyb/v/h -nav/h s.12 themeResource=null}
+03-22 21:55:35.035: D/dalvikvm(477): GC_CONCURRENT freed 1976K, 53% free 4502K/9479K, paused 3ms+14ms, total 111ms
+03-22 21:55:35.035: D/dalvikvm(477): WAIT_FOR_CONCURRENT_GC blocked 101ms
+03-22 21:55:35.199: D/faplayer(2721): about to destroy 0x2a097568
+03-22 21:55:35.199: D/faplayer(2721): [0x2a920060]main access: waitpipe: object killed
+03-22 21:55:35.199: D/faplayer(2721): [0x2a8403a0]main input: control: stopping input
+03-22 21:55:35.238: D/faplayer(2721): [0x2a91b5d8]main decoder: removing module "avcodec"
+03-22 21:55:35.242: D/faplayer(2721): [0x2a91b5d8]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+03-22 21:55:35.242: D/faplayer(2721): [0x2a91b5d8]main decoder: killing decoder fourcc `h264', 37 PES in FIFO
+03-22 21:55:35.242: D/faplayer(2721): [0x2a097568]main generic: detroying vout (already one saved or active)
+03-22 21:55:35.246: D/faplayer(2721): [0x2a903728]main vout display: Filter 0x2a7cc590 removed from chain
+03-22 21:55:35.246: D/faplayer(2721): [0x2a7cc590]main filter: removing module "yuv2rgb"
+03-22 21:55:35.246: D/faplayer(2721): [0x2a903728]main vout display: removing module "android_surface"
+03-22 21:55:35.261: D/SizeAdaptiveLayout(395): com.android.internal.widget.SizeAdaptiveLayout@40f6ad60child view android.widget.FrameLayout@40fbc0f8 measured out of bounds at 95px clamped to 96px
+03-22 21:55:35.269: D/SizeAdaptiveLayout(395): com.android.internal.widget.SizeAdaptiveLayout@40e14df0child view android.widget.FrameLayout@40f07138 measured out of bounds at 95px clamped to 96px
+03-22 21:55:35.359: D/faplayer(2721): [0x2a8ec3d0]main spu text: removing module "dummy"
+03-22 21:55:35.359: D/faplayer(2721): [0x2a9987a0]main scale: removing module "swscale"
+03-22 21:55:35.410: V/PhoneStatusBar(395): setLightsOn(true)
+03-22 21:55:35.468: D/faplayer(2721): [0x2a89c6b0]main decoder: removing module "avcodec"
+03-22 21:55:35.468: D/faplayer(2721): [0x2a89c6b0]avcodec decoder: ffmpeg codec (MPEG AAC Audio) stopped
+03-22 21:55:35.468: D/faplayer(2721): [0x2a89c6b0]main decoder: killing decoder fourcc `mp4a', 22 PES in FIFO
+03-22 21:55:35.472: D/faplayer(2721): [0x2a661dd8]main audio filter: removing module "ugly_resampler"
+03-22 21:55:35.472: D/faplayer(2721): [0x2a7f8c10]main audio output: removing module "audiotrack_android"
+03-22 21:55:35.472: D/faplayer(2721): [0x2aa69b90]main generic: removing module "fixed32_mixer"
+03-22 21:55:35.472: D/faplayer(2721): [0x2a097568]main generic: releasing audio output
+03-22 21:55:35.507: D/faplayer(2721): [0x2a22aed0]main decoder: removing module "avcodec"
+03-22 21:55:35.511: D/faplayer(2721): [0x2a22aed0]avcodec decoder: ffmpeg codec (H264 - MPEG-4 AVC (part 10)) stopped
+03-22 21:55:35.511: D/faplayer(2721): [0x2a22aed0]main decoder: killing decoder fourcc `h264', 19 PES in FIFO
+03-22 21:55:35.511: D/faplayer(2721): [0x2a097568]main generic: saving a free vout
+03-22 21:55:35.511: D/faplayer(2721): [0x2a097568]main generic: reusing provided vout
+03-22 21:55:35.511: D/faplayer(2721): [0x2a786dc8]main demux: removing module "avformat"
+03-22 21:55:35.511: D/faplayer(2721): [0x2a91c8e8]main stream: removing module "stream_filter_record"
+03-22 21:55:35.515: D/faplayer(2721): [0x2a920060]main access: removing module "access_http"
+03-22 21:55:35.515: D/faplayer(2721): [0x2a8403a0]main input: Program doesn't contain anymore ES
+03-22 21:55:35.515: D/faplayer(2721): [0x2a8403a0]main input: TIMER input launching for 'http://web-play.pptv.com/web-m3u8-300164.m3u8' : 6204.699 ms - Total 6204.699 ms / 1 intvls (Avg 6204.699 ms)
+03-22 21:55:35.515: D/faplayer(2721): [0x2a968f98]main video output: destroying useless vout
+03-22 21:55:35.515: D/faplayer(2721): [0x2aa69940]main vout display: removing module "dummy"
+03-22 21:55:35.519: D/faplayer(2721): [0x2a6d9110]main spu text: removing module "dummy"
+03-22 21:55:35.519: D/faplayer(2721): [0x2a6d93f8]main scale: removing module "swscale"
+03-22 21:55:37.050: D/dalvikvm(323): GC_EXPLICIT freed 298K, 42% free 8750K/14919K, paused 3ms+6ms, total 67ms
+03-22 21:55:38.480: D/AudioHardware(141): AudioHardware pcm playback is going to standby.
+03-22 21:55:38.480: V/AudioHardware(141): closeMixer_l() mMixerOpenCnt: 1
+03-22 21:55:38.480: D/AudioHardware(141): closePcmOut_l() mPcmOpenCnt: 1
+

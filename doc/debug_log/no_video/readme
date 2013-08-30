@@ -1,0 +1,25 @@
+
+2013-04-08
+关于 台州新闻台的 HLS直播放不了，只有音频无视频的问题定位
+
+	给出其HLS地址	http://tsl6.hls.cutv.com/cutvChannelLive/25qamuz.m3u8
+
+	请求之后返回的variant为
+
+	#EXTM3U
+	#EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=350000
+	http://tsl6.hls.cutv.com/cutvlive/25qamuz/hls/live_sd.m3u8
+	#EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=64000
+	http://tsl6.hls.cutv.com/cutvlive/25qamuz/hls/live_a.m3u8
+
+	可以看出其有两个带宽，分别请求得到segments，然后保存流至audio_down和video_down目录下
+	当前目录下是拼接之后的流，可以看到上面的两个variant的地址，其实第二个是只有音频的HLS
+
+	VLC的httplive.c和ffmpeg的applehttp.c会自动请求，由于只有音频的流，其带宽很低，会首先被采纳，所以其实ffmpeg解析出来的
+HLS只有音频，上层报yuv2rgb filter: can't get output picture的错误应该是没有视频解出来的错误警告，也让人误导是解码失败了的错误
+
+	解决方法：
+	对比togic的log信息，其实他是强制用了http://tsl6.hls.cutv.com/cutvlive/25qamuz/hls/live_sd.m3u8这个variant，我目前想修改ffmpeg的
+applehttp.c的代码，让其之请求第一个variant，根据经验，第一个variant都是高清流，带宽比较大，网络不佳时可能会卡
+
+	cutv的地方台多数有这种情况，暂时先这么修改

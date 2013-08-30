@@ -1,0 +1,323 @@
+03-22 23:32:58.156: I/ClipboardService(323): Got clipboard for user=0
+03-22 23:32:59.187: I/ClipboardService(323): Got clipboard for user=0
+03-22 23:32:59.214: I/ClipboardService(323): Got clipboard for user=0
+03-22 23:32:59.214: I/ClipboardService(323): Got clipboard for user=0
+03-22 23:33:00.171: V/VLC/AudioService(9339): Loading position 0 in [http://web-play.pptv.com/web-m3u8-300164.m3u8]
+03-22 23:33:00.304: V/VLC/AudioService(9339): Creating on-the-fly Media object for http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 23:33:00.363: D/VLC(9339): [0x2a3d2d74]: main playlist no fetch required for (null) (art currently (null))
+03-22 23:33:00.378: D/VLC(9339): [0x2a3e2374]: main demux meta looking for meta fetcher module matching "any": 0 candidates
+03-22 23:33:00.394: D/VLC/MediaItem(9339): Title http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 23:33:00.406: D/VLC(9339): [0x2a3e2374]: main demux meta no meta fetcher modules
+03-22 23:33:00.406: D/VLC/MediaItem(9339): Artist 未知艺术家
+03-22 23:33:00.414: D/VLC(9339): [0x2a3d2d74]: main playlist searching art for http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 23:33:00.425: D/VLC/MediaItem(9339): Genre 未知流派
+03-22 23:33:00.425: D/VLC/MediaItem(9339): Album 未知专辑
+03-22 23:33:00.429: D/VLC(9339): [0x2a32b70c]: main art finder looking for art finder module matching "any": 1 candidates
+03-22 23:33:00.437: V/VLC/LibVLC(9339): Reading http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 23:33:00.453: D/VLC(9339): [0x2a3b8374]: main input Creating an input for 'http://web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 23:33:00.464: E/VLC/AudioService(9339): Event not handled
+03-22 23:33:00.507: D/VLC(9339): [0x2a32b70c]: main art finder no art finder modules matched
+03-22 23:33:00.515: D/VLC(9339): [0x2a3d2d74]: main playlist art not found for http://web-play.pptv.com/web-m3u8-300164.m3u8
+03-22 23:33:00.570: D/VLC(9339): [0x2a3b8374]: main input using timeshift granularity of 50 MiB, in path '/tmp'
+03-22 23:33:00.582: D/VLC(9339): [0x2a3b8374]: main input `http://web-play.pptv.com/web-m3u8-300164.m3u8' gives access `http' demux `' path `web-play.pptv.com/web-m3u8-300164.m3u8'
+03-22 23:33:00.597: I/AudioService(323):   Remote Control   registerMediaButtonIntent() for PendingIntent{411af600: PendingIntentRecord{4129f048 org.videolan.vlc broadcastIntent}}
+03-22 23:33:00.609: D/VLC(9339): [0x2a3b8374]: main input creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8' file='(null)'
+03-22 23:33:00.621: D/VLC(9339): [0x2a3e08dc]: main demux looking for access_demux module matching "http": 4 candidates
+03-22 23:33:00.640: D/VLC(9339): [0x2a3e08dc]: main demux no access_demux modules matched
+03-22 23:33:00.640: D/VLC(9339): [0x2a3b8374]: main input creating access 'http' location='web-play.pptv.com/web-m3u8-300164.m3u8', path='(null)'
+03-22 23:33:00.656: D/VLC(9339): [0x2a3e0a44]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:00.664: D/VLC(9339): [0x2a3e0a44]: access_http access http: server='web-play.pptv.com' port=80 file='/web-m3u8-300164.m3u8'
+03-22 23:33:00.683: D/VLC(9339): [0x2a3e0a44]: main access net: connecting to web-play.pptv.com port 80
+03-22 23:33:00.769: D/VLC(9339): [0x2a3e0a44]: main access connection succeeded (socket = 50)
+03-22 23:33:00.789: D/PhoneStatusBar(395): addNotification score=0
+03-22 23:33:00.804: D/VLC/AudioService(9339): Updating widget
+03-22 23:33:00.878: D/VLC(9339): [0x2a3e0a44]: access_http access protocol 'HTTP' answer code 200
+03-22 23:33:00.898: D/SizeAdaptiveLayout(395): com.android.internal.widget.SizeAdaptiveLayout@4101e120child view android.widget.FrameLayout@4106d320 measured out of bounds at 95px clamped to 96px
+03-22 23:33:00.933: D/VLC(9339): [0x2a3e0a44]: access_http access Content-Type: text/plain; charset=UTF-8
+03-22 23:33:00.992: D/VLC(9339): [0x2a3e0a44]: access_http access Transfer-Encoding: chunked
+03-22 23:33:01.003: D/VLC(9339): [0x2a3e0a44]: access_http access Connection: close
+03-22 23:33:01.109: D/VLC(9339): [0x2a3e0a44]: access_http access Accepting Cookie: JSESSIONID=abcQggo2J-SMa4HU0Us2t; path=/
+03-22 23:33:01.187: D/VLC(9339): [0x2a3e0a44]: main access using access module "access_http"
+03-22 23:33:01.218: D/VLC(9339): [0x2a3e0de4]: main stream Using stream method for AStream*
+03-22 23:33:01.253: D/VLC(9339): [0x2a3e0de4]: main stream starting pre-buffering
+03-22 23:33:01.281: D/VLC(9339): [0x2a3e0de4]: main stream received first data after 0 ms
+03-22 23:33:01.285: D/VLC(9339): [0x2a3e0de4]: main stream pre-buffering done 299 bytes in 0s - 133 KiB/s
+03-22 23:33:01.289: D/VLC(9339): [0x2a1cab84]: main stream looking for stream_filter module matching "any": 9 candidates
+03-22 23:33:01.543: I/VLC(9339): [0x2a1cab84]: httplive stream HTTP Live Streaming (web-play.pptv.com/web-m3u8-300164.m3u8)
+03-22 23:33:01.554: D/VLC(9339): [0x2a1cab84]: httplive stream parse_M3U8
+03-22 23:33:01.554: D/VLC(9339): #EXTM3U
+03-22 23:33:01.554: D/VLC(9339): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 23:33:01.554: D/VLC(9339): http://117.135.161.14:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 23:33:01.554: D/VLC(9339): #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=400000
+03-22 23:33:01.554: D/VLC(9339): http://112.25.19.199:80:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&
+03-22 23:33:01.566: I/VLC(9339): [0x2a1cab84]: httplive stream Meta playlist
+03-22 23:33:01.574: I/VLC(9339): [0x2a1cab84]: httplive stream bandwidth adaptation detected (program-id=1, bandwidth=400000).
+03-22 23:33:01.578: D/VLC(9339): [0x2a1cab84]: main stream creating access 'http' location='117.135.161.14:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 23:33:01.582: D/VLC(9339): [0x2a4a78cc]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:01.593: D/VLC(9339): [0x2a4a78cc]: access_http access http: server='117.135.161.14' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 23:33:01.593: D/VLC(9339): [0x2a4a78cc]: main access net: connecting to 117.135.161.14 port 80
+03-22 23:33:01.656: D/VLC(9339): [0x2a4a78cc]: main access connection succeeded (socket = 49)
+03-22 23:33:01.738: D/VLC(9339): [0x2a4a78cc]: access_http access protocol 'HTTP' answer code 200
+03-22 23:33:01.750: D/VLC(9339): [0x2a4a78cc]: access_http access Server: nginx/5.1
+03-22 23:33:01.757: D/VLC(9339): [0x2a4a78cc]: access_http access Content-Type: application/x-mpegURL
+03-22 23:33:01.785: D/VLC(9339): [0x2a4a78cc]: access_http access Transfer-Encoding: chunked
+03-22 23:33:01.800: D/VLC(9339): [0x2a4a78cc]: access_http access Connection: close
+03-22 23:33:01.812: D/VLC(9339): [0x2a4a78cc]: main access using access module "access_http"
+03-22 23:33:01.820: D/VLC(9339): [0x2a397b64]: main stream Using stream method for AStream*
+03-22 23:33:01.828: D/VLC(9339): [0x2a397b64]: main stream starting pre-buffering
+03-22 23:33:01.839: D/VLC(9339): [0x2a397b64]: main stream received first data after 0 ms
+03-22 23:33:01.851: D/VLC(9339): [0x2a397b64]: main stream pre-buffering done 1024 bytes in 0s - 85 KiB/s
+03-22 23:33:01.894: D/VLC(9339): [0x2a4a78cc]: main access removing module "access_http"
+03-22 23:33:01.921: D/VLC(9339): [0x2a1cab84]: httplive stream parse_M3U8
+03-22 23:33:01.921: D/VLC(9339): #EXTM3U
+03-22 23:33:01.921: D/VLC(9339): #EXT-X-TARGETDURATION:5
+03-22 23:33:01.921: D/VLC(9339): #EXT-X-MEDIA-SEQUENCE:272792907
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964535.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964540.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964545.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964550.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964555.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964560.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964565.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363964570.ts?chid=300164&pre=ikan&
+03-22 23:33:01.921: D/VLC(9339): #EXTINF:5,
+03-22 23:33:01.921: D/VLC(9339): http://117.135.161.14/live/847a
+03-22 23:33:01.929: I/VLC(9339): [0x2a1cab84]: httplive stream Live Playlist HLS protocol version: 1
+03-22 23:33:02.406: I/VLC(9339): [0x2a1cab84]: httplive stream bandwidth adaptation detected (program-id=1, bandwidth=400000).
+03-22 23:33:02.453: D/VLC(9339): [0x2a1cab84]: main stream creating access 'http' location='112.25.19.199:80:80/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&', path='(null)'
+03-22 23:33:02.457: D/VLC(9339): [0x2a217d4c]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:02.464: D/VLC(9339): [0x2a217d4c]: access_http access http: server='112.25.19.199' port=80 file='/live/5/45/847a4e1e97584d39a961f5604e90c1c4.m3u8?chid=300164&pre=ikan&'
+03-22 23:33:02.464: D/VLC(9339): [0x2a217d4c]: main access net: connecting to 112.25.19.199 port 80
+03-22 23:33:02.519: D/VLC(9339): [0x2a217d4c]: main access connection succeeded (socket = 52)
+03-22 23:33:02.628: D/VLC(9339): [0x2a217d4c]: access_http access protocol 'HTTP' answer code 200
+03-22 23:33:02.628: D/VLC(9339): [0x2a217d4c]: access_http access Server: nginx/5.1
+03-22 23:33:02.640: D/VLC(9339): [0x2a217d4c]: access_http access Content-Type: application/x-mpegURL
+03-22 23:33:02.652: D/VLC(9339): [0x2a217d4c]: access_http access Transfer-Encoding: chunked
+03-22 23:33:02.656: D/VLC(9339): [0x2a217d4c]: access_http access Connection: close
+03-22 23:33:02.664: D/VLC(9339): [0x2a217d4c]: main access using access module "access_http"
+03-22 23:33:02.675: D/VLC(9339): [0x2a32a5fc]: main stream Using stream method for AStream*
+03-22 23:33:02.679: D/VLC(9339): [0x2a32a5fc]: main stream starting pre-buffering
+03-22 23:33:02.683: D/VLC(9339): [0x2a32a5fc]: main stream received first data after 0 ms
+03-22 23:33:02.691: D/VLC(9339): [0x2a32a5fc]: main stream pre-buffering done 1024 bytes in 0s - 127 KiB/s
+03-22 23:33:02.753: D/VLC(9339): [0x2a217d4c]: main access removing module "access_http"
+03-22 23:33:02.781: D/VLC(9339): [0x2a1cab84]: httplive stream parse_M3U8
+03-22 23:33:02.781: D/VLC(9339): #EXTM3U
+03-22 23:33:02.781: D/VLC(9339): #EXT-X-TARGETDURATION:5
+03-22 23:33:02.781: D/VLC(9339): #EXT-X-MEDIA-SEQUENCE:272792907
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964535.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964540.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964545.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964550.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964555.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964560.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964565.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584d39a961f5604e90c1c4/1363964570.ts?chid=300164&pre=ikan&
+03-22 23:33:02.781: D/VLC(9339): #EXTINF:5,
+03-22 23:33:02.781: D/VLC(9339): http://112.25.19.199/live/847a4e1e97584
+03-22 23:33:02.800: I/VLC(9339): [0x2a1cab84]: httplive stream Live Playlist HLS protocol version: 1
+03-22 23:33:03.265: D/VLC(9339): [0x2a1cab84]: httplive stream 2 streams loaded in Meta playlist
+03-22 23:33:03.320: I/VLC(9339): [0x2a1cab84]: httplive stream Choose segment 360/363 (sequence=272793267)
+03-22 23:33:03.328: D/VLC(9339): [0x2a1cab84]: main stream creating access 'http' location='117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363966335.ts?chid=300164&pre=ikan&', path='(null)'
+03-22 23:33:03.328: D/VLC(9339): [0x2a5f510c]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:03.339: D/VLC(9339): [0x2a5f510c]: access_http access http: server='117.135.161.14' port=80 file='/live/847a4e1e97584d39a961f5604e90c1c4/1363966335.ts?chid=300164&pre=ikan&'
+03-22 23:33:03.339: D/VLC(9339): [0x2a5f510c]: main access net: connecting to 117.135.161.14 port 80
+03-22 23:33:03.386: D/VLC(9339): [0x2a5f510c]: main access connection succeeded (socket = 52)
+03-22 23:33:03.468: D/VLC(9339): [0x2a5f510c]: access_http access protocol 'HTTP' answer code 206
+03-22 23:33:03.476: D/VLC(9339): [0x2a5f510c]: access_http access Server: nginx/5.1
+03-22 23:33:03.488: D/VLC(9339): [0x2a5f510c]: access_http access Content-Type: application/octet-stream
+03-22 23:33:03.500: D/VLC(9339): [0x2a5f510c]: access_http access Connection: close
+03-22 23:33:03.519: D/VLC(9339): [0x2a5f510c]: access_http access stream size=656120,pos=0,remaining=656120
+03-22 23:33:03.523: D/VLC(9339): [0x2a5f510c]: access_http access this frame size=656120
+03-22 23:33:03.535: D/VLC(9339): [0x2a5f510c]: main access using access module "access_http"
+03-22 23:33:03.578: D/VLC(9339): [0x2a4c1354]: main stream Using stream method for AStream*
+03-22 23:33:03.578: D/VLC(9339): [0x2a4c1354]: main stream starting pre-buffering
+03-22 23:33:03.586: D/VLC(9339): [0x2a4c1354]: main stream received first data after 0 ms
+03-22 23:33:03.589: D/VLC(9339): [0x2a4c1354]: main stream pre-buffering done 1024 bytes in 0s - 177 KiB/s
+03-22 23:33:05.734: D/VLC(9339): [0x2a5f510c]: main access removing module "access_http"
+03-22 23:33:05.742: I/VLC(9339): [0x2a1cab84]: httplive stream downloaded segment 272793267 from stream 0
+03-22 23:33:05.746: D/VLC(9339): [0x2a1cab84]: httplive stream candidate 0 bandwidth (bits/s) 2173796 >= 400000
+03-22 23:33:05.746: D/VLC(9339): [0x2a1cab84]: main stream creating access 'http' location='117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363966340.ts?chid=300164&pre=ikan&', path='(null)'
+03-22 23:33:05.750: D/VLC(9339): [0x2a4c17ec]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:05.753: D/VLC(9339): [0x2a4c17ec]: access_http access http: server='117.135.161.14' port=80 file='/live/847a4e1e97584d39a961f5604e90c1c4/1363966340.ts?chid=300164&pre=ikan&'
+03-22 23:33:05.757: D/VLC(9339): [0x2a4c17ec]: main access net: connecting to 117.135.161.14 port 80
+03-22 23:33:05.800: D/VLC(9339): [0x2a4c17ec]: main access connection succeeded (socket = 52)
+03-22 23:33:05.875: D/VLC(9339): [0x2a4c17ec]: access_http access protocol 'HTTP' answer code 206
+03-22 23:33:05.890: D/VLC(9339): [0x2a4c17ec]: access_http access Server: nginx/5.1
+03-22 23:33:05.890: D/VLC(9339): [0x2a4c17ec]: access_http access Content-Type: application/octet-stream
+03-22 23:33:05.902: D/VLC(9339): [0x2a4c17ec]: access_http access Connection: close
+03-22 23:33:05.910: D/VLC(9339): [0x2a4c17ec]: access_http access stream size=261320,pos=0,remaining=261320
+03-22 23:33:05.925: D/VLC(9339): [0x2a4c17ec]: access_http access this frame size=261320
+03-22 23:33:05.937: D/VLC(9339): [0x2a4c17ec]: main access using access module "access_http"
+03-22 23:33:05.980: D/VLC(9339): [0x2a4c7554]: main stream Using stream method for AStream*
+03-22 23:33:05.980: D/VLC(9339): [0x2a4c7554]: main stream starting pre-buffering
+03-22 23:33:05.980: D/VLC(9339): [0x2a4c7554]: main stream received first data after 0 ms
+03-22 23:33:05.988: D/VLC(9339): [0x2a4c7554]: main stream pre-buffering done 1024 bytes in 0s - 138 KiB/s
+03-22 23:33:07.089: D/VLC(9339): [0x2a4c17ec]: main access removing module "access_http"
+03-22 23:33:07.105: I/VLC(9339): [0x2a1cab84]: httplive stream downloaded segment 272793268 from stream 0
+03-22 23:33:07.117: D/VLC(9339): [0x2a1cab84]: httplive stream candidate 0 bandwidth (bits/s) 1535788 >= 400000
+03-22 23:33:07.117: D/VLC(9339): [0x2a1cab84]: main stream using stream_filter module "httplive"
+03-22 23:33:07.125: D/VLC(9339): [0x2a1cab84]: main stream Inserted a stream filter
+03-22 23:33:07.125: D/VLC(9339): [0x2a4c1d7c]: main stream looking for stream_filter module matching "any": 9 candidates
+03-22 23:33:07.144: D/VLC(9339): [0x2a1cab84]: main stream creating access 'http' location='117.135.161.14/live/847a4e1e97584d39a961f5604e90c1c4/1363966345.ts?chid=300164&pre=ikan&', path='(null)'
+03-22 23:33:07.164: D/VLC(9339): [0x2a4c17ec]: main access looking for access module matching "http": 13 candidates
+03-22 23:33:07.179: D/VLC(9339): [0x2a4c1d7c]: main stream no stream_filter modules matched
+03-22 23:33:07.183: D/VLC(9339): [0x2a4c25e4]: main stream looking for stream_filter module matching "stream_filter_record": 9 candidates
+03-22 23:33:07.199: D/VLC(9339): [0x2a4c17ec]: access_http access http: server='117.135.161.14' port=80 file='/live/847a4e1e97584d39a961f5604e90c1c4/1363966345.ts?chid=300164&pre=ikan&'
+03-22 23:33:07.211: D/VLC(9339): [0x2a4c25e4]: main stream no stream_filter modules matched
+03-22 23:33:07.214: D/VLC(9339): [0x2a3b8374]: main input creating demux: access='http' demux='' location='web-play.pptv.com/web-m3u8-300164.m3u8.ts' file='(null)'
+03-22 23:33:07.214: D/VLC(9339): [0x2a4c17ec]: main access net: connecting to 117.135.161.14 port 80
+03-22 23:33:07.218: D/VLC(9339): [0x2a4c2b6c]: main demux looking for demux module matching "any": 54 candidates
+03-22 23:33:07.269: I/VLC(9339): [0x2a1cab84]: httplive stream playing segment 272793267 from stream 0
+03-22 23:33:07.316: D/VLC(9339): [0x2a4c2b6c]: ts demux PATCallBack called
+03-22 23:33:07.320: D/VLC(9339): [0x2a4c2b6c]: ts demux new PAT ts_id=0 version=0 current_next=1
+03-22 23:33:07.320: D/VLC(9339): [0x2a4c2b6c]: ts demux   * number=1 pid=100
+03-22 23:33:07.320: D/VLC(9339): [0x2a4c2b6c]: ts demux PMTCallBack called
+03-22 23:33:07.336: D/VLC(9339): [0x2a4c2b6c]: ts demux new PMT program number=1 version=0 pid_pcr=101
+03-22 23:33:07.363: D/VLC(9339): [0x2a4c2b6c]: ts demux   * es pid=101 type=27 fcc=h264
+03-22 23:33:07.375: D/VLC(9339): [0x2a3b8374]: main input selecting program id=1
+03-22 23:33:07.378: E/VLC(9339): [0x2a4c2b6c]: ts demux MPEG-4 descriptor not found
+03-22 23:33:07.386: D/VLC(9339): [0x2a4c2b6c]: ts demux   * es pid=102 type=15 fcc=mp4a
+03-22 23:33:07.394: D/VLC(9339): [0x2a4c2b6c]: main demux using demux module "ts"
+03-22 23:33:07.398: D/VLC(9339): [0x2a4c3424]: main decoder looking for decoder module matching "any": 31 candidates
+03-22 23:33:07.414: D/VLC(9339): [0x2a4c3424]: avcodec decoder trying to use direct rendering
+03-22 23:33:07.507: D/VLC(9339): [0x2a4c3424]: avcodec decoder allowing 1 thread(s) for decoding
+03-22 23:33:07.507: D/VLC(9339): [0x2a4c3424]: avcodec decoder avcodec codec (H264 - MPEG-4 AVC (part 10)) started
+03-22 23:33:07.519: D/VLC(9339): [0x2a4c3424]: main decoder using decoder module "avcodec"
+03-22 23:33:07.523: D/VLC(9339): [0x2a4c4144]: main packetizer looking for packetizer module matching "any": 19 candidates
+03-22 23:33:07.527: D/VLC(9339): [0x2a4c4144]: main packetizer using packetizer module "packetizer_h264"
+03-22 23:33:07.543: D/VLC(9339): [0x2a4c4634]: main decoder looking for decoder module matching "any": 31 candidates
+03-22 23:33:07.550: W/VLC(9339): [0x2a4c4634]: avcodec decoder waiting for extra data for codec MPEG AAC Audio
+03-22 23:33:07.605: D/VLC(9339): [0x2a4c4634]: main decoder using decoder module "avcodec"
+03-22 23:33:07.613: D/VLC(9339): [0x2a4c524c]: main packetizer looking for packetizer module matching "any": 19 candidates
+03-22 23:33:07.617: D/VLC(9339): [0x2a4c524c]: packetizer_mpeg4audio packetizer running MPEG4 audio packetizer
+03-22 23:33:07.625: D/VLC(9339): [0x2a4c524c]: packetizer_mpeg4audio packetizer no decoder specific info, must be an ADTS or LOAS stream
+03-22 23:33:07.625: D/VLC(9339): [0x2a4c524c]: main packetizer using packetizer module "packetizer_mpeg4audio"
+03-22 23:33:07.628: D/VLC(9339): [0x2a4c2b6c]: ts demux DEMUX_SET_GROUP 0 0x0
+03-22 23:33:07.644: D/VLC(9339): [0x2a34c4dc]: main demux meta looking for meta reader module matching "any": 1 candidates
+03-22 23:33:07.660: D/VLC(9339): [0x2a34c4dc]: main demux meta no meta reader modules matched
+03-22 23:33:07.664: D/VLC(9339): [0x2a3b8374]: main input `http://web-play.pptv.com/web-m3u8-300164.m3u8' successfully opened
+03-22 23:33:07.668: D/VLC(9339): [0x2a3b8374]: main input Buffering 0%
+03-22 23:33:07.668: I/VLC/AudioService(9339): MediaPlayerPlaying
+03-22 23:33:07.671: I/AudioService(323):  AudioFocus  requestAudioFocus() from android.media.AudioManager@40e30f30org.videolan.vlc.AudioService$3@41372568
+03-22 23:33:07.703: D/VLC(9339): [0x2a3b8374]: main input Buffering 4%
+03-22 23:33:07.722: D/VLC(9339): [0x2a4c524c]: packetizer_mpeg4audio packetizer detected ADTS format
+03-22 23:33:07.738: D/VLC(9339): [0x2a4c4144]: packetizer_h264 packetizer found NAL_SPS (sps_id=0)
+03-22 23:33:07.742: D/VLC(9339): [0x2a4c4144]: packetizer_h264 packetizer found NAL_PPS (pps_id=0 sps_id=0)
+03-22 23:33:07.765: I/VLC(9339): [0x2a4c524c]: packetizer_mpeg4audio packetizer AAC channels: 1 samplerate: 22050
+03-22 23:33:07.804: D/VLC(9339): [0x2a3b8374]: main input Buffering 8%
+03-22 23:33:07.808: D/VLC(9339): [0x2a3b8374]: main input Buffering 12%
+03-22 23:33:07.820: D/VLC(9339): [0x2a628754]: main spu text looking for text renderer module matching "any": 1 candidates
+03-22 23:33:07.863: D/VLC(9339): [0x2a3b8374]: main input Buffering 16%
+03-22 23:33:07.882: D/VLC(9339): [0x2a3b8374]: main input Buffering 20%
+03-22 23:33:07.894: D/VLC(9339): [0x2a3b8374]: main input Buffering 24%
+03-22 23:33:07.937: D/VLC(9339): [0x2a3b8374]: main input Buffering 28%
+03-22 23:33:07.945: D/VLC(9339): [0x2a3b8374]: main input Buffering 32%
+03-22 23:33:07.945: D/VLC(9339): [0x2a3b8374]: main input Buffering 36%
+03-22 23:33:07.953: D/VLC(9339): [0x2a628754]: freetype spu text using fontsize: 2
+03-22 23:33:07.980: D/VLC(9339): [0x2a3b8374]: main input Buffering 40%
+03-22 23:33:07.988: D/VLC(9339): [0x2a3b8374]: main input Buffering 44%
+03-22 23:33:07.992: D/VLC(9339): [0x2a3b8374]: main input Buffering 48%
+03-22 23:33:08.007: D/VLC(9339): [0x2a3b8374]: main input Buffering 52%
+03-22 23:33:08.015: D/VLC(9339): [0x2a628754]: main spu text using text renderer module "freetype"
+03-22 23:33:08.043: D/VLC(9339): [0x2a6363b4]: main scale looking for video filter2 module matching "any": 32 candidates
+03-22 23:33:08.050: D/VLC(9339): [0x2a3b8374]: main input Buffering 56%
+03-22 23:33:08.269: D/VLC(9339): [0x2a6363b4]: swscale scale 32x32 chroma: YUVA -> 16x16 chroma: RGBA with scaling using Bicubic (good quality)
+03-22 23:33:08.324: D/VLC(9339): [0x2a3b8374]: main input Buffering 60%
+03-22 23:33:08.328: D/VLC(9339): [0x2a3b8374]: main input Buffering 64%
+03-22 23:33:08.343: D/VLC(9339): [0x2a3b8374]: main input Buffering 68%
+03-22 23:33:08.363: D/VLC(9339): [0x2a3b8374]: main input Buffering 72%
+03-22 23:33:08.382: D/VLC(9339): [0x2a3b8374]: main input Buffering 76%
+03-22 23:33:08.390: D/VLC(9339): [0x2a3b8374]: main input Buffering 80%
+03-22 23:33:08.394: D/VLC(9339): [0x2a3b8374]: main input Buffering 84%
+03-22 23:33:08.429: D/VLC(9339): [0x2a3b8374]: main input Buffering 88%
+03-22 23:33:08.445: D/VLC(9339): [0x2a3b8374]: main input Buffering 92%
+03-22 23:33:08.449: D/VLC(9339): [0x2a6363b4]: main scale using video filter2 module "swscale"
+03-22 23:33:08.453: D/VLC(9339): [0x2a3b8374]: main input Buffering 96%
+03-22 23:33:08.461: D/VLC(9339): [0x2a6578e4]: main scale looking for video filter2 module matching "any": 32 candidates
+03-22 23:33:08.461: D/VLC(9339): [0x2a3b8374]: main input Buffering 100%
+03-22 23:33:08.468: D/VLC(9339): [0x2a6578e4]: yuvp scale YUVP to YUVA converter
+03-22 23:33:08.472: D/VLC(9339): [0x2a6578e4]: main scale using video filter2 module "yuvp"
+03-22 23:33:08.472: D/VLC(9339): [0x2a3b8374]: main input Stream buffering done (1040 ms in 804 ms)
+03-22 23:33:08.507: D/VLC(9339): [0x2a627bb4]: main video output Deinterlacing available
+03-22 23:33:08.515: D/VLC(9339): [0x2a627bb4]: main video output deinterlace 0, mode blend, is_needed 0
+03-22 23:33:08.628: D/VLC(9339): [0x2a627bb4]: main video output Opening vout display wrapper
+03-22 23:33:08.632: D/VLC(9339): [0x2a65a55c]: main vout display looking for vout display module matching "any": 2 candidates
+03-22 23:33:08.671: D/VLC(9339): [0x2a65a55c]: android_surface vout display Pixel format RV32
+03-22 23:33:08.683: D/VLC(9339): [0x2a65a55c]: main vout display VoutDisplayEvent 'fullscreen' 0
+03-22 23:33:08.687: D/VLC(9339): [0x2a65a55c]: main vout display using vout display module "android_surface"
+03-22 23:33:08.687: D/VLC(9339): [0x2a65a55c]: main vout display A filter to adapt decoder to display is needed
+03-22 23:33:08.691: D/VLC(9339): [0x2a65ad7c]: main filter looking for video filter2 module matching "any": 32 candidates
+03-22 23:33:08.699: D/VLC(9339): [0x2a4c4634]: avcodec decoder avcodec codec (MPEG AAC Audio) started
+03-22 23:33:08.734: D/VLC(9339): [0x2a65ad7c]: yuv_rgb_neon filter I420(640x480) to RV32(640x480)
+03-22 23:33:08.734: D/VLC(9339): [0x2a65ad7c]: main filter using video filter2 module "yuv_rgb_neon"
+03-22 23:33:08.738: D/VLC(9339): [0x2a65a55c]: main vout display Filter 'yuv_rgb_neon' (0x2a65ad7c) appended to chain
+03-22 23:33:08.785: D/VLC(9339): [0x2a627bb4]: main video output original format sz 640x480, of (0,0), vsz 640x480, 4cc I420, sar 4:3, msk r0x0 g0x0 b0x0
+03-22 23:33:08.812: D/VLC(9339): [0x2a628754]: main spu text removing module "freetype"
+03-22 23:33:08.824: D/VLC(9339): [0x2a628754]: main spu text looking for text renderer module matching "any": 1 candidates
+03-22 23:33:08.824: D/VLC(9339): [0x2a628754]: freetype spu text using fontsize: 2
+03-22 23:33:08.843: D/VLC(9339): [0x2a628754]: main spu text using text renderer module "freetype"
+03-22 23:33:08.847: D/VLC(9339): [0x2a4c3424]: avcodec decoder using direct rendering
+03-22 23:33:08.851: I/VLC/AudioService(9339): Obtained video track
+03-22 23:33:08.859: I/ActivityManager(323): START {flg=0x18000000 cmp=org.videolan.vlc/.gui.video.VideoPlayerActivity (has extras) u=0} from pid 9339
+03-22 23:33:08.910: D/VLC(9339): [0x2a3e254c]: main generic creating audio output
+03-22 23:33:08.933: D/VLC(9339): [0x2a65f92c]: main audio output looking for audio output module matching "opensles": 4 candidates
+03-22 23:33:08.941: W/libOpenSLES(9339): class OutputMix interface 0 requested but unavailable MPH=43
+03-22 23:33:08.953: D/VLC(9339): [0x2a65f92c]: main audio output using audio output module "opensles_android"
+03-22 23:33:08.964: D/dalvikvm(323): GC_FOR_ALLOC freed 2354K, 42% free 9372K/16007K, paused 88ms, total 96ms
+03-22 23:33:09.027: E/VLC(9339): [0x2a65a55c]: main vout display Failed to set on top
+03-22 23:33:09.222: D/Sensors(323): Smb380Sensor::~enable(0, 1)
+03-22 23:33:09.222: D/Sensors(323): Smb380Sensor::~enable(0, 1) open /sys/class/input/event1/device/enable
+03-22 23:33:09.222: D/Sensors(323): Smb380Sensor::~enable(0, 1) opened /sys/class/input/event1/device/enable
+03-22 23:33:09.230: D/Sensors(323): Smb380Sensor::~setDelay(0, 200000000)
+03-22 23:33:09.230: D/Sensors(323): Smb380Sensor::~setDelay(0, 66667000)
+03-22 23:33:09.398: D/VLC/VideoPlayerActivity(9339): Pixel format is RGBX_8888
+03-22 23:33:09.429: D/VLC/AudioService(9339): Updating widget
+03-22 23:33:09.449: D/VLC/AudioServiceContoller(9339): Service Connected
+03-22 23:33:09.605: I/ActivityManager(323): Displayed org.videolan.vlc/.gui.video.VideoPlayerActivity: +631ms
+03-22 23:33:09.687: D/VLC(9339): [0x2a65a55c]: main vout display auto hiding mouse cursor
+03-22 23:33:09.703: D/VLC(9339): [0x2a65f92c]: main audio output output 's16l' 22050 Hz Stereo/Mono frame=1 samples/4 bytes
+03-22 23:33:09.707: D/VLC(9339): [0x2a660364]: main volume looking for audio volume module matching "any": 3 candidates
+03-22 23:33:09.714: D/VLC(9339): [0x2a660364]: main volume using audio volume module "integer_mixer"
+03-22 23:33:09.793: D/VLC(9339): [0x2a65f92c]: main audio output input 'f32l' 22050 Hz Mono frame=1 samples/4 bytes
+03-22 23:33:09.796: D/VLC(9339): [0x2a65f92c]: main audio output conversion: 'f32l'->'s16l' 22050 Hz->22050 Hz Mono->Stereo/Mono
+03-22 23:33:09.800: D/VLC(9339): [0x2a4f94fc]: main audio converter looking for audio converter module matching "any": 7 candidates
+03-22 23:33:09.812: D/VLC(9339): [0x2a4f94fc]: main audio converter using audio converter module "trivial_channel_mixer"
+03-22 23:33:09.816: D/VLC(9339): [0x2a4f97f4]: main audio converter looking for audio converter module matching "any": 7 candidates
+03-22 23:33:09.820: D/VLC(9339): [0x2a4f97f4]: audio_format audio converter f32l->s16l, bits per sample: 32->16
+03-22 23:33:09.828: D/VLC(9339): [0x2a4f97f4]: main audio converter using audio converter module "audio_format"
+03-22 23:33:09.832: D/VLC(9339): [0x2a65f92c]: main audio output conversion pipeline complete
+03-22 23:33:09.832: D/VLC(9339): [0x2a6b1004]: main audio resampler looking for audio resampler module matching "any": 1 candidates
+03-22 23:33:09.836: D/VLC(9339): [0x2a6b1004]: main audio resampler using audio resampler module "ugly_resampler"
+03-22 23:33:09.836: D/VLC(9339): [0x2a4c4634]: main decoder End of audio preroll
+03-22 23:33:10.308: D/VLC(9339): [0x2a4c17ec]: main access connection succeeded (socket = 52)
+03-22 23:33:10.402: D/VLC(9339): [0x2a4c17ec]: access_http access protocol 'HTTP' answer code 206
+03-22 23:33:10.410: D/VLC(9339): [0x2a4c17ec]: access_http access Server: nginx/5.1
+03-22 23:33:10.464: D/VLC(9339): [0x2a4c17ec]: access_http access Content-Type: application/octet-stream
+03-22 23:33:10.496: D/VLC(9339): [0x2a4c17ec]: access_http access Connection: close
+03-22 23:33:10.500: D/VLC(9339): [0x2a4c17ec]: access_http access stream size=218644,pos=0,remaining=218644
+03-22 23:33:10.554: D/VLC(9339): [0x2a4c17ec]: access_http access this frame size=218644
+03-22 23:33:10.566: D/VLC(9339): [0x2a4c17ec]: main access using access module "access_http"
+03-22 23:33:10.636: D/VLC(9339): [0x2a4fc314]: main stream Using stream method for AStream*
+03-22 23:33:10.636: D/VLC(9339): [0x2a4fc314]: main stream starting pre-buffering
+03-22 23:33:10.640: D/VLC(9339): [0x2a4fc314]: main stream received first data after 0 ms
+03-22 23:33:10.640: D/VLC(9339): [0x2a4fc314]: main stream pre-buffering done 1024 bytes in 0s - 7518 KiB/s
+03-22 23:33:10.949: D/VLC(9339): [0x2a4c3424]: main decoder End of video preroll
+03-22 23:33:10.976: D/VLC(9339): [0x2a4c17ec]: main access removing module "access_http"
+03-22 23:33:10.992: D/VLC(9339): [0x2a4c3424]: main decoder Received first picture
+
