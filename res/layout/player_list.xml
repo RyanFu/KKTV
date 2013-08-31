@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical" >
+    android:id="@+id/player_sourcelist"
+    android:layout_width="200dp"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/transparent_gray"
+    android:visibility="invisible" >
 
-    <ScrollView
+    <ListView
+        android:id="@+id/source_list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        android:fadingEdge="vertical"
+        android:cacheColorHint="#ffffffff"
+        android:divider="@drawable/list_bottom"
+        android:dividerHeight="1.0px"
         android:fastScrollEnabled="true"
-        android:scrollbars="vertical" >
-
-        <br.com.dina.ui.widget.UITableView
-            android:id="@+id/tableView"
-            style="@style/UITableView" />
-    </ScrollView>
+        android:listSelector="#00000000" />
 
 </LinearLayout>

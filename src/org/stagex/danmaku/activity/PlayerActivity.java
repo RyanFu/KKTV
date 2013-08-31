@@ -6,6 +6,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import org.keke.player.R;
+import org.stagex.danmaku.adapter.ChannelAdapter;
+import org.stagex.danmaku.adapter.ChannelSourceAdapter;
 import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.SystemUtility;
 
@@ -48,12 +50,18 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
+import android.widget.AbsListView.OnScrollListener;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -151,8 +159,11 @@ public class PlayerActivity extends Activity implements
 	// private int mSubtitleTrackCount = 0;
 
 	/* 播放界面选台和切源 */
-	UITableView tableView;
-	private ArrayList<String> sourceinfos;
+	private LinearLayout mLinearLayoutSourceList;
+	private Boolean mSourceListShow = false;
+//	UITableView tableView;
+	private ListView source_list;
+	private ArrayList<String> sourceInfos = null;
 	private ImageButton mImageButtonList;
 
 	/**
@@ -257,32 +268,33 @@ public class PlayerActivity extends Activity implements
 					isLiveMedia = sharedPreferences.getBoolean("isLiveMedia",
 							true);
 					if (isLiveMedia) {
-						// 缓冲环显示
-						mProgressBarPreparing.setVisibility(View.VISIBLE);
-						// 缓冲提示语
-						// mLoadingTxt.setVisibility(View.VISIBLE);
-						Log.d(LOGTAG,
-								"reconnect the Media Server in LiveTV mode");
-						if (sharedPreferences.getBoolean("isHardDec", false)) {
-							// 硬解码重新连接媒体服务器
-							destroyMediaPlayer(true);
-							selectMediaPlayer(
-									mPlayListArray.get(mPlayListSelected),
-									false);
-							createMediaPlayer(true,
-									mPlayListArray.get(mPlayListSelected),
-									mSurfaceHolderDef);
-							mMediaPlayer.setDisplay(mSurfaceHolderDef);
-						} else {
-							// 软解码重新连接媒体服务器
-							destroyMediaPlayer(false);
-							selectMediaPlayer(
-									mPlayListArray.get(mPlayListSelected), true);
-							createMediaPlayer(false,
-									mPlayListArray.get(mPlayListSelected),
-									mSurfaceHolderVlc);
-							mMediaPlayer.setDisplay(mSurfaceHolderVlc);
-						}
+//						// 缓冲环显示
+//						mProgressBarPreparing.setVisibility(View.VISIBLE);
+//						// 缓冲提示语
+//						// mLoadingTxt.setVisibility(View.VISIBLE);
+//						Log.d(LOGTAG,
+//								"reconnect the Media Server in LiveTV mode");
+//						if (sharedPreferences.getBoolean("isHardDec", false)) {
+//							// 硬解码重新连接媒体服务器
+//							destroyMediaPlayer(true);
+//							selectMediaPlayer(
+//									mPlayListArray.get(mPlayListSelected),
+//									false);
+//							createMediaPlayer(true,
+//									mPlayListArray.get(mPlayListSelected),
+//									mSurfaceHolderDef);
+//							mMediaPlayer.setDisplay(mSurfaceHolderDef);
+//						} else {
+//							// 软解码重新连接媒体服务器
+//							destroyMediaPlayer(false);
+//							selectMediaPlayer(
+//									mPlayListArray.get(mPlayListSelected), true);
+//							createMediaPlayer(false,
+//									mPlayListArray.get(mPlayListSelected),
+//									mSurfaceHolderVlc);
+//							mMediaPlayer.setDisplay(mSurfaceHolderVlc);
+//						}
+						reConnectSource(mPlayListArray.get(mPlayListSelected));
 					} else
 						// @}
 						new AlertDialog.Builder(PlayerActivity.this)
@@ -557,7 +569,10 @@ public class PlayerActivity extends Activity implements
 
 		// =====================================================
 		// 播放界面切源以及选台功能
-		tableView = (UITableView) findViewById(R.id.tableView);
+		mLinearLayoutSourceList= (LinearLayout) findViewById(R.id.player_sourcelist);
+		source_list = (ListView) findViewById(R.id.source_list);
+		// 防止滑动黑屏
+		source_list.setCacheColorHint(Color.TRANSPARENT);
 		mImageButtonList = (ImageButton) findViewById(R.id.player_button_list);
 		mImageButtonList.setOnClickListener(this);
 		// =====================================================
@@ -985,13 +1000,17 @@ public class PlayerActivity extends Activity implements
 		}
 		case R.id.player_button_list: {
 			// TODO 增加播放界面切源和切台
+			mLinearLayoutSourceList.setVisibility(View.VISIBLE);
+			// 同时隐藏播放的控件
+			mLinearLayoutControlBar.setVisibility(View.GONE);
+			
 			// 查询数据库
 			List<POChannelList> channelList = mDbHelper.queryForEq(
 					POChannelList.class, "name", mTitleName);
 			for (POChannelList channel : channelList) {
-				createList(channel.getAllUrl());
-				Log.d(LOGTAG, "total items: " + tableView.getCount());
-				tableView.commit();
+				sourceInfos = channel.getAllUrl();
+				createList(sourceInfos);
+				Log.d(LOGTAG, "total items: " + source_list.getCount());
 			}
 			break;
 		}
@@ -1142,6 +1161,9 @@ public class PlayerActivity extends Activity implements
 			return true;
 		}
 
+		// 2013-08-31 隐藏源切换和切台的控件
+		mLinearLayoutSourceList.setVisibility(View.GONE);
+		
 		// TODO 更新当前时间信息
 		mSysTime.setText(DateFormat.format("kk:mm", System.currentTimeMillis()));
 		mTitle.setText(mTitleName);
@@ -1499,41 +1521,45 @@ public class PlayerActivity extends Activity implements
 	 * 2013-08-31 增加播放界面切源功能 采用圆角的ListView布局方式
 	 */
 	private void createList(ArrayList<String> infos) {
-		CustomClickListener listener = new CustomClickListener();
-		tableView.setClickListener(listener);
-		int index = 0;
-		String url = null;
-		for (String info : infos) {
-			url = SourceName.whichName(info);
-			// if (SourceName.mHd || SourceName.mHot) {
-			// 添加每一项
-			tableView.addBasicItem(++index + ".\t" + url, "\t\t"
-					+ ((SourceName.mHd == true) ? "HD\t" : "")
-					+ ((SourceName.mHot == true) ? "HOT\t" : ""));
-			// } else {
-			// // 添加每一项
-			// tableView.addBasicItem(++index + ".\t" + url);
-			// }
-		}
-	}
 
-	/**
-	 * 设置监听事件
-	 * 
-	 * @author jgf
-	 * 
-	 */
-	private class CustomClickListener implements ClickListener {
-		@Override
-		public void onClick(int index) {
-			// startLiveMedia(infos.get(index), channel_name, index);
-		}
+		ChannelSourceAdapter adapter = new ChannelSourceAdapter(this, sourceInfos);
+		source_list.setAdapter(adapter);
+		source_list.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				String url = (String) source_list
+						.getItemAtPosition(arg2);
+				mSourceName = "地址" + Integer.toString(arg2 + 1) + "：" + SourceName.whichName(url);
+				reSetSourceData(url, mSourceName);
+				Log.i(LOGTAG, "===>>>" + mSourceName);
+			}
+		});
+
+		source_list.setOnScrollListener(new OnScrollListener() {
+
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+	
 	}
 
 	/**
 	 * 重新获取播放需要的视频数据
 	 */
-	private void reSetSourceData() {
+	private void reSetSourceData(String url, String name) {
 		// mPlayListSelected = intent.getIntExtra("selected", 0);
 		// mPlayListArray = intent.getStringArrayListExtra("playlist");
 		// channelStar = intent.getBooleanExtra("channelStar", false);
@@ -1542,19 +1568,20 @@ public class PlayerActivity extends Activity implements
 //		mSourceName = intent.getStringExtra("source");
 		// isSelfTV = intent.getBooleanExtra("isSelfTV", false);
 
-		if (mPlayListArray == null || mPlayListArray.size() == 0) {
-			Log.e(LOGTAG, "initializeData(): empty");
-			finish();
-			return;
-		}
+//		if (mPlayListArray == null || mPlayListArray.size() == 0) {
+//			Log.e(LOGTAG, "initializeData(): empty");
+//			finish();
+//			return;
+//		}
+		reConnectSource(url);
 	}
 
 	/**
-	 * 连接候选的地址源
+	 * 重新连接候选的地址源
 	 */
 	private void reConnectSource(String url) {
-		isLiveMedia = sharedPreferences.getBoolean("isLiveMedia", true);
-		if (isLiveMedia) {
+//		isLiveMedia = sharedPreferences.getBoolean("isLiveMedia", true);
+//		if (isLiveMedia) {
 			// 缓冲环显示
 			mProgressBarPreparing.setVisibility(View.VISIBLE);
 			// 缓冲提示语
@@ -1574,5 +1601,5 @@ public class PlayerActivity extends Activity implements
 				mMediaPlayer.setDisplay(mSurfaceHolderVlc);
 			}
 		}
-	}
+//	}
 }
