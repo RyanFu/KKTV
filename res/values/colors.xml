@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="transparent">#00000000</color>
     <color name="item_common">#F111</color>
     <color name="item_1">#F222</color>
     <color name="item_2">#F000</color>
@@ -156,17 +157,18 @@
     <color name="navy">#000080</color> <!-- 海军色 -->
     <color name="black">#000000</color> <!-- 黑色 -->
 
-	<!-- LIST BORDER COLOR -->
-	<color name="rounded_container_border">#ffb7babb</color>
 
-	<!-- ITEM BACKGROUND COLOR - STATE - DEFAULT -->
-	<color name="base_start_color_default">#FFFFFF</color>
+    <!-- LIST BORDER COLOR -->
+    <color name="rounded_container_border">#ffb7babb</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - DEFAULT -->
+    <color name="base_start_color_default">#FFFFFF</color>
     <color name="base_end_color_default">#FFFFFF</color>
-    	
-	<!-- ITEM BACKGROUND COLOR - STATE - PRESSED -->
-	<color name="base_start_color_pressed">#ff3590c4</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - PRESSED -->
+    <color name="base_start_color_pressed">#ff3590c4</color>
     <color name="base_end_color_pressed">#ff2570ba</color>
-    
+
     <!-- ITEM TEXT COLORS - STATES - PRESSED AND DEFAULT -->
     <color name="text_color_default">#000000</color>
     <color name="text_color_pressed">#ffffff</color>

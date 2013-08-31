@@ -6,7 +6,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import org.keke.player.R;
+import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.SystemUtility;
+
+import br.com.dina.ui.widget.UITableView;
+import br.com.dina.ui.widget.UITableView.ClickListener;
 
 import com.nmbb.oplayer.scanner.DbHelper;
 import com.nmbb.oplayer.scanner.POChannelList;
@@ -92,7 +96,7 @@ public class PlayerActivity extends Activity implements
 
 	/* player misc */
 	private ProgressBar mProgressBarPreparing;
-//	private TextView mLoadingTxt;
+	// private TextView mLoadingTxt;
 	private TextView mPercentTxt;
 
 	/* player controls */
@@ -146,6 +150,11 @@ public class PlayerActivity extends Activity implements
 	// private int mSubtitleTrackIndex = 0;
 	// private int mSubtitleTrackCount = 0;
 
+	/* 播放界面选台和切源 */
+	UITableView tableView;
+	private ArrayList<String> sourceinfos;
+	private ImageButton mImageButtonList;
+
 	/**
 	 * 增加手势控制
 	 * 
@@ -191,7 +200,7 @@ public class PlayerActivity extends Activity implements
 
 	/* 是否是自定义频道 */
 	private Boolean isSelfTV = false;
-	
+
 	/**
 	 * 判断使用的解码接口
 	 * 
@@ -211,32 +220,32 @@ public class PlayerActivity extends Activity implements
 	/**
 	 * 播放过程中的事件响应的核心处理方法
 	 */
-	protected void initializeEvents() {
+	private void initializeEvents() {
 		mEventHandler = new Handler() {
 			public void handleMessage(Message msg) {
-//				Log.d(LOGTAG, "===> get message [" + msg.what + "]");
+				// Log.d(LOGTAG, "===> get message [" + msg.what + "]");
 				switch (msg.what) {
 				case MEDIA_PLAYER_BUFFERING_UPDATE: {
 					// FIXBUG bug#0023 这里的判断标志会引起第一次启动时没有
 					// 缓冲百分比的提示
-//					if (mMediaPlayerLoaded) {
-						// Log.d(LOGTAG, "===>load   " + msg.arg1 + "%");
-						mPercentTxt.setText("正在缓冲===> "
-								+ String.valueOf(msg.arg1) + "%");
+					// if (mMediaPlayerLoaded) {
+					// Log.d(LOGTAG, "===>load   " + msg.arg1 + "%");
+					mPercentTxt.setText("正在缓冲===> " + String.valueOf(msg.arg1)
+							+ "%");
 
-						mPercentTxt.setVisibility(msg.arg1 < 100 ? View.VISIBLE
-								: View.GONE);
+					mPercentTxt.setVisibility(msg.arg1 < 100 ? View.VISIBLE
+							: View.GONE);
 
-						mProgressBarPreparing
-								.setVisibility(msg.arg1 < 100 ? View.VISIBLE
-										: View.GONE);
+					mProgressBarPreparing
+							.setVisibility(msg.arg1 < 100 ? View.VISIBLE
+									: View.GONE);
 
-//						 mLoadingTxt
-//						 .setVisibility(msg.arg1 < 100 ? View.VISIBLE
-//						 : View.GONE);
-					}
+					// mLoadingTxt
+					// .setVisibility(msg.arg1 < 100 ? View.VISIBLE
+					// : View.GONE);
+				}
 					break;
-//				}
+				// }
 				case MEDIA_PLAYER_COMPLETION: {
 					/* TODO 播放结束后，如何处理 */
 					// 使用通知窗口
@@ -251,7 +260,7 @@ public class PlayerActivity extends Activity implements
 						// 缓冲环显示
 						mProgressBarPreparing.setVisibility(View.VISIBLE);
 						// 缓冲提示语
-//						mLoadingTxt.setVisibility(View.VISIBLE);
+						// mLoadingTxt.setVisibility(View.VISIBLE);
 						Log.d(LOGTAG,
 								"reconnect the Media Server in LiveTV mode");
 						if (sharedPreferences.getBoolean("isHardDec", false)) {
@@ -309,7 +318,7 @@ public class PlayerActivity extends Activity implements
 						mProgressBarPreparing.setVisibility(View.GONE);
 						// FIXME bug#0023
 						mPercentTxt.setVisibility(View.GONE);
-//						mLoadingTxt.setVisibility(View.GONE);
+						// mLoadingTxt.setVisibility(View.GONE);
 						/* TODO 用在硬解解码模式，判断不支持的源 */
 						new AlertDialog.Builder(PlayerActivity.this)
 								.setIcon(R.drawable.ic_dialog_alert)
@@ -356,7 +365,7 @@ public class PlayerActivity extends Activity implements
 						mProgressBarPreparing.setVisibility(View.GONE);
 						// FIXME bug#0023
 						mPercentTxt.setVisibility(View.GONE);
-//						mLoadingTxt.setVisibility(View.GONE);
+						// mLoadingTxt.setVisibility(View.GONE);
 						// 弹出播放失败的窗口@{
 						new AlertDialog.Builder(PlayerActivity.this)
 								.setIcon(R.drawable.ic_dialog_alert)
@@ -389,7 +398,8 @@ public class PlayerActivity extends Activity implements
 				case MEDIA_PLAYER_PREPARED: {
 					Log.d(LOGTAG, "===> MEDIA_PLAYER_PREPARED");
 					// FIXME bug#0023 对于rtmp的视频，不会有该message
-					// 因此是个bug，暂时将mMediaPlayerLoaded = true在MEDIA_PLAYER_PROGRESS_UPDATE
+					// 因此是个bug，暂时将mMediaPlayerLoaded =
+					// true在MEDIA_PLAYER_PROGRESS_UPDATE
 					// 中也进行置位操作
 					if (isDefMediaPlayer(msg.obj) || isVlcMediaPlayer(msg.obj)) {
 						/* update status */
@@ -398,7 +408,7 @@ public class PlayerActivity extends Activity implements
 					/* update UI */
 					if (mMediaPlayerLoaded) {
 						mProgressBarPreparing.setVisibility(View.GONE);
-//						mLoadingTxt.setVisibility(View.GONE);
+						// mLoadingTxt.setVisibility(View.GONE);
 						// FIXME bug#0023
 						mPercentTxt.setVisibility(View.GONE);
 					}
@@ -496,7 +506,7 @@ public class PlayerActivity extends Activity implements
 
 		// TODO 2013-08-01
 		mSelfdef = (TextView) findViewById(R.id.selfdef_tv);
-		
+
 		// overlay header
 		mTitle = (TextView) findViewById(R.id.player_overlay_title);
 		mSource = (TextView) findViewById(R.id.player_overlay_name);
@@ -541,9 +551,16 @@ public class PlayerActivity extends Activity implements
 		// 缓冲进度圈
 		mProgressBarPreparing = (ProgressBar) findViewById(R.id.player_prepairing);
 		// 缓冲提示语言
-//		mLoadingTxt = (TextView) findViewById(R.id.player_loading);
+		// mLoadingTxt = (TextView) findViewById(R.id.player_loading);
 		// 缓冲比例
 		mPercentTxt = (TextView) findViewById(R.id.buffer_percent);
+
+		// =====================================================
+		// 播放界面切源以及选台功能
+		tableView = (UITableView) findViewById(R.id.tableView);
+		mImageButtonList = (ImageButton) findViewById(R.id.player_button_list);
+		mImageButtonList.setOnClickListener(this);
+		// =====================================================
 
 		// 初始化手势
 		initGesture();
@@ -555,6 +572,9 @@ public class PlayerActivity extends Activity implements
 		registerReceiver(mReceiver, filter);
 	}
 
+	/**
+	 * 获取播放需要的视频数据
+	 */
 	protected void initializeData() {
 		Intent intent = getIntent();
 		String action = intent.getAction();
@@ -606,7 +626,7 @@ public class PlayerActivity extends Activity implements
 			resource = SystemUtility.getDrawableId("ic_fav");
 			mImageButtonStar.setBackgroundResource(resource);
 		}
-		
+
 		// TODO 2013-08-01 自定义频道暂时不支持在播放界面收藏
 		if (isSelfTV) {
 			mImageButtonStar.setVisibility(View.GONE);
@@ -688,7 +708,7 @@ public class PlayerActivity extends Activity implements
 			mProgressBarPreparing.setVisibility(View.GONE);
 			// FIXME bug#0023
 			mPercentTxt.setVisibility(View.GONE);
-//			mLoadingTxt.setVisibility(View.GONE);
+			// mLoadingTxt.setVisibility(View.GONE);
 			/* TODO 用在硬解解码模式，判断不支持的源 */
 			new AlertDialog.Builder(PlayerActivity.this)
 					.setIcon(R.drawable.ic_dialog_alert)
@@ -755,7 +775,7 @@ public class PlayerActivity extends Activity implements
 			return;
 		}
 		if (mMediaPlayer != null) {
-//			 Log.i(LOGTAG, "===> mMediaPlayer.start()");
+			// Log.i(LOGTAG, "===> mMediaPlayer.start()");
 			mMediaPlayer.start();
 			mMediaPlayerStarted = true;
 		}
@@ -844,15 +864,15 @@ public class PlayerActivity extends Activity implements
 		// 缓冲环显示
 		mProgressBarPreparing.setVisibility(View.VISIBLE);
 		// 缓冲提示语
-//		mLoadingTxt.setVisibility(View.VISIBLE);
+		// mLoadingTxt.setVisibility(View.VISIBLE);
 		// 数据初始化
 		initializeData();
 		String uri = mPlayListArray.get(mPlayListSelected);
 
 		/* 频道收藏的数据库 */
 		mDbHelper = new DbHelper<POChannelList>();
-		mSelfDbHelper  = new DbHelper<POUserDefChannel>();
-		
+		mSelfDbHelper = new DbHelper<POUserDefChannel>();
+
 		// 选择播放器
 		/* 判断解码器状态 */
 		sharedPreferences = getSharedPreferences("keke_player", MODE_PRIVATE);
@@ -913,7 +933,7 @@ public class PlayerActivity extends Activity implements
 			if (isSelfTV) {
 				// 用户自定义的频道
 				// TODO 2013-08-01 暂时不支持自定义的频道在播放界面收藏
-//				updateSelfFavDatabase(mTitleName);
+				// updateSelfFavDatabase(mTitleName);
 			} else {
 				// 官方频道
 				updateFavDatabase(mTitleName);
@@ -961,6 +981,18 @@ public class PlayerActivity extends Activity implements
 			String name = String.format("btn_aspect_ratio_%d", mAspectRatio);
 			int resource = SystemUtility.getDrawableId(name);
 			mImageButtonSwitchAspectRatio.setBackgroundResource(resource);
+			break;
+		}
+		case R.id.player_button_list: {
+			// TODO 增加播放界面切源和切台
+			// 查询数据库
+			List<POChannelList> channelList = mDbHelper.queryForEq(
+					POChannelList.class, "name", mTitleName);
+			for (POChannelList channel : channelList) {
+				createList(channel.getAllUrl());
+				Log.d(LOGTAG, "total items: " + tableView.getCount());
+				tableView.commit();
+			}
 			break;
 		}
 		default:
@@ -1427,37 +1459,120 @@ public class PlayerActivity extends Activity implements
 			mDbHelper.update(channel);
 		}
 	}
-	
-//	/**
-//	 * 自定义收藏后更新某一条数据信息
-//	 * 
-//	 */
-//	private void updateSelfFavDatabase(String name) {
-//		int resource = -1;
-//
-//		List<POUserDefChannel> channelList = mSelfDbHelper.queryForEq(
-//				POUserDefChannel.class, "name", name);
-//		for (POUserDefChannel channel : channelList) {
-//			if (channel.save) {
-//				channel.save = false;
-//				resource = SystemUtility.getDrawableId("ic_fav");
-//				mImageButtonStar.setBackgroundResource(resource);
-//
-//				Toast.makeText(getApplicationContext(), "取消收藏",
-//						Toast.LENGTH_SHORT).show();
-//			} else {
-//				channel.save = true;
-//				resource = SystemUtility.getDrawableId("ic_fav_pressed");
-//				mImageButtonStar.setBackgroundResource(resource);
-//
-//				Toast.makeText(getApplicationContext(), "添加收藏",
-//						Toast.LENGTH_SHORT).show();
-//			}
-//			// update
-//			Log.i(LOGTAG, "==============>" + channel.name + "###"
-//					+ channel.poId + "###" + channel.save);
-//
-//			mSelfDbHelper.update(channel);
-//		}
-//	}
+
+	// /**
+	// * 自定义收藏后更新某一条数据信息
+	// *
+	// */
+	// private void updateSelfFavDatabase(String name) {
+	// int resource = -1;
+	//
+	// List<POUserDefChannel> channelList = mSelfDbHelper.queryForEq(
+	// POUserDefChannel.class, "name", name);
+	// for (POUserDefChannel channel : channelList) {
+	// if (channel.save) {
+	// channel.save = false;
+	// resource = SystemUtility.getDrawableId("ic_fav");
+	// mImageButtonStar.setBackgroundResource(resource);
+	//
+	// Toast.makeText(getApplicationContext(), "取消收藏",
+	// Toast.LENGTH_SHORT).show();
+	// } else {
+	// channel.save = true;
+	// resource = SystemUtility.getDrawableId("ic_fav_pressed");
+	// mImageButtonStar.setBackgroundResource(resource);
+	//
+	// Toast.makeText(getApplicationContext(), "添加收藏",
+	// Toast.LENGTH_SHORT).show();
+	// }
+	// // update
+	// Log.i(LOGTAG, "==============>" + channel.name + "###"
+	// + channel.poId + "###" + channel.save);
+	//
+	// mSelfDbHelper.update(channel);
+	// }
+	// }
+
+	// =========================================================
+
+	/**
+	 * 2013-08-31 增加播放界面切源功能 采用圆角的ListView布局方式
+	 */
+	private void createList(ArrayList<String> infos) {
+		CustomClickListener listener = new CustomClickListener();
+		tableView.setClickListener(listener);
+		int index = 0;
+		String url = null;
+		for (String info : infos) {
+			url = SourceName.whichName(info);
+			// if (SourceName.mHd || SourceName.mHot) {
+			// 添加每一项
+			tableView.addBasicItem(++index + ".\t" + url, "\t\t"
+					+ ((SourceName.mHd == true) ? "HD\t" : "")
+					+ ((SourceName.mHot == true) ? "HOT\t" : ""));
+			// } else {
+			// // 添加每一项
+			// tableView.addBasicItem(++index + ".\t" + url);
+			// }
+		}
+	}
+
+	/**
+	 * 设置监听事件
+	 * 
+	 * @author jgf
+	 * 
+	 */
+	private class CustomClickListener implements ClickListener {
+		@Override
+		public void onClick(int index) {
+			// startLiveMedia(infos.get(index), channel_name, index);
+		}
+	}
+
+	/**
+	 * 重新获取播放需要的视频数据
+	 */
+	private void reSetSourceData() {
+		// mPlayListSelected = intent.getIntExtra("selected", 0);
+		// mPlayListArray = intent.getStringArrayListExtra("playlist");
+		// channelStar = intent.getBooleanExtra("channelStar", false);
+		// Log.d(LOGTAG, "===>>>" + mTitleName);
+		// mTitleName = intent.getStringExtra("title");
+//		mSourceName = intent.getStringExtra("source");
+		// isSelfTV = intent.getBooleanExtra("isSelfTV", false);
+
+		if (mPlayListArray == null || mPlayListArray.size() == 0) {
+			Log.e(LOGTAG, "initializeData(): empty");
+			finish();
+			return;
+		}
+	}
+
+	/**
+	 * 连接候选的地址源
+	 */
+	private void reConnectSource(String url) {
+		isLiveMedia = sharedPreferences.getBoolean("isLiveMedia", true);
+		if (isLiveMedia) {
+			// 缓冲环显示
+			mProgressBarPreparing.setVisibility(View.VISIBLE);
+			// 缓冲提示语
+			// mLoadingTxt.setVisibility(View.VISIBLE);
+			Log.d(LOGTAG, "reconnect the Media Server in LiveTV mode");
+			if (sharedPreferences.getBoolean("isHardDec", false)) {
+				// 硬解码重新连接媒体服务器
+				destroyMediaPlayer(true);
+				selectMediaPlayer(url, false);
+				createMediaPlayer(true, url, mSurfaceHolderDef);
+				mMediaPlayer.setDisplay(mSurfaceHolderDef);
+			} else {
+				// 软解码重新连接媒体服务器
+				destroyMediaPlayer(false);
+				selectMediaPlayer(url, true);
+				createMediaPlayer(false, url, mSurfaceHolderVlc);
+				mMediaPlayer.setDisplay(mSurfaceHolderVlc);
+			}
+		}
+	}
 }

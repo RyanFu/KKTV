@@ -71,6 +71,17 @@
         android:gravity="center"
         android:orientation="horizontal" >
 
+        <ImageButton
+            android:id="@+id/player_button_list"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/sel_list"
+            android:gravity="center_vertical" />
+
         <TextView
             android:id="@+id/selfdef_tv"
             android:layout_width="wrap_content"
@@ -79,12 +90,12 @@
             android:layout_marginLeft="30dip"
             android:layout_marginRight="30dip"
             android:layout_marginTop="4dip"
-            android:text="自定义"
-            android:textSize="15dp"
-            android:textColor="@color/blue" 
             android:gravity="center_vertical"
+            android:text="自定义"
+            android:textColor="@color/blue"
+            android:textSize="15dp"
             android:visibility="gone" />
-        
+
         <ImageButton
             android:id="@+id/player_button_star"
             android:layout_width="30dp"

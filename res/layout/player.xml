@@ -11,4 +11,6 @@
 
     <include layout="@layout/gesture_ctl" />
 
+    <include layout="@layout/player_list" />
+
 </FrameLayout>
