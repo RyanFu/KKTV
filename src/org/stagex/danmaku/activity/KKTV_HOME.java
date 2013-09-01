@@ -114,7 +114,7 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener, Upda
 
 		tv_title = (TextView) findViewById(R.id.tv_title);
 		tv_title.setText(titles[0]);//
-
+		findViewById(R.id.back_btn).setOnClickListener(this);
 		viewPager = (ViewPager) findViewById(R.id.vp);
 		viewPager.setAdapter(new MyAdapter());// 设置填充ViewPager页面的适配器
 		// 设置一个监听器，当ViewPager中的页面改变时调用
@@ -317,6 +317,20 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener, Upda
 		// 当Activity不可见的时候停止切换
 		scheduledExecutorService.shutdown();
 		super.onStop();
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.back_btn:
+			if (mMenuDrawer.isMenuVisible()) {
+				mMenuDrawer.closeMenu();
+			}else {
+				mMenuDrawer.openMenu();
+			}
+			break;
+		}
+		super.onClick(v);
 	}
 
 	/**

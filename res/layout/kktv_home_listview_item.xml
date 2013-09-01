@@ -9,6 +9,7 @@
 	    android:id="@+id/kktv_home_item_img"
 	    android:layout_width="66dp"
 	    android:layout_height="46dp"
+	    android:layout_marginLeft="10dp"
 	    android:scaleType="fitXY"
 	    />
 	<TextView 
@@ -16,6 +17,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_marginLeft="10dp"
-	    android:gravity="center_vertical"
+	    android:gravity="center"
+	    android:textSize="20sp"
 	    />
 </LinearLayout>

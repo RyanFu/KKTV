@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class BaseActivity extends AbsListViewBaseActivity implements OnClickListener {
 
-	private MenuDrawer mMenuDrawer;
+	public MenuDrawer mMenuDrawer;
 	private float scale;
 	public static final int leftMarge = 70;
 	public static int flag_from = 1;
@@ -103,7 +103,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 			}
 			break;
 		}
-		mMenuDrawer.closeMenu();
+//		mMenuDrawer.closeMenu();
 	}
 
 	public void showInfo(int info) {
