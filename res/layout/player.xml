@@ -11,6 +11,8 @@
 
     <include layout="@layout/gesture_ctl" />
 
-    <include layout="@layout/player_list" />
+    <include layout="@layout/player_sourcelist" />
+    
+    <include layout="@layout/player_channellist" />
 
 </FrameLayout>

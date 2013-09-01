@@ -184,6 +184,17 @@
             android:layout_marginTop="4dip"
             android:background="@drawable/ic_screen_pressed"
             android:gravity="center_vertical" />
+
+        <ImageButton
+            android:id="@+id/player_button_channel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/sel_list"
+            android:gravity="center_vertical" />
     </LinearLayout>
 
     <LinearLayout

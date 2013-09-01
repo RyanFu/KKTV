@@ -441,16 +441,18 @@ public class ChannelTabActivity extends TabActivity implements
 	 * @param pos
 	 */
 	private void startLiveMedia(ArrayList<String> liveUrls, String name,
-			Boolean channel_star) {
+			Boolean channel_star, int sort, String sortName) {
 		Intent intent = new Intent(ChannelTabActivity.this,
 				PlayerActivity.class);
 		ArrayList<String> playlist = new ArrayList<String>();
 		for (String liveUrl : liveUrls)
 			playlist.add(liveUrl);
 		intent.putExtra("selected", 0);
+		intent.putExtra("channelSort", sort);
 		intent.putExtra("playlist", playlist);
 		intent.putExtra("title", name);
 		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("sortString", sortName);
 		intent.putExtra("source", "地址" + Integer.toString(1) + "："
 				+ SourceName.whichName(liveUrls.get(0)));
 
@@ -475,7 +477,7 @@ public class ChannelTabActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// TODO 2013-08-31 不再显示独立候选源界面
-				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+				 startLiveMedia(info.getAllUrl(), info.name, info.save, 1, "央视频道");
 //				showAllSource(info.getAllUrl(), info.name, info.program_path,
 //						info.save);
 			}
@@ -529,7 +531,7 @@ public class ChannelTabActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// TODO 2013-08-31 不再显示独立候选源界面
-				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+				 startLiveMedia(info.getAllUrl(), info.name, info.save, 2, "卫视频道");
 //				showAllSource(info.getAllUrl(), info.name, info.program_path,
 //						info.save);
 			}
@@ -619,7 +621,7 @@ public class ChannelTabActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// TODO 2013-08-31 不再显示独立候选源界面
-				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+				 startLiveMedia(info.getAllUrl(), info.name, info.save, 4, "体育频道");
 //				showAllSource(info.getAllUrl(), info.name, info.program_path,
 //						info.save);
 			}
@@ -673,7 +675,7 @@ public class ChannelTabActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// TODO 2013-08-31 不再显示独立候选源界面
-				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+				 startLiveMedia(info.getAllUrl(), info.name, info.save, 5, "港澳台频道");
 //				showAllSource(info.getAllUrl(), info.name, info.program_path,
 //						info.save);
 			}
@@ -727,7 +729,7 @@ public class ChannelTabActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// TODO 2013-08-31 不再显示独立候选源界面
-				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+				 startLiveMedia(info.getAllUrl(), info.name, info.save, 6, "其他频道");
 //				showAllSource(info.getAllUrl(), info.name, info.program_path,
 //						info.save);
 			}

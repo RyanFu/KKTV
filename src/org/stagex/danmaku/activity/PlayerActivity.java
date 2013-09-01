@@ -7,6 +7,7 @@ import java.util.TimerTask;
 
 import org.keke.player.R;
 import org.stagex.danmaku.adapter.ChannelAdapter;
+import org.stagex.danmaku.adapter.ChannelListAdapter;
 import org.stagex.danmaku.adapter.ChannelSourceAdapter;
 import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.SystemUtility;
@@ -14,6 +15,7 @@ import org.stagex.danmaku.util.SystemUtility;
 import br.com.dina.ui.widget.UITableView;
 import br.com.dina.ui.widget.UITableView.ClickListener;
 
+import com.nmbb.oplayer.scanner.ChannelListBusiness;
 import com.nmbb.oplayer.scanner.DbHelper;
 import com.nmbb.oplayer.scanner.POChannelList;
 import com.nmbb.oplayer.scanner.POUserDefChannel;
@@ -160,11 +162,17 @@ public class PlayerActivity extends Activity implements
 
 	/* 播放界面选台和切源 */
 	private LinearLayout mLinearLayoutSourceList;
+	private RelativeLayout mLinearLayoutChannelList;
+	private TextView mSortName;
+	private String sortString;
 	private ListView source_list;
-//	private ArrayList<String> sourceInfos = null;
+	private ListView channel_list;
+	private List<POChannelList> channel_infos = null;
 	private ImageButton mImageButtonList;
+	private ImageButton mImageButtonChannel;
 	private int mSourceNum = 0;
 	private int mSourceIndex = 0;
+	private int mChannelIndex = 0;
 	
 	/**
 	 * 增加手势控制
@@ -208,6 +216,8 @@ public class PlayerActivity extends Activity implements
 	private Boolean channelStar = false;
 	List<POChannelList> channelList = null;
 	private int fav_num = 0;
+	// TODO 目前只按照节目源的类别来切台
+	private int channelSort = 0;
 
 	/* 是否是自定义频道 */
 	private Boolean isSelfTV = false;
@@ -592,6 +602,14 @@ public class PlayerActivity extends Activity implements
 		source_list.setCacheColorHint(Color.TRANSPARENT);
 		mImageButtonList = (ImageButton) findViewById(R.id.player_button_list);
 		mImageButtonList.setOnClickListener(this);
+		
+		mLinearLayoutChannelList= (RelativeLayout) findViewById(R.id.player_channellist);
+		mSortName = (TextView) findViewById(R.id.sort_name);
+		channel_list = (ListView) findViewById(R.id.channel_list);
+		// 防止滑动黑屏
+		channel_list.setCacheColorHint(Color.TRANSPARENT);
+		mImageButtonChannel = (ImageButton) findViewById(R.id.player_button_channel);
+		mImageButtonChannel.setOnClickListener(this);
 		// =====================================================
 
 		// 初始化手势
@@ -622,8 +640,11 @@ public class PlayerActivity extends Activity implements
 			channelStar = intent.getBooleanExtra("channelStar", false);
 			// Log.d(LOGTAG, "===>>>" + mTitleName);
 			mTitleName = intent.getStringExtra("title");
+			sortString = intent.getStringExtra("sortString");
 			mSourceName = intent.getStringExtra("source");
 			isSelfTV = intent.getBooleanExtra("isSelfTV", false);
+			// 需要按照频道的分类来传入相应的值，0表示不支持切台
+			channelSort = intent.getIntExtra("channelSort", 0);
 		}
 		if (mPlayListArray == null || mPlayListArray.size() == 0) {
 			Log.e(LOGTAG, "initializeData(): empty");
@@ -1029,16 +1050,21 @@ public class PlayerActivity extends Activity implements
 			mLinearLayoutSourceList.setVisibility(View.VISIBLE);
 			// 同时隐藏播放的控件
 			mLinearLayoutControlBar.setVisibility(View.GONE);
-			
-			// 查询数据库
-//			List<POChannelList> channelList = mDbHelper.queryForEq(
-//					POChannelList.class, "name", mTitleName);
-			
-//			for (POChannelList channel : channelList) {
-//				sourceInfos = channel.getAllUrl();
-				createList(mPlayListArray);
-				Log.d(LOGTAG, "total items: " + source_list.getCount());
-//			}
+
+			createList(mPlayListArray);
+			Log.d(LOGTAG, "total items: " + source_list.getCount());
+
+			break;
+		}
+		case R.id.player_button_channel: {
+			mSortName.setText(sortString);
+			// TODO 增加播放界面切源和切台
+			mLinearLayoutChannelList.setVisibility(View.VISIBLE);
+			// 同时隐藏播放的控件
+			mLinearLayoutControlBar.setVisibility(View.GONE);
+
+			createChannelList(channelSort);
+
 			break;
 		}
 		default:
@@ -1190,6 +1216,7 @@ public class PlayerActivity extends Activity implements
 
 		// 2013-08-31 隐藏源切换和切台的控件
 		mLinearLayoutSourceList.setVisibility(View.GONE);
+		mLinearLayoutChannelList.setVisibility(View.GONE);
 		
 		// TODO 更新当前时间信息
 		mSysTime.setText(DateFormat.format("kk:mm", System.currentTimeMillis()));
@@ -1594,23 +1621,65 @@ public class PlayerActivity extends Activity implements
 	
 	}
 
+	private void createChannelList(int sort) {
+
+		// TODO 清除数据（是否可以只查询一次）
+		if (channel_infos == null)
+			// 根据JSON里面的types来区分直播频道分类
+			channel_infos = ChannelListBusiness.getAllSearchChannels("types", Integer.toString(sort));
+		
+		ChannelListAdapter adapter = new ChannelListAdapter(this, channel_infos);
+		channel_list.setAdapter(adapter);
+		// 突出显示当前频道
+		channel_list.setSelection(mChannelIndex);
+		// TODO 用一个全局的变量来记录当前是哪一个频道
+		
+		
+		channel_list.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+				mChannelIndex = arg2;
+				
+				// TODO Auto-generated method stub
+				POChannelList info = (POChannelList) channel_list
+						.getItemAtPosition(arg2);
+				
+				mTitleName = info.name;
+				reSetChannelData(info);
+				Log.i(LOGTAG, "===>>>" + mSourceName);
+
+				
+				// 2013-08-31 隐藏源切换和切台的控件
+				// 为防止重复搜索数据库分类，此处暂时不隐藏
+//				mLinearLayoutChannelList.setVisibility(View.GONE);
+			}
+		});
+
+		source_list.setOnScrollListener(new OnScrollListener() {
+
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+	
+	}
+	
 	/**
 	 * 重新获取播放需要的视频数据
 	 */
 	private void reSetSourceData(String url, String name) {
-		// mPlayListSelected = intent.getIntExtra("selected", 0);
-		// mPlayListArray = intent.getStringArrayListExtra("playlist");
-		// channelStar = intent.getBooleanExtra("channelStar", false);
-		// Log.d(LOGTAG, "===>>>" + mTitleName);
-		// mTitleName = intent.getStringExtra("title");
-//		mSourceName = intent.getStringExtra("source");
-		// isSelfTV = intent.getBooleanExtra("isSelfTV", false);
-
-//		if (mPlayListArray == null || mPlayListArray.size() == 0) {
-//			Log.e(LOGTAG, "initializeData(): empty");
-//			finish();
-//			return;
-//		}
 		reConnectSource(url);
 	}
 
@@ -1640,4 +1709,21 @@ public class PlayerActivity extends Activity implements
 			}
 		}
 //	}
+	
+	/**
+	 * 切换频道，重新设置相关数据
+	 */
+	private void reSetChannelData(POChannelList info) {
+		// 先清除原有的
+		mPlayListArray.clear();
+		// 再加载新的数据
+		mPlayListArray = info.getAllUrl();
+		mSourceIndex = 0;
+		mPlayListSelected = 0;
+		channelStar = info.save;
+		
+		String url = mPlayListArray.get(mPlayListSelected);
+		mSourceName = "地址" + Integer.toString(1) + "：" + SourceName.whichName(url);
+		reConnectSource(url);
+	}
 }
