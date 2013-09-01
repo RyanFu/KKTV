@@ -6,6 +6,7 @@ import org.keke.player.R;
 import com.nmbb.oplayer.scanner.POChannelList;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -50,6 +51,7 @@ public class ChannelListAdapter extends BaseAdapter {
 		
 		textName.setText(infos.get(position).name);
 		textIndex.setText(Integer.toString(position + 1));
+//		Log.d("channelList", "===> list position" + position);
 		
 		// 判断是否是热门频道，暂时使用HOT字样
 		if (infos.get(position).mode.equalsIgnoreCase("HOT"))

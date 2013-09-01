@@ -8,6 +8,7 @@ import java.util.Map;
 import org.keke.player.R;
 import org.stagex.danmaku.adapter.ChannelAdapter;
 import org.stagex.danmaku.adapter.ChannelInfo;
+import org.stagex.danmaku.util.SourceName;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -132,8 +133,32 @@ public class SearchActivity extends Activity {
 					// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 					// startLiveMedia(info.getUrl(), info.getName());
-					showAllSource(info.getAllUrl(), info.name,
-							info.program_path, info.save);
+//					showAllSource(info.getAllUrl(), info.name,
+//							info.program_path, info.save);
+					// 暂时还是按大的分类来切换，对于搜索出来的频道，需要仔细区分分类
+					String sortName = null;
+					String types = info.types;
+					String sortValue = null;
+					if (types.contains("1")) {
+						sortValue = "1";
+						sortName = "央视频道";
+					} else if (types.contains("2")) {
+						sortValue = "2";
+						sortName = "卫视频道";
+					} else if (types.contains("3")) {
+						sortValue = "3";
+						sortName = "地方频道";
+					} else if (types.contains("4")) {
+						sortValue = "4";
+						sortName = "体育频道";
+					} else if (types.contains("5")) {
+						sortValue = "5";
+						sortName = "港澳台频道";
+					} else if (types.contains("6")) {
+						sortValue = "6";
+						sortName = "其他频道";
+					}
+					startLiveMedia(info.getAllUrl(), info.name, info.save, sortValue, sortName);
 				}
 			});
 
@@ -173,6 +198,29 @@ public class SearchActivity extends Activity {
 		}
 	}
 
+	/**
+	 * 启动播放器界面
+	 * 
+	 * @param liveUrl
+	 * @param name
+	 * @param pos
+	 */
+	private void startLiveMedia(ArrayList<String> liveUrls, String name,
+			Boolean channel_star, String sort, String sortName) {
+		Intent intent = new Intent(SearchActivity.this,
+				PlayerActivity.class);
+		intent.putExtra("selected", 0);
+		intent.putExtra("channelSort", sort);
+		intent.putExtra("playlist", liveUrls);
+		intent.putExtra("title", name);
+		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("sortString", sortName);
+		intent.putExtra("source", "地址" + Integer.toString(1) + "："
+				+ SourceName.whichName(liveUrls.get(0)));
+
+		startActivity(intent);
+	}
+	
 	/**
 	 * 显示所有的台源
 	 */

@@ -11,8 +11,10 @@ import org.stagex.danmaku.adapter.ChannelAdapter;
 import org.stagex.danmaku.adapter.ChannelDefFavAdapter;
 import org.stagex.danmaku.adapter.ChannelInfo;
 import org.stagex.danmaku.util.BackupData;
+import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.saveFavName;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.TabActivity;
 import android.content.DialogInterface;
@@ -49,6 +51,7 @@ import com.nmbb.oplayer.scanner.POChannelList;
 import com.nmbb.oplayer.scanner.POUserDefChannel;
 import com.nmbb.oplayer.scanner.SQLiteHelperOrm;
 
+@SuppressLint("NewApi")
 public class FavouriteActivity extends TabActivity implements
 		OnTabChangeListener {
 
@@ -269,8 +272,9 @@ public class FavouriteActivity extends TabActivity implements
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
 				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
+				startLiveMedia(info.getAllUrl(), info.name, info.save, "收藏频道");
 			}
 		});
 
@@ -308,7 +312,7 @@ public class FavouriteActivity extends TabActivity implements
 		/* 获取所有的自定义收藏频道 */
 		infos = ChannelListBusiness.getAllDefFavChannels();
 
-		mSourceAdapter = new ChannelDefFavAdapter(this, infos);
+		mSourceAdapter = new ChannelDefFavAdapter(this, infos, false);
 		selffav_list.setAdapter(mSourceAdapter);
 		// 设置监听事件
 		selffav_list.setOnItemClickListener(new OnItemClickListener() {
@@ -337,57 +341,87 @@ public class FavouriteActivity extends TabActivity implements
 	}
 	
 	/**
-	 * 显示所有的台源
+	 * 启动播放器界面（收藏频道）
+	 * 
+	 * @param liveUrl
+	 * @param name
+	 * @param pos
 	 */
-	private void showAllSource(ArrayList<String> all_url, String name,
-			String path, Boolean isStar) {
-		// 如果该节目只有一个候选源地址，那么直接进入播放界面
-		if (all_url.size() == 1) {
-			Intent intent = new Intent(FavouriteActivity.this,
-					PlayerActivity.class);
-			ArrayList<String> playlist = new ArrayList<String>();
-			playlist.add(all_url.get(0));
-			intent.putExtra("selected", 0);
-			intent.putExtra("playlist", playlist);
-			intent.putExtra("title", name);
-			intent.putExtra("channelStar", isStar);
-			startActivity(intent);
-		} else {
-			// 否则进入候选源界面
-			Intent intent = new Intent(FavouriteActivity.this,
-					ChannelSourceActivity.class);
-			intent.putExtra("all_url", all_url);
-			intent.putExtra("channel_name", name);
-			intent.putExtra("program_path", path);
-			intent.putExtra("channelStar", isStar);
-			startActivity(intent);
-		}
+	private void startLiveMedia(ArrayList<String> liveUrls, String name,
+			Boolean channel_star, String sortName) {
+		Intent intent = new Intent(FavouriteActivity.this,
+				PlayerActivity.class);
+		intent.putExtra("selected", 0);
+		intent.putExtra("favSort", true);
+		intent.putExtra("playlist", liveUrls);
+		intent.putExtra("title", name);
+		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("sortString", sortName);
+		intent.putExtra("source", "地址" + Integer.toString(1) + "："
+				+ SourceName.whichName(liveUrls.get(0)));
+
+		startActivity(intent);
 	}
+	
+//	/**
+//	 * 显示所有的台源
+//	 */
+//	private void showAllSource(ArrayList<String> all_url, String name,
+//			String path, Boolean isStar) {
+//		// 如果该节目只有一个候选源地址，那么直接进入播放界面
+//		if (all_url.size() == 1) {
+//			Intent intent = new Intent(FavouriteActivity.this,
+//					PlayerActivity.class);
+//			ArrayList<String> playlist = new ArrayList<String>();
+//			playlist.add(all_url.get(0));
+//			intent.putExtra("selected", 0);
+//			intent.putExtra("playlist", playlist);
+//			intent.putExtra("title", name);
+//			intent.putExtra("channelStar", isStar);
+//			startActivity(intent);
+//		} else {
+//			// 否则进入候选源界面
+//			Intent intent = new Intent(FavouriteActivity.this,
+//					ChannelSourceActivity.class);
+//			intent.putExtra("all_url", all_url);
+//			intent.putExtra("channel_name", name);
+//			intent.putExtra("program_path", path);
+//			intent.putExtra("channelStar", isStar);
+//			startActivity(intent);
+//		}
+//	}
 
 	// 打开自定义的网络媒体
 	private void startSelfLiveMedia(ArrayList<String> all_url, String name, Boolean isStar) {
-		// 如果该节目只有一个候选源地址，那么直接进入播放界面
-		if (all_url.size() == 1) {
-			Intent intent = new Intent(FavouriteActivity.this,
-					PlayerActivity.class);
-			ArrayList<String> playlist = new ArrayList<String>();
-			playlist.add(all_url.get(0));
-			intent.putExtra("selected", 0);
-			intent.putExtra("playlist", playlist);
-			intent.putExtra("title", name);
-			intent.putExtra("isSelfTV", true);
-			intent.putExtra("channelStar", isStar);
-			startActivity(intent);
-		} else {
+//		// 如果该节目只有一个候选源地址，那么直接进入播放界面
+//		if (all_url.size() == 1) {
+//			Intent intent = new Intent(FavouriteActivity.this,
+//					PlayerActivity.class);
+//			ArrayList<String> playlist = new ArrayList<String>();
+//			playlist.add(all_url.get(0));
+//			intent.putExtra("selected", 0);
+//			intent.putExtra("playlist", playlist);
+//			intent.putExtra("title", name);
+//			intent.putExtra("isSelfTV", true);
+//			intent.putExtra("channelStar", isStar);
+//			startActivity(intent);
+//		} else {
 			// 否则进入候选源界面
 			Intent intent = new Intent(FavouriteActivity.this,
-					ChannelSourceActivity.class);
-			intent.putExtra("all_url", all_url);
-			intent.putExtra("channel_name", name);
+					PlayerActivity.class);
+			intent.putExtra("selected", 0);
+			intent.putExtra("playlist", all_url);
+			intent.putExtra("title", name);
 			intent.putExtra("isSelfTV", true);
+			// 标识是自定义的收藏频道
+			intent.putExtra("isSelfFavTV", true);
 			intent.putExtra("channelStar", isStar);
+			intent.putExtra("sortString", "自定义收藏");
+			intent.putExtra("source", "地址" + Integer.toString(1) + "："
+					+ SourceName.whichName(all_url.get(0)));
+			
 			startActivity(intent);
-		}
+//		}
 	}
 	
 	/**

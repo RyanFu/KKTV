@@ -9,10 +9,12 @@ import org.stagex.danmaku.adapter.ChannelInfo;
 import org.stagex.danmaku.adapter.ChannelLoadAdapter;
 import org.stagex.danmaku.util.BackupData;
 import org.stagex.danmaku.util.ParseUtil;
+import org.stagex.danmaku.util.SourceName;
 
 import com.nmbb.oplayer.scanner.DbHelper;
 import com.nmbb.oplayer.scanner.POUserDefChannel;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -36,6 +38,7 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
+@SuppressLint("NewApi")
 public class UserLoadActivity extends Activity {
 	/** Called when the activity is first created. */
 	private static final String LOGTAG = "UserLoadActivity";
@@ -137,7 +140,8 @@ public class UserLoadActivity extends Activity {
 							.getItemAtPosition(arg2);
 
 					// FIXME 2013-07-31 这里的收藏就不放入是否收藏的按钮了
-					startLiveMedia(info.getAllUrl(), info.getName(), false);
+//					startLiveMedia(info.getAllUrl(), info.getName(), false);
+					 startLiveMedia(info.getAllUrl(), info.getName(), false, "自定义频道");
 				}
 			});
 			// 增加长按频道收藏功能
@@ -168,31 +172,54 @@ public class UserLoadActivity extends Activity {
 //		button_defFav.setOnClickListener(goListener);
 	}
 
-	// 打开网络媒体
-	private void startLiveMedia(ArrayList<String> all_url, String name, Boolean isStar) {
-		// 如果该节目只有一个候选源地址，那么直接进入播放界面
-		if (all_url.size() == 1) {
-			Intent intent = new Intent(UserLoadActivity.this,
-					PlayerActivity.class);
-			ArrayList<String> playlist = new ArrayList<String>();
-			playlist.add(all_url.get(0));
-			intent.putExtra("selected", 0);
-			intent.putExtra("playlist", playlist);
-			intent.putExtra("title", name);
-			intent.putExtra("channelStar", isStar);
-			intent.putExtra("isSelfTV", true);
-			startActivity(intent);
-		} else {
-			// 否则进入候选源界面
-			Intent intent = new Intent(UserLoadActivity.this,
-					ChannelSourceActivity.class);
-			intent.putExtra("all_url", all_url);
-			intent.putExtra("channel_name", name);
-			intent.putExtra("channelStar", isStar);
-			intent.putExtra("isSelfTV", true);
-			startActivity(intent);
-		}
+	/**
+	 * 启动播放器界面
+	 * 
+	 * @param liveUrl
+	 * @param name
+	 * @param pos
+	 */
+	private void startLiveMedia(ArrayList<String> liveUrls, String name,
+			Boolean channel_star, String sortName) {
+		Intent intent = new Intent(UserLoadActivity.this,
+				PlayerActivity.class);
+		intent.putExtra("selected", 0);
+		intent.putExtra("playlist", liveUrls);
+		intent.putExtra("title", name);
+		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("sortString", sortName);
+		intent.putExtra("isSelfTV", true);
+		intent.putExtra("source", "地址" + Integer.toString(1) + "："
+				+ SourceName.whichName(liveUrls.get(0)));
+
+		startActivity(intent);
 	}
+	
+//	// 打开网络媒体
+//	private void startLiveMedia(ArrayList<String> all_url, String name, Boolean isStar) {
+//		// 如果该节目只有一个候选源地址，那么直接进入播放界面
+//		if (all_url.size() == 1) {
+//			Intent intent = new Intent(UserLoadActivity.this,
+//					PlayerActivity.class);
+//			ArrayList<String> playlist = new ArrayList<String>();
+//			playlist.add(all_url.get(0));
+//			intent.putExtra("selected", 0);
+//			intent.putExtra("playlist", playlist);
+//			intent.putExtra("title", name);
+//			intent.putExtra("channelStar", isStar);
+//			intent.putExtra("isSelfTV", true);
+//			startActivity(intent);
+//		} else {
+//			// 否则进入候选源界面
+//			Intent intent = new Intent(UserLoadActivity.this,
+//					ChannelSourceActivity.class);
+//			intent.putExtra("all_url", all_url);
+//			intent.putExtra("channel_name", name);
+//			intent.putExtra("channelStar", isStar);
+//			intent.putExtra("isSelfTV", true);
+//			startActivity(intent);
+//		}
+//	}
 
 	// 按键监听
 	private Button.OnClickListener goListener = new Button.OnClickListener() {
