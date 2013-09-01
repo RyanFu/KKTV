@@ -15,13 +15,18 @@ import com.yixia.vparser.VParser;
 import com.yixia.vparser.model.Video;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -34,7 +39,7 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 
 	private ViewPager viewPager; // android-support-v4中的滑动组件
 	private List<ImageView> imageViews; // 滑动的图片集合
-
+	public ProgressDialog progressDialog;
 	private String[] titles; // 图片标题
 	private int[] imageResId; // 图片ID
 	private List<View> dots; // 图片标题正文的那些点
@@ -91,6 +96,9 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 		((ListView) listView).setAdapter(adapter);
 		listView.setOnItemClickListener(this);
 		vParser = new VParser(this);
+		progressDialog = new ProgressDialog(KKTV_HOME.this);
+		progressDialog.setMessage("解析中...");
+		progressDialog.setCancelable(false);
 	}
 
 	@Override
@@ -121,6 +129,37 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 		// 当Activity不可见的时候停止切换
 		scheduledExecutorService.shutdown();
 		super.onStop();
+	}
+
+	/**
+	 * 在主界面按下返回键，提示用户是否退出应用
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// 按下键盘上返回按钮
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			new AlertDialog.Builder(this)
+					.setIcon(R.drawable.ic_lock_power_off)
+					.setTitle(R.string.prompt)
+					.setMessage(R.string.quit_desc)
+					.setNegativeButton(R.string.cancel,
+							new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+								}
+							})
+					.setPositiveButton(R.string.confirm,
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int whichButton) {
+									finish();
+								}
+							}).show();
+			return true;
+		} else {
+			return super.onKeyDown(keyCode, event);
+		}
 	}
 
 	/**
@@ -215,34 +254,62 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 			long id) {
 		try {
 			Home_List_type type = lists.get(position);
-			ArrayList<String> urlStrings = new ArrayList<String>();
-			if (type.getId() == 0) {
-				if (type.getUrl().endsWith("html")) {
-					Video video = vParser.parse(type.getUrl());
-					if (video != null && video.videoUri != null) {
-						urlStrings.add(video.videoUri);
-					}
-				}else if(type.getUrl().endsWith("m3u8")){
-					urlStrings.add(type.getUrl());
-				}
-				if (urlStrings.size() > 0) {
-					startLiveMedia(urlStrings, type.getName());
-				}else {
-					showInfo("地址可能失效!!!");
-				}
-			}
+			new InitData(type).execute();
 		} catch (Exception e) {
 		}
-		
+
 	}
 
 	private void startLiveMedia(ArrayList<String> liveUrls, String name) {
-		Intent intent = new Intent(KKTV_HOME.this,
-				PlayerActivity.class);
+		Intent intent = new Intent(KKTV_HOME.this, PlayerActivity.class);
 		intent.putExtra("selected", 0);
 		intent.putExtra("playlist", liveUrls);
 		intent.putExtra("title", name);
 		startActivity(intent);
 	}
 
+	class InitData extends AsyncTask<Void, Void, Void> {
+		Home_List_type type;
+
+		InitData(Home_List_type type) {
+			this.type = type;
+		}
+
+		@Override
+		protected Void doInBackground(Void... paramArrayOfVoid) {
+			try {
+				ArrayList<String> urlStrings = new ArrayList<String>();
+				if (type.getId() == 0) {
+					if (type.getUrl().endsWith("html")) {
+						Video video = vParser.parse(type.getUrl());
+						if (video != null && video.videoUri != null) {
+							urlStrings.add(video.videoUri);
+						}
+					} else if (type.getUrl().endsWith("m3u8")) {
+						urlStrings.add(type.getUrl());
+					}
+					if (urlStrings.size() > 0) {
+						startLiveMedia(urlStrings, type.getName());
+					} else {
+						showInfo("地址可能失效!!!");
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			progressDialog.show();
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			super.onPostExecute(result);
+			progressDialog.cancel();
+		}
+	}
 }
