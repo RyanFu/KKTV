@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.keke.player.R;
 import org.stagex.danmaku.adapter.ChannelAdapter;
+import org.stagex.danmaku.util.SourceName;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -106,8 +107,10 @@ public class ProvinceActivity extends Activity {
 					POChannelList info = (POChannelList) channel_list
 							.getItemAtPosition(arg2);
 
-					showAllSource(info.getAllUrl(), info.name,
-							info.program_path, info.save);
+//					showAllSource(info.getAllUrl(), info.name,
+//							info.program_path, info.save);
+					// 直接进入播放界面
+					startLiveMedia(info.getAllUrl(), info.name, info.save, "3", "地方频道");
 				}
 			});
 
@@ -144,6 +147,29 @@ public class ProvinceActivity extends Activity {
 		}
 	}
 
+	/**
+	 * 启动播放器界面
+	 * 
+	 * @param liveUrl
+	 * @param name
+	 * @param pos
+	 */
+	private void startLiveMedia(ArrayList<String> liveUrls, String name,
+			Boolean channel_star, String sort, String sortName) {
+		Intent intent = new Intent(ProvinceActivity.this,
+				PlayerActivity.class);
+		intent.putExtra("selected", 0);
+		intent.putExtra("channelSort", sort);
+		intent.putExtra("playlist", liveUrls);
+		intent.putExtra("title", name);
+		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("sortString", sortName);
+		intent.putExtra("source", "地址" + Integer.toString(1) + "："
+				+ SourceName.whichName(liveUrls.get(0)));
+
+		startActivity(intent);
+	}
+	
 	/**
 	 * 显示所有的台源
 	 */

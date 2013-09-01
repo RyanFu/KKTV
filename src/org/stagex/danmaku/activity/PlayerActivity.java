@@ -6,14 +6,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import org.keke.player.R;
-import org.stagex.danmaku.adapter.ChannelAdapter;
+import org.stagex.danmaku.adapter.ChannelDefFavAdapter;
 import org.stagex.danmaku.adapter.ChannelListAdapter;
 import org.stagex.danmaku.adapter.ChannelSourceAdapter;
 import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.SystemUtility;
-
-import br.com.dina.ui.widget.UITableView;
-import br.com.dina.ui.widget.UITableView.ClickListener;
 
 import com.nmbb.oplayer.scanner.ChannelListBusiness;
 import com.nmbb.oplayer.scanner.DbHelper;
@@ -63,7 +60,6 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -165,9 +161,11 @@ public class PlayerActivity extends Activity implements
 	private RelativeLayout mLinearLayoutChannelList;
 	private TextView mSortName;
 	private String sortString;
+	private Boolean isFavSort = false;
 	private ListView source_list;
 	private ListView channel_list;
 	private List<POChannelList> channel_infos = null;
+	private List<POUserDefChannel> userdef_infos = null;
 	private ImageButton mImageButtonList;
 	private ImageButton mImageButtonChannel;
 	private int mSourceNum = 0;
@@ -217,10 +215,12 @@ public class PlayerActivity extends Activity implements
 	List<POChannelList> channelList = null;
 	private int fav_num = 0;
 	// TODO 目前只按照节目源的类别来切台
-	private int channelSort = 0;
+	private String channelSort = null;
 
 	/* 是否是自定义频道 */
 	private Boolean isSelfTV = false;
+	// 标识是自定义的收藏频道
+	private Boolean isSelfFavTV = false;
 
 	/**
 	 * 判断使用的解码接口
@@ -335,7 +335,7 @@ public class PlayerActivity extends Activity implements
 						if (changeFlag) {
 							reConnectSource(mPlayListArray.get(mSourceIndex));
 							mSourceName = "地址" + Integer.toString(mSourceIndex + 1) + "：" + SourceName.whichName(mPlayListArray.get(mSourceIndex));
-							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，尝试地址" + (mSourceIndex + 1), Toast.LENGTH_SHORT).show();
+							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，尝试地址" + (mSourceIndex + 1), Toast.LENGTH_LONG).show();
 						} else
 						
 						/* TODO 用在硬解解码模式，判断不支持的源 */
@@ -394,7 +394,7 @@ public class PlayerActivity extends Activity implements
 						if (changeFlag) {
 							reConnectSource(mPlayListArray.get(mSourceIndex));
 							mSourceName = "地址" + Integer.toString(mSourceIndex + 1) + "：" + SourceName.whichName(mPlayListArray.get(mSourceIndex));
-							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，自动切换下一个源", Toast.LENGTH_SHORT).show();
+							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，尝试地址" + (mSourceIndex + 1), Toast.LENGTH_LONG).show();
 						} else
 						
 						// 弹出播放失败的窗口@{
@@ -641,10 +641,14 @@ public class PlayerActivity extends Activity implements
 			// Log.d(LOGTAG, "===>>>" + mTitleName);
 			mTitleName = intent.getStringExtra("title");
 			sortString = intent.getStringExtra("sortString");
+			// 如果是官方收藏频道，数据库查找的方式不同
+			isFavSort = intent.getBooleanExtra("favSort", false);
 			mSourceName = intent.getStringExtra("source");
+			// 如果是自定义（收藏）频道，数据库查找的方式不同
 			isSelfTV = intent.getBooleanExtra("isSelfTV", false);
+			isSelfFavTV = intent.getBooleanExtra("isSelfFavTV", false);
 			// 需要按照频道的分类来传入相应的值，0表示不支持切台
-			channelSort = intent.getIntExtra("channelSort", 0);
+			channelSort = intent.getStringExtra("channelSort");
 		}
 		if (mPlayListArray == null || mPlayListArray.size() == 0) {
 			Log.e(LOGTAG, "initializeData(): empty");
@@ -1063,7 +1067,14 @@ public class PlayerActivity extends Activity implements
 			// 同时隐藏播放的控件
 			mLinearLayoutControlBar.setVisibility(View.GONE);
 
-			createChannelList(channelSort);
+			// 判断是自定义频道、收藏频道、官方频道等
+			if (isSelfFavTV) {
+				// 如果是自定义频道，数据结构变了
+				/* 获取所有的自定义收藏频道 */
+				createUserdefChannelList();
+			}
+			else
+				createChannelList(channelSort);
 
 			break;
 		}
@@ -1572,7 +1583,7 @@ public class PlayerActivity extends Activity implements
 	// =========================================================
 
 	/**
-	 * 2013-08-31 增加播放界面切源功能 采用圆角的ListView布局方式
+	 * 2013-08-31 增加播放界面切源功能
 	 */
 	private void createList(ArrayList<String> infos) {
 
@@ -1581,7 +1592,6 @@ public class PlayerActivity extends Activity implements
 		// 突出显示当前候选地址
 		source_list.setSelection(mSourceIndex);
 		// TODO 用一个全局的变量来记录当前是哪一个源
-		
 		
 		source_list.setOnItemClickListener(new OnItemClickListener() {
 
@@ -1604,7 +1614,6 @@ public class PlayerActivity extends Activity implements
 		});
 
 		source_list.setOnScrollListener(new OnScrollListener() {
-
 			@Override
 			public void onScrollStateChanged(AbsListView view, int scrollState) {
 				// TODO Auto-generated method stub
@@ -1615,18 +1624,83 @@ public class PlayerActivity extends Activity implements
 			public void onScroll(AbsListView view, int firstVisibleItem,
 					int visibleItemCount, int totalItemCount) {
 				// TODO Auto-generated method stub
-
 			}
 		});
-	
 	}
+	
+	/**
+	 * 自定义频道的数据，切台
+	 * @param sort
+	 */
+	private void createUserdefChannelList() {
 
-	private void createChannelList(int sort) {
-
+//		if (isFavSort)
+//			userdef_infos = ChannelListBusiness.getAllDefFavChannels();
 		// TODO 清除数据（是否可以只查询一次）
-		if (channel_infos == null)
-			// 根据JSON里面的types来区分直播频道分类
-			channel_infos = ChannelListBusiness.getAllSearchChannels("types", Integer.toString(sort));
+//		else
+		if (userdef_infos == null) {
+			userdef_infos = ChannelListBusiness.getAllDefFavChannels();
+		}
+		
+		ChannelDefFavAdapter adapter = new ChannelDefFavAdapter(this, userdef_infos, true);
+		channel_list.setAdapter(adapter);
+		// 突出显示当前频道
+		channel_list.setSelection(mChannelIndex);
+		// TODO 用一个全局的变量来记录当前是哪一个频道
+		
+		
+		channel_list.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+				mChannelIndex = arg2;
+				
+				// TODO Auto-generated method stub
+				POUserDefChannel info = (POUserDefChannel) channel_list
+						.getItemAtPosition(arg2);
+				
+				mTitleName = info.name;
+				reSetUserdefChannelData(info);
+//				Log.i(LOGTAG, "===>>>" + mSourceName);
+
+				// 2013-08-31 隐藏源切换和切台的控件
+				// 为防止重复搜索数据库分类，此处暂时不隐藏
+//				mLinearLayoutChannelList.setVisibility(View.GONE);
+			}
+		});
+
+		source_list.setOnScrollListener(new OnScrollListener() {
+			@Override
+			public void onScrollStateChanged(AbsListView view, int scrollState) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onScroll(AbsListView view, int firstVisibleItem,
+					int visibleItemCount, int totalItemCount) {
+				// TODO Auto-generated method stub
+			}
+		});
+	}
+	
+	/**
+	 * 官方频道的数据，切台
+	 * @param sort
+	 */
+	private void createChannelList(String sort) {
+
+		if (isFavSort)
+			channel_infos = ChannelListBusiness.getAllFavChannels();
+		// TODO 清除数据（是否可以只查询一次）
+		else if (channel_infos == null) {
+			if (sort != null)
+				// 根据JSON里面的types来区分直播频道分类
+				channel_infos = ChannelListBusiness.getAllSearchChannels("types", sort);
+			else
+				return;
+		}
 		
 		ChannelListAdapter adapter = new ChannelListAdapter(this, channel_infos);
 		channel_list.setAdapter(adapter);
@@ -1651,7 +1725,6 @@ public class PlayerActivity extends Activity implements
 				reSetChannelData(info);
 				Log.i(LOGTAG, "===>>>" + mSourceName);
 
-				
 				// 2013-08-31 隐藏源切换和切台的控件
 				// 为防止重复搜索数据库分类，此处暂时不隐藏
 //				mLinearLayoutChannelList.setVisibility(View.GONE);
@@ -1659,21 +1732,17 @@ public class PlayerActivity extends Activity implements
 		});
 
 		source_list.setOnScrollListener(new OnScrollListener() {
-
 			@Override
 			public void onScrollStateChanged(AbsListView view, int scrollState) {
 				// TODO Auto-generated method stub
-
 			}
 
 			@Override
 			public void onScroll(AbsListView view, int firstVisibleItem,
 					int visibleItemCount, int totalItemCount) {
 				// TODO Auto-generated method stub
-
 			}
 		});
-	
 	}
 	
 	/**
@@ -1719,8 +1788,26 @@ public class PlayerActivity extends Activity implements
 		// 再加载新的数据
 		mPlayListArray = info.getAllUrl();
 		mSourceIndex = 0;
+		mSourceNum = mPlayListArray.size();
 		mPlayListSelected = 0;
 		channelStar = info.save;
+		
+		String url = mPlayListArray.get(mPlayListSelected);
+		mSourceName = "地址" + Integer.toString(1) + "：" + SourceName.whichName(url);
+		reConnectSource(url);
+	}
+	
+	/**
+	 * 自定义切换频道，重新设置相关数据
+	 */
+	private void reSetUserdefChannelData(POUserDefChannel info) {
+		// 先清除原有的
+		mPlayListArray.clear();
+		// 再加载新的数据
+		mPlayListArray = info.getAllUrl();
+		mSourceIndex = 0;
+		mSourceNum = mPlayListArray.size();
+		mPlayListSelected = 0;
 		
 		String url = mPlayListArray.get(mPlayListSelected);
 		mSourceName = "地址" + Integer.toString(1) + "：" + SourceName.whichName(url);
