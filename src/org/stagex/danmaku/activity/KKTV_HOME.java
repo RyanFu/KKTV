@@ -287,6 +287,8 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 						}
 					} else if (type.getUrl().endsWith("m3u8")) {
 						urlStrings.add(type.getUrl());
+					}else if (type.getType().equals("直播")) {
+						urlStrings.add(type.getUrl());
 					}
 					if (urlStrings.size() > 0) {
 						startLiveMedia(urlStrings, type.getName());

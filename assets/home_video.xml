@@ -2,6 +2,32 @@
 <Videos>
     <video>
         <id>1</id>
+        <type>直播</type>
+        <img>http://api.cbox.cntv.cn/cms/public/upload/cctv1.png</img>
+    </video>
+    <video>
+        <id>0</id>
+        <type>直播</type>
+        <url>http://122.192.35.80:554/live/tv60/playlist.m3u8</url>
+        <name>苏州新闻综合</name>
+        <img>http://tv.togic.com:8080/ShowTimeService/images/suzhou.png</img>
+    </video>
+    <video>
+        <id>0</id>
+        <type>直播</type>
+        <url>http://v4.cztv.com/channels/105/500.flv/live</url>
+        <name>河南新闻</name>
+        <img>http://tv.togic.com/upload/channels/1369105183886107.png</img>
+    </video>
+    <video>
+        <id>0</id>
+        <type>直播</type>
+        <url>http://live.hntv.tv/channels/tvie/video_channel_06/flv:hntv6_apple_200k/live</url>
+        <name>浙江影视</name>
+        <img>http://tv.togic.com:8080/ShowTimeService/images/zj_jingshi.png</img>
+    </video>
+    <video>
+        <id>1</id>
         <type>动漫</type>
         <img>http://api.cbox.cntv.cn/cms/public/upload/cctv3.png</img>
     </video>
