@@ -3,6 +3,7 @@
     <video>
         <id>1</id>
         <type>动漫</type>
+        <img>http://api.cbox.cntv.cn/cms/public/upload/cctv3.png</img>
     </video>
     <video>
         <id>0</id>
@@ -21,6 +22,7 @@
     <video>
         <id>1</id>
         <type>电影</type>
+        <img>http://api.cbox.cntv.cn/cms/public/upload/cctv6.png</img>
     </video>
     <video>
         <id>0</id>

@@ -9,7 +9,6 @@
 	    android:id="@+id/kktv_home_item_img"
 	    android:layout_width="66dp"
 	    android:layout_height="46dp"
-	    android:src="@drawable/television_icon"
 	    android:scaleType="fitXY"
 	    />
 	<TextView 

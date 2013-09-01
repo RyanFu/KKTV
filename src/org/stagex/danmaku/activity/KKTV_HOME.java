@@ -11,7 +11,11 @@ import org.stagex.danmaku.adapter.KKTV_HOME_LISTVIEW_Adapter;
 import org.stagex.danmaku.parser.HomeListDomParse;
 import org.stagex.danmaku.type.Home_List_type;
 
+import com.yixia.vparser.VParser;
+import com.yixia.vparser.model.Video;
+
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
@@ -19,12 +23,14 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView.ScaleType;
 
-public class KKTV_HOME extends BaseActivity{
+public class KKTV_HOME extends BaseActivity implements OnItemClickListener {
 
 	private ViewPager viewPager; // android-support-v4中的滑动组件
 	private List<ImageView> imageViews; // 滑动的图片集合
@@ -40,6 +46,8 @@ public class KKTV_HOME extends BaseActivity{
 	private ScheduledExecutorService scheduledExecutorService;
 	public KKTV_HOME_LISTVIEW_Adapter adapter;
 	public List<Home_List_type> lists;
+	VParser vParser;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,19 +86,18 @@ public class KKTV_HOME extends BaseActivity{
 		// 设置一个监听器，当ViewPager中的页面改变时调用
 		viewPager.setOnPageChangeListener(new MyPageChangeListener());
 		lists = HomeListDomParse.parseXml(this);
-		adapter = new KKTV_HOME_LISTVIEW_Adapter(this, imageLoader);
-		adapter.setListItems(lists);
-		listView = (ListView)findViewById(R.id.kktv_channel_info);
-		((ListView)listView).setAdapter(adapter);
+		adapter = new KKTV_HOME_LISTVIEW_Adapter(this, imageLoader, lists);
+		listView = (ListView) findViewById(R.id.kktv_channel_info);
+		((ListView) listView).setAdapter(adapter);
+		listView.setOnItemClickListener(this);
+		vParser = new VParser(this);
 	}
-	
-	
+
 	@Override
 	protected void onResume() {
 		flag_from = 0;
 		super.onResume();
 	}
-
 
 	// 切换当前显示的图片
 	@SuppressLint("HandlerLeak")
@@ -201,6 +208,41 @@ public class KKTV_HOME extends BaseActivity{
 		public void finishUpdate(View arg0) {
 
 		}
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position,
+			long id) {
+		try {
+			Home_List_type type = lists.get(position);
+			ArrayList<String> urlStrings = new ArrayList<String>();
+			if (type.getId() == 0) {
+				if (type.getUrl().endsWith("html")) {
+					Video video = vParser.parse(type.getUrl());
+					if (video != null && video.videoUri != null) {
+						urlStrings.add(video.videoUri);
+					}
+				}else if(type.getUrl().endsWith("m3u8")){
+					urlStrings.add(type.getUrl());
+				}
+				if (urlStrings.size() > 0) {
+					startLiveMedia(urlStrings, type.getName());
+				}else {
+					showInfo("地址可能失效!!!");
+				}
+			}
+		} catch (Exception e) {
+		}
+		
+	}
+
+	private void startLiveMedia(ArrayList<String> liveUrls, String name) {
+		Intent intent = new Intent(KKTV_HOME.this,
+				PlayerActivity.class);
+		intent.putExtra("selected", 0);
+		intent.putExtra("playlist", liveUrls);
+		intent.putExtra("title", name);
+		startActivity(intent);
 	}
 
 }
