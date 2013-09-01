@@ -5,49 +5,55 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:id="@+id/home_first"
-        android:text="首页" >
-    </Button>
+        android:background="@drawable/tab_recommend"
+        android:contentDescription="@string/app_name"
+        >
+    </ImageButton>
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/home_two"
-        android:text="直播" >
-    </Button>
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/tab_live"
+        android:id="@+id/home_two" >
+    </ImageButton>
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/home_three"
-        android:text="收藏" >
-    </Button>
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/btn_favorite_icon"
+        android:id="@+id/home_three">
+    </ImageButton>
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/home_four"
-        android:text="自定义" >
-    </Button>
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/default_img"
+        android:id="@+id/home_four">
+    </ImageButton>
 
-    <Button
+    <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/home_five"
-        android:text="更多" >
-    </Button>
+         android:contentDescription="@string/app_name"
+        android:background="@drawable/tab_more"
+        android:id="@+id/home_five" >
+    </ImageButton>
 
 </LinearLayout>
