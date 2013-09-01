@@ -85,6 +85,20 @@
         <item name="android:drawablePadding">6.0dip</item>
         <item name="android:layout_weight">1.0</item>
     </style>
+    
+    <style name="style_header_text_home">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">#ff3e3e3d</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_menu_sort_by_size</item>
+        <item name="android:drawablePadding">6.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
 
     <style name="style_content_header_img">
         <item name="android:gravity">center</item>

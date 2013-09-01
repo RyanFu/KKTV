@@ -1,11 +1,9 @@
 package org.stagex.danmaku.adapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.keke.player.R;
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;

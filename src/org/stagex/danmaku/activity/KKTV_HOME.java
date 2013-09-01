@@ -7,6 +7,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import org.keke.player.R;
+import org.stagex.danmaku.adapter.KKTV_HOME_LISTVIEW_Adapter;
+import org.stagex.danmaku.parser.HomeListDomParse;
+import org.stagex.danmaku.type.Home_List_type;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -17,6 +20,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ImageView.ScaleType;
 
@@ -34,7 +38,8 @@ public class KKTV_HOME extends BaseActivity{
 	// An ExecutorService that can schedule commands to run after a given delay,
 	// or to execute periodically.
 	private ScheduledExecutorService scheduledExecutorService;
-
+	public KKTV_HOME_LISTVIEW_Adapter adapter;
+	public List<Home_List_type> lists;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,9 +77,14 @@ public class KKTV_HOME extends BaseActivity{
 		viewPager.setAdapter(new MyAdapter());// 设置填充ViewPager页面的适配器
 		// 设置一个监听器，当ViewPager中的页面改变时调用
 		viewPager.setOnPageChangeListener(new MyPageChangeListener());
+		lists = HomeListDomParse.parseXml(this);
+		adapter = new KKTV_HOME_LISTVIEW_Adapter(this, imageLoader);
+		adapter.setListItems(lists);
+		listView = (ListView)findViewById(R.id.kktv_channel_info);
+		((ListView)listView).setAdapter(adapter);
 	}
 	
-
+	
 	@Override
 	protected void onResume() {
 		flag_from = 0;

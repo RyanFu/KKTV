@@ -1,16 +1,16 @@
 package org.stagex.danmaku.activity;
 
 import org.keke.player.R;
+import org.stagex.danmaku.imageloader.AbsListViewBaseActivity;
 
 import net.simonvt.menudrawer.MenuDrawer;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class BaseActivity extends Activity implements OnClickListener {
+public class BaseActivity extends AbsListViewBaseActivity implements OnClickListener {
 
 	private MenuDrawer mMenuDrawer;
 	private float scale;
