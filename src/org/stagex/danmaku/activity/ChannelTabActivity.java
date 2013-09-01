@@ -17,6 +17,7 @@ import org.stagex.danmaku.adapter.ProvinceInfo;
 import org.stagex.danmaku.util.BackupData;
 import org.stagex.danmaku.util.GlobalValue;
 import org.stagex.danmaku.util.ParseUtil;
+import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.saveFavName;
 
 import cn.waps.AppConnect;
@@ -432,6 +433,30 @@ public class ChannelTabActivity extends TabActivity implements
 		}
 	}
 
+	/**
+	 * 启动播放器界面
+	 * 
+	 * @param liveUrl
+	 * @param name
+	 * @param pos
+	 */
+	private void startLiveMedia(ArrayList<String> liveUrls, String name,
+			Boolean channel_star) {
+		Intent intent = new Intent(ChannelTabActivity.this,
+				PlayerActivity.class);
+		ArrayList<String> playlist = new ArrayList<String>();
+		for (String liveUrl : liveUrls)
+			playlist.add(liveUrl);
+		intent.putExtra("selected", 0);
+		intent.putExtra("playlist", playlist);
+		intent.putExtra("title", name);
+		intent.putExtra("channelStar", channel_star);
+		intent.putExtra("source", "地址" + Integer.toString(1) + "："
+				+ SourceName.whichName(liveUrls.get(0)));
+
+		startActivity(intent);
+	}
+	
 	/*
 	 * 设置央视台源的channel list
 	 */
@@ -449,9 +474,10 @@ public class ChannelTabActivity extends TabActivity implements
 				// Log.d("ChannelInfo",
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
-				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+				// TODO 2013-08-31 不再显示独立候选源界面
+				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
 			}
 		});
 
@@ -502,9 +528,10 @@ public class ChannelTabActivity extends TabActivity implements
 				// Log.d("ChannelInfo",
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
-				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+				// TODO 2013-08-31 不再显示独立候选源界面
+				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
 			}
 		});
 
@@ -591,9 +618,10 @@ public class ChannelTabActivity extends TabActivity implements
 				// Log.d("ChannelInfo",
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
-				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+				// TODO 2013-08-31 不再显示独立候选源界面
+				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
 			}
 		});
 
@@ -644,9 +672,10 @@ public class ChannelTabActivity extends TabActivity implements
 				// Log.d("ChannelInfo",
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
-				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+				// TODO 2013-08-31 不再显示独立候选源界面
+				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
 			}
 		});
 
@@ -697,9 +726,10 @@ public class ChannelTabActivity extends TabActivity implements
 				// Log.d("ChannelInfo",
 				// "name = " + info.getName() + "[" + info.getUrl() + "]");
 
-				// startLiveMedia(info.getUrl(), info.getName());
-				showAllSource(info.getAllUrl(), info.name, info.program_path,
-						info.save);
+				// TODO 2013-08-31 不再显示独立候选源界面
+				 startLiveMedia(info.getAllUrl(), info.name, info.save);
+//				showAllSource(info.getAllUrl(), info.name, info.program_path,
+//						info.save);
 			}
 		});
 

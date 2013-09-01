@@ -160,12 +160,12 @@ public class PlayerActivity extends Activity implements
 
 	/* 播放界面选台和切源 */
 	private LinearLayout mLinearLayoutSourceList;
-	private Boolean mSourceListShow = false;
-//	UITableView tableView;
 	private ListView source_list;
-	private ArrayList<String> sourceInfos = null;
+//	private ArrayList<String> sourceInfos = null;
 	private ImageButton mImageButtonList;
-
+	private int mSourceNum = 0;
+	private int mSourceIndex = 0;
+	
 	/**
 	 * 增加手势控制
 	 * 
@@ -258,6 +258,7 @@ public class PlayerActivity extends Activity implements
 					break;
 				// }
 				case MEDIA_PLAYER_COMPLETION: {
+					Log.w(LOGTAG, "MEDIA_PLAYER_COMPLETION");
 					/* TODO 播放结束后，如何处理 */
 					// 使用通知窗口
 					// Toast.makeText(getApplicationContext(),"播放结束，请按返回键",
@@ -268,35 +269,10 @@ public class PlayerActivity extends Activity implements
 					isLiveMedia = sharedPreferences.getBoolean("isLiveMedia",
 							true);
 					if (isLiveMedia) {
-//						// 缓冲环显示
-//						mProgressBarPreparing.setVisibility(View.VISIBLE);
-//						// 缓冲提示语
-//						// mLoadingTxt.setVisibility(View.VISIBLE);
-//						Log.d(LOGTAG,
-//								"reconnect the Media Server in LiveTV mode");
-//						if (sharedPreferences.getBoolean("isHardDec", false)) {
-//							// 硬解码重新连接媒体服务器
-//							destroyMediaPlayer(true);
-//							selectMediaPlayer(
-//									mPlayListArray.get(mPlayListSelected),
-//									false);
-//							createMediaPlayer(true,
-//									mPlayListArray.get(mPlayListSelected),
-//									mSurfaceHolderDef);
-//							mMediaPlayer.setDisplay(mSurfaceHolderDef);
-//						} else {
-//							// 软解码重新连接媒体服务器
-//							destroyMediaPlayer(false);
-//							selectMediaPlayer(
-//									mPlayListArray.get(mPlayListSelected), true);
-//							createMediaPlayer(false,
-//									mPlayListArray.get(mPlayListSelected),
-//									mSurfaceHolderVlc);
-//							mMediaPlayer.setDisplay(mSurfaceHolderVlc);
-//						}
+						// modify 2013-08-31
 						reConnectSource(mPlayListArray.get(mPlayListSelected));
 					} else
-						// @}
+						// @{
 						new AlertDialog.Builder(PlayerActivity.this)
 								.setIcon(R.drawable.ic_about)
 								.setTitle("播放结束")
@@ -320,6 +296,20 @@ public class PlayerActivity extends Activity implements
 				/* FIXME 这里的处理有待进一步细化 */
 				case MEDIA_PLAYER_ERROR: {
 					Log.e(LOGTAG, "MEDIA_PLAYER_ERROR");
+					Boolean changeFlag = false;
+					//===================================
+					/* TODO 2013-08-31
+					 * 这是播放界面切源的主体部分
+					 */
+					if (mSourceIndex < mSourceNum - 1) {
+						// 还有别的源可以使用
+						mSourceIndex++;
+						
+						changeFlag = true;
+					}
+					
+					//===================================
+					
 					/* fall back to VlcMediaPlayer if possible */
 					if (isDefMediaPlayer(msg.obj)) {
 						// Log.i(LOGTAG,
@@ -331,6 +321,13 @@ public class PlayerActivity extends Activity implements
 						// FIXME bug#0023
 						mPercentTxt.setVisibility(View.GONE);
 						// mLoadingTxt.setVisibility(View.GONE);
+						
+						if (changeFlag) {
+							reConnectSource(mPlayListArray.get(mSourceIndex));
+							mSourceName = "地址" + Integer.toString(mSourceIndex + 1) + "：" + SourceName.whichName(mPlayListArray.get(mSourceIndex));
+							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，尝试地址" + (mSourceIndex + 1), Toast.LENGTH_SHORT).show();
+						} else
+						
 						/* TODO 用在硬解解码模式，判断不支持的源 */
 						new AlertDialog.Builder(PlayerActivity.this)
 								.setIcon(R.drawable.ic_dialog_alert)
@@ -371,19 +368,31 @@ public class PlayerActivity extends Activity implements
 						break;
 					} else if (isVlcMediaPlayer(msg.obj)) {
 						// Log.i(LOGTAG, "VlcMediaPlayer");
+						
 						/* destroy media player */
-						mSurfaceViewVlc.setVisibility(View.GONE);
+						// TODO 2013-08-31屏蔽这行代码的原因是，目前屏幕切台不关闭当前的surfaceView
+						// 否则，会造成新的连接崩溃，类似于当前的直播源断掉了，重新连接的场景
+//						mSurfaceViewVlc.setVisibility(View.GONE);
+						// end 2013-08-31
+						
 						// Log.i(LOGTAG, "VlcMediaPlayer update UI");
 						mProgressBarPreparing.setVisibility(View.GONE);
 						// FIXME bug#0023
 						mPercentTxt.setVisibility(View.GONE);
 						// mLoadingTxt.setVisibility(View.GONE);
+						
+						if (changeFlag) {
+							reConnectSource(mPlayListArray.get(mSourceIndex));
+							mSourceName = "地址" + Integer.toString(mSourceIndex + 1) + "：" + SourceName.whichName(mPlayListArray.get(mSourceIndex));
+							Toast.makeText(PlayerActivity.this, "地址" + mSourceIndex + "已失效，自动切换下一个源", Toast.LENGTH_SHORT).show();
+						} else
+						
 						// 弹出播放失败的窗口@{
 						new AlertDialog.Builder(PlayerActivity.this)
 								.setIcon(R.drawable.ic_dialog_alert)
-								.setTitle("播放失败【软解码】")
+								.setTitle("播放失败")
 								.setMessage(
-										"很遗憾，该视频无法播放\n请切换该频道【其他地址源】\n或观看【其他频道】")
+										"当前链接已失效\n请切换该频道【其他地址源】\n或观看【其他频道】")
 								.setNegativeButton("知道了",
 										new DialogInterface.OnClickListener() {
 											@Override
@@ -393,6 +402,7 @@ public class PlayerActivity extends Activity implements
 												// do nothing - it will close on
 												// its own
 												// 关闭当前的PlayerActivity，退回listview的界面
+												// TODO 2013-08-31 如果是单个源
 												finish();
 											}
 										}).show();
@@ -408,7 +418,7 @@ public class PlayerActivity extends Activity implements
 					break;
 				}
 				case MEDIA_PLAYER_PREPARED: {
-					Log.d(LOGTAG, "===> MEDIA_PLAYER_PREPARED");
+					Log.i(LOGTAG, "===> MEDIA_PLAYER_PREPARED");
 					// FIXME bug#0023 对于rtmp的视频，不会有该message
 					// 因此是个bug，暂时将mMediaPlayerLoaded =
 					// true在MEDIA_PLAYER_PROGRESS_UPDATE
@@ -450,6 +460,7 @@ public class PlayerActivity extends Activity implements
 					break;
 				}
 				case MEDIA_PLAYER_VIDEO_SIZE_CHANGED: {
+					Log.i(LOGTAG, "===> MEDIA_PLAYER_VIDEO_SIZE_CHANGED");
 					AbsMediaPlayer player = (AbsMediaPlayer) msg.obj;
 					SurfaceView surface = isDefMediaPlayer(player) ? mSurfaceViewDef
 							: mSurfaceViewVlc;
@@ -476,6 +487,7 @@ public class PlayerActivity extends Activity implements
 		mSurfaceHolderVlc.addCallback(new SurfaceHolder.Callback() {
 			@Override
 			public void surfaceCreated(SurfaceHolder holder) {
+//				Log.i(LOGTAG, "===> surfaceCreated");
 				createMediaPlayer(false, mPlayListArray.get(mPlayListSelected),
 						mSurfaceHolderVlc);
 			}
@@ -483,11 +495,13 @@ public class PlayerActivity extends Activity implements
 			@Override
 			public void surfaceChanged(SurfaceHolder holder, int format,
 					int width, int height) {
+//				Log.i(LOGTAG, "===> surfaceChanged");
 				mMediaPlayer.setDisplay(holder);
 			}
 
 			@Override
 			public void surfaceDestroyed(SurfaceHolder holder) {
+//				Log.i(LOGTAG, "===> surfaceDestroyed");
 				destroyMediaPlayer(false);
 			}
 
@@ -499,6 +513,7 @@ public class PlayerActivity extends Activity implements
 		mSurfaceHolderDef.addCallback(new SurfaceHolder.Callback() {
 			@Override
 			public void surfaceCreated(SurfaceHolder holder) {
+//				Log.i(LOGTAG, "===> surfaceCreated");
 				createMediaPlayer(true, mPlayListArray.get(mPlayListSelected),
 						mSurfaceHolderDef);
 			}
@@ -506,11 +521,13 @@ public class PlayerActivity extends Activity implements
 			@Override
 			public void surfaceChanged(SurfaceHolder holder, int format,
 					int width, int height) {
+//				Log.i(LOGTAG, "===> surfaceChanged");
 				mMediaPlayer.setDisplay(holder);
 			}
 
 			@Override
 			public void surfaceDestroyed(SurfaceHolder holder) {
+//				Log.i(LOGTAG, "===> surfaceDestroyed");
 				destroyMediaPlayer(true);
 			}
 
@@ -600,6 +617,7 @@ public class PlayerActivity extends Activity implements
 			mPlayListArray.add(one);
 		} else {
 			mPlayListSelected = intent.getIntExtra("selected", 0);
+			mSourceIndex = 0;
 			mPlayListArray = intent.getStringArrayListExtra("playlist");
 			channelStar = intent.getBooleanExtra("channelStar", false);
 			// Log.d(LOGTAG, "===>>>" + mTitleName);
@@ -612,6 +630,7 @@ public class PlayerActivity extends Activity implements
 			finish();
 			return;
 		}
+		mSourceNum = mPlayListArray.size();
 	}
 
 	/**
@@ -629,9 +648,12 @@ public class PlayerActivity extends Activity implements
 		mImageButtonToggleMessage.setVisibility(View.GONE);
 		mImageButtonSwitchAudio.setVisibility(View.GONE);
 		mImageButtonSwitchSubtitle.setVisibility(View.GONE);
-		mImageButtonPrevious
-				.setVisibility((mPlayListArray.size() == 1) ? View.GONE
-						: View.VISIBLE);
+		// TODO 2013-08-31 暂时不使用该功能
+//		mImageButtonPrevious
+//				.setVisibility((mPlayListArray.size() == 1) ? View.GONE
+//						: View.VISIBLE);
+		mImageButtonPrevious.setVisibility(View.GONE);
+		// end
 
 		// 判断是否以收藏
 		if (channelStar) {
@@ -651,8 +673,11 @@ public class PlayerActivity extends Activity implements
 		mImageButtonTogglePlay.setVisibility(View.VISIBLE);
 		resource = SystemUtility.getDrawableId("btn_play_1");
 		mImageButtonTogglePlay.setBackgroundResource(resource);
-		mImageButtonNext.setVisibility((mPlayListArray.size() == 1) ? View.GONE
-				: View.VISIBLE);
+		// TODO 2013-08-31 暂时不使用该功能
+//		mImageButtonNext.setVisibility((mPlayListArray.size() == 1) ? View.GONE
+//				: View.VISIBLE);
+		mImageButtonNext.setVisibility(View.GONE);
+		// end
 		mImageButtonSwitchAspectRatio.setVisibility(View.VISIBLE);
 		resource = SystemUtility.getDrawableId("btn_aspect_ratio_0");
 		mImageButtonSwitchAspectRatio.setBackgroundResource(resource);
@@ -771,6 +796,7 @@ public class PlayerActivity extends Activity implements
 			mMediaPlayerStarted = false;
 			// end add
 			if (isDefault == testDefault) {
+				Log.i(LOGTAG, "destroyMediaPlayer");
 				mMediaPlayer.setDisplay(null);
 				mMediaPlayer.release();
 				mMediaPlayer = null;
@@ -783,14 +809,14 @@ public class PlayerActivity extends Activity implements
 	 */
 	protected void startMediaPlayer() {
 		// FIXME bug#0023 rtmp的视频可能不走这里，但是如何开始播放的呢？
-		// Log.i(LOGTAG, "startMediaPlayer() ");
+//		 Log.i(LOGTAG, "startMediaPlayer() ");
 		if (mMediaPlayerStarted || !mMediaPlayerLoaded) {
 			// Log.i(LOGTAG,
 			// "(mMediaPlayerStarted || !mMediaPlayerLoaded) return");
 			return;
 		}
 		if (mMediaPlayer != null) {
-			// Log.i(LOGTAG, "===> mMediaPlayer.start()");
+			 Log.i(LOGTAG, "===> mMediaPlayer.start()");
 			mMediaPlayer.start();
 			mMediaPlayerStarted = true;
 		}
@@ -1005,13 +1031,14 @@ public class PlayerActivity extends Activity implements
 			mLinearLayoutControlBar.setVisibility(View.GONE);
 			
 			// 查询数据库
-			List<POChannelList> channelList = mDbHelper.queryForEq(
-					POChannelList.class, "name", mTitleName);
-			for (POChannelList channel : channelList) {
-				sourceInfos = channel.getAllUrl();
-				createList(sourceInfos);
+//			List<POChannelList> channelList = mDbHelper.queryForEq(
+//					POChannelList.class, "name", mTitleName);
+			
+//			for (POChannelList channel : channelList) {
+//				sourceInfos = channel.getAllUrl();
+				createList(mPlayListArray);
 				Log.d(LOGTAG, "total items: " + source_list.getCount());
-			}
+//			}
 			break;
 		}
 		default:
@@ -1522,19 +1549,30 @@ public class PlayerActivity extends Activity implements
 	 */
 	private void createList(ArrayList<String> infos) {
 
-		ChannelSourceAdapter adapter = new ChannelSourceAdapter(this, sourceInfos);
+		ChannelSourceAdapter adapter = new ChannelSourceAdapter(this, mPlayListArray);
 		source_list.setAdapter(adapter);
+		// 突出显示当前候选地址
+		source_list.setSelection(mSourceIndex);
+		// TODO 用一个全局的变量来记录当前是哪一个源
+		
+		
 		source_list.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
+				
+				mSourceIndex = arg2;
+				
 				// TODO Auto-generated method stub
 				String url = (String) source_list
 						.getItemAtPosition(arg2);
 				mSourceName = "地址" + Integer.toString(arg2 + 1) + "：" + SourceName.whichName(url);
 				reSetSourceData(url, mSourceName);
 				Log.i(LOGTAG, "===>>>" + mSourceName);
+				
+				// 2013-08-31 隐藏源切换和切台的控件
+				mLinearLayoutSourceList.setVisibility(View.GONE);
 			}
 		});
 
@@ -1592,13 +1630,13 @@ public class PlayerActivity extends Activity implements
 				destroyMediaPlayer(true);
 				selectMediaPlayer(url, false);
 				createMediaPlayer(true, url, mSurfaceHolderDef);
-				mMediaPlayer.setDisplay(mSurfaceHolderDef);
+//				mMediaPlayer.setDisplay(mSurfaceHolderDef);
 			} else {
 				// 软解码重新连接媒体服务器
 				destroyMediaPlayer(false);
 				selectMediaPlayer(url, true);
 				createMediaPlayer(false, url, mSurfaceHolderVlc);
-				mMediaPlayer.setDisplay(mSurfaceHolderVlc);
+//				mMediaPlayer.setDisplay(mSurfaceHolderVlc);
 			}
 		}
 //	}
