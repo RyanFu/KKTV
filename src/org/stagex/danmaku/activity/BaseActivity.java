@@ -29,6 +29,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 		scale = getResources().getDisplayMetrics().density;
 		mMenuDrawer.setMenuSize(dip2px(leftMarge));
 		initLayout();
+		mMenuDrawer.openMenu();
 	}
 
 	public void initLayout(){
