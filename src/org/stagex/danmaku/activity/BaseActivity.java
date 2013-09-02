@@ -4,6 +4,7 @@ import org.keke.player.R;
 import org.stagex.danmaku.imageloader.AbsListViewBaseActivity;
 
 import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.Position;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 public class BaseActivity extends AbsListViewBaseActivity implements OnClickListener {
 
 	public MenuDrawer mMenuDrawer;
-	private float scale;
+	private static float scale;
 	public static final int leftMarge = 70;
 	public static int flag_from = 1;
 
@@ -30,7 +31,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 	}
 
 	public void init(int parent, int menu) {
-		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_WINDOW);
+		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.Type.BEHIND, Position.LEFT, MenuDrawer.MENU_DRAG_WINDOW);
 		mMenuDrawer.setContentView(parent);
 		mMenuDrawer.setMenuView(R.layout.kktv_drawmenu);
 		scale = getResources().getDisplayMetrics().density;
@@ -45,8 +46,9 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 		findViewById(R.id.home_three).setOnClickListener(this);
 		findViewById(R.id.home_four).setOnClickListener(this);
 		findViewById(R.id.home_five).setOnClickListener(this);
+		findViewById(R.id.home_six).setOnClickListener(this);
 	}
-	public int dip2px(float dpValue) {
+	public static int dip2px(float dpValue) {
 		return (int) (dpValue * scale + 0.5f);
 	}
 
@@ -100,6 +102,14 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 				Intent five = new Intent();
 				five.setClass(this, SetupActivity.class);
 				startActivity(five);
+			}
+			break;
+		case R.id.home_six:
+			if (flag_from != 6) {
+				flag_from = 6;
+				Intent six = new Intent();
+				six.setClass(this, RadioActivity.class);
+				startActivity(six);
 			}
 			break;
 		}

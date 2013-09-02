@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+        <TextView
+            android:id="@id/back_btn"
+            style="@style/style_header_text_home"
+            android:text="@string/radio_titlle"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/radio_channel_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CA8EFF"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/cbox_uc_divider"
+        android:fadeScrollbars="false"
+        android:fastScrollEnabled="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none"
+        android:scrollingCache="false" >
+    </ListView>
+
+</LinearLayout>

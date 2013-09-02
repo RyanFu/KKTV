@@ -6,54 +6,63 @@
     android:orientation="vertical" >
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
         android:id="@+id/home_first"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/tab_recommend"
-        android:contentDescription="@string/app_name"
-        >
+        android:contentDescription="@string/app_name" >
     </ImageButton>
 
     <ImageButton
+        android:id="@+id/home_two"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
         android:background="@drawable/tab_live"
-        android:id="@+id/home_two" >
+        android:contentDescription="@string/app_name" >
     </ImageButton>
 
     <ImageButton
+        android:id="@+id/home_three"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
         android:background="@drawable/btn_favorite_icon"
-        android:id="@+id/home_three">
+        android:contentDescription="@string/app_name" >
     </ImageButton>
 
     <ImageButton
+        android:id="@+id/home_four"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:contentDescription="@string/app_name"
         android:background="@drawable/default_img"
-        android:id="@+id/home_four">
+        android:contentDescription="@string/app_name" >
     </ImageButton>
 
     <ImageButton
+        android:id="@+id/home_five"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-         android:contentDescription="@string/app_name"
         android:background="@drawable/tab_more"
-        android:id="@+id/home_five" >
+        android:contentDescription="@string/app_name" >
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/home_six"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/radio"
+        android:contentDescription="@string/app_name" >
     </ImageButton>
 
 </LinearLayout>

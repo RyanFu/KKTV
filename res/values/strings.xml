@@ -40,5 +40,6 @@
     <string name="appList_btn">应用推荐</string>
     <string name="search_txt">频道搜索</string>
     <string name="search_hint">请输入搜索的频道名称</string>
+    <string name="radio_titlle">电台(Radio)"</string>
 
 </resources>
