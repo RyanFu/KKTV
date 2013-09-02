@@ -5,24 +5,27 @@ import org.stagex.danmaku.imageloader.AbsListViewBaseActivity;
 
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class BaseActivity extends AbsListViewBaseActivity implements OnClickListener {
+public class BaseActivity extends AbsListViewBaseActivity implements
+		OnClickListener {
 
 	public MenuDrawer mMenuDrawer;
 	private static float scale;
 	public static final int leftMarge = 70;
 	public static int flag_from = 1;
-
+	public ConnectivityManager con;
 	private SharedPreferences sharedPreferences;
 	private Editor editor;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,7 +34,8 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 	}
 
 	public void init(int parent, int menu) {
-		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.Type.BEHIND, Position.LEFT, MenuDrawer.MENU_DRAG_WINDOW);
+		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.Type.BEHIND,
+				Position.LEFT, MenuDrawer.MENU_DRAG_WINDOW);
 		mMenuDrawer.setContentView(parent);
 		mMenuDrawer.setMenuView(R.layout.kktv_drawmenu);
 		scale = getResources().getDisplayMetrics().density;
@@ -40,7 +44,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 		mMenuDrawer.openMenu();
 	}
 
-	public void initLayout(){
+	public void initLayout() {
 		findViewById(R.id.home_first).setOnClickListener(this);
 		findViewById(R.id.home_two).setOnClickListener(this);
 		findViewById(R.id.home_three).setOnClickListener(this);
@@ -48,6 +52,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 		findViewById(R.id.home_five).setOnClickListener(this);
 		findViewById(R.id.home_six).setOnClickListener(this);
 	}
+
 	public static int dip2px(float dpValue) {
 		return (int) (dpValue * scale + 0.5f);
 	}
@@ -105,7 +110,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 			}
 			break;
 		case R.id.home_six:
-			if (flag_from != 6) {
+			if (flag_from != 6 && checkNetwork()) {
 				flag_from = 6;
 				Intent six = new Intent();
 				six.setClass(this, RadioActivity.class);
@@ -113,7 +118,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 			}
 			break;
 		}
-//		mMenuDrawer.closeMenu();
+		// mMenuDrawer.closeMenu();
 	}
 
 	public void showInfo(int info) {
@@ -122,5 +127,22 @@ public class BaseActivity extends AbsListViewBaseActivity implements OnClickList
 
 	public void showInfo(String info) {
 		Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
+	}
+
+	// 添加网络检查
+	public boolean checkNetwork() {
+		if (con == null) {
+			con = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
+		}
+		boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+				.isConnectedOrConnecting();
+		boolean internet = con.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+				.isConnectedOrConnecting();
+		if (!wifi && !internet) {
+			showInfo("请检查网络环境，稍后再试");
+			return false;
+		}else {
+			return true;
+		}
 	}
 }

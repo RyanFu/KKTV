@@ -455,8 +455,10 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener, Upda
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		try {
-			Home_List_type type = lists.get(position);
-			new InitData(type).execute();
+			if (checkNetwork()) {
+				Home_List_type type = lists.get(position);
+				new InitData(type).execute();
+			}
 		} catch (Exception e) {
 		}
 

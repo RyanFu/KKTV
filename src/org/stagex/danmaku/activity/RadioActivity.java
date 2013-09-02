@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.simonvt.menudrawer.MenuDrawer;
 import net.simonvt.menudrawer.Position;
-import net.simonvt.menudrawer.MenuDrawer.Type;
 
 import org.keke.player.R;
 import org.stagex.danmaku.adapter.RadioMenuAdapter;
@@ -13,17 +12,17 @@ import org.stagex.danmaku.parser.RadioChannelParse;
 import org.stagex.danmaku.type.RadioListType;
 import org.stagex.danmaku.type.RadioType;
 
-import cn.waps.AppLog;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class RadioActivity extends Activity implements
 		RadioMenuAdapter.MenuListener, OnClickListener {
@@ -41,7 +40,7 @@ public class RadioActivity extends Activity implements
 	private int mActivePosition = -1;
 	private String mContentText;
 	public ProgressDialog progressDialog;
-
+	public ConnectivityManager con;
 	@Override
 	protected void onCreate(Bundle inState) {
 		super.onCreate(inState);
@@ -49,6 +48,7 @@ public class RadioActivity extends Activity implements
 			mActivePosition = inState.getInt(STATE_ACTIVE_POSITION);
 			mContentText = inState.getString(STATE_CONTENT_TEXT);
 		}
+		con = (ConnectivityManager)getSystemService(Activity.CONNECTIVITY_SERVICE); 
 		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.Type.BEHIND,
 				Position.LEFT, MenuDrawer.MENU_DRAG_CONTENT);
 		mMenuDrawer.setContentView(R.layout.radio_channel_content);
@@ -75,8 +75,8 @@ public class RadioActivity extends Activity implements
 		progressDialog = new ProgressDialog(RadioActivity.this);
 		progressDialog.setMessage("解析中...");
 		progressDialog.setCancelable(false);
+		checkNetwork();
 		new InitParentChannelData(radioURL).execute();
-
 	}
 
 	public AdapterView.OnItemClickListener childClickListener = new AdapterView.OnItemClickListener() {
@@ -84,7 +84,6 @@ public class RadioActivity extends Activity implements
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			RadioType type = ChildCurrentChannel.get(position);
-			AppLog.e("test", type.getName()+"  : "+type.getUrl());
 			ArrayList<String> url = new ArrayList<String>();
 			url.add(type.getUrl());
 			startLiveMedia(url, type.getName());
@@ -116,6 +115,7 @@ public class RadioActivity extends Activity implements
 				}
 			}
 			if (!isHas) {
+				checkNetwork();
 				new InitChildChannelData(type).execute();
 			}
 			mActivePosition = position;
@@ -187,6 +187,9 @@ public class RadioActivity extends Activity implements
 		protected Void doInBackground(Void... paramArrayOfVoid) {
 			try {
 				ParentChannel = RadioChannelParse.parseRadioChannel(url);
+				if (ParentChannel == null || ParentChannel.size() == 0) {
+					return null;
+				}
 				ChildCurrentChannel = RadioChannelParse
 						.parseRadioChild(ParentChannel.get(0).getUrl());
 			} catch (Exception e) {
@@ -204,14 +207,16 @@ public class RadioActivity extends Activity implements
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
-			RadioListType listType = new RadioListType();
-			listType.setName(ParentChannel.get(0).getName());
-			listType.setList(ChildCurrentChannel);
-			channlesList.add(listType);
-			mAdapter.setListItems(ParentChannel);
-			mChildAdapter.setListItems(ChildCurrentChannel);
-			mMenuDrawer.openMenu();
-			progressDialog.cancel();
+			if (ParentChannel != null && ParentChannel.size() > 0) {
+				RadioListType listType = new RadioListType();
+				listType.setName(ParentChannel.get(0).getName());
+				listType.setList(ChildCurrentChannel);
+				channlesList.add(listType);
+				mAdapter.setListItems(ParentChannel);
+				mChildAdapter.setListItems(ChildCurrentChannel);
+				mMenuDrawer.openMenu();
+				progressDialog.cancel();
+			}
 		}
 	}
 
@@ -225,6 +230,23 @@ public class RadioActivity extends Activity implements
 				mMenuDrawer.openMenu();
 			}
 			break;
+		}
+	}
+	
+	public void showInfo(String info){
+		Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
+	}
+	
+	//添加网络检查
+	public void checkNetwork(){
+		if (con == null) {
+			con = (ConnectivityManager)getSystemService(Activity.CONNECTIVITY_SERVICE);
+		}
+		boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
+		boolean internet = con.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+		if (!wifi && !internet) {
+			showInfo("请检查网络环境，稍后再试");
+			finish();
 		}
 	}
 }
