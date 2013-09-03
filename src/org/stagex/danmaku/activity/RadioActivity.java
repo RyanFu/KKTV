@@ -41,6 +41,7 @@ public class RadioActivity extends Activity implements
 	private String mContentText;
 	public ProgressDialog progressDialog;
 	public ConnectivityManager con;
+
 	@Override
 	protected void onCreate(Bundle inState) {
 		super.onCreate(inState);
@@ -48,7 +49,7 @@ public class RadioActivity extends Activity implements
 			mActivePosition = inState.getInt(STATE_ACTIVE_POSITION);
 			mContentText = inState.getString(STATE_CONTENT_TEXT);
 		}
-		con = (ConnectivityManager)getSystemService(Activity.CONNECTIVITY_SERVICE); 
+		con = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
 		mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.Type.BEHIND,
 				Position.LEFT, MenuDrawer.MENU_DRAG_CONTENT);
 		mMenuDrawer.setContentView(R.layout.radio_channel_content);
@@ -74,9 +75,16 @@ public class RadioActivity extends Activity implements
 		channlesList = new ArrayList<RadioListType>();
 		progressDialog = new ProgressDialog(RadioActivity.this);
 		progressDialog.setMessage("解析中...");
-		progressDialog.setCancelable(false);
+		// progressDialog.setCancelable(false);
+	}
+
+	@Override
+	protected void onResume() {
 		checkNetwork();
-		new InitParentChannelData(radioURL).execute();
+		if (ParentChannel == null || ParentChannel.size() == 0) {
+			new InitParentChannelData(radioURL).execute();
+		}
+		super.onResume();
 	}
 
 	public AdapterView.OnItemClickListener childClickListener = new AdapterView.OnItemClickListener() {
@@ -232,18 +240,20 @@ public class RadioActivity extends Activity implements
 			break;
 		}
 	}
-	
-	public void showInfo(String info){
+
+	public void showInfo(String info) {
 		Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
 	}
-	
-	//添加网络检查
-	public void checkNetwork(){
+
+	// 添加网络检查
+	public void checkNetwork() {
 		if (con == null) {
-			con = (ConnectivityManager)getSystemService(Activity.CONNECTIVITY_SERVICE);
+			con = (ConnectivityManager) getSystemService(Activity.CONNECTIVITY_SERVICE);
 		}
-		boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
-		boolean internet = con.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+		boolean wifi = con.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
+				.isConnectedOrConnecting();
+		boolean internet = con.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
+				.isConnectedOrConnecting();
 		if (!wifi && !internet) {
 			showInfo("请检查网络环境，稍后再试");
 			finish();

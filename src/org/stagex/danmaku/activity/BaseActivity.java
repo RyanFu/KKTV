@@ -13,6 +13,7 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class BaseActivity extends AbsListViewBaseActivity implements
@@ -20,12 +21,14 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 
 	public MenuDrawer mMenuDrawer;
 	private static float scale;
-	public static final int leftMarge = 70;
+	public static final int leftMarge = 110;
 	public static int flag_from = 1;
 	public ConnectivityManager con;
 	private SharedPreferences sharedPreferences;
 	private Editor editor;
-
+	public ImageButton[] KKTV_HOME_MENU;
+	public int[] KKTV_HOME_MENU_Normal = {0, R.drawable.tab_recommend_normal, R.drawable.tab_channel_normal, R.drawable.btn_favorite_icon, R.drawable.default_img, R.drawable.radio, R.drawable.tab_more_normal};
+	public int[] KKTV_HOME_MENU_Select = {0, R.drawable.tab_recommend_select, R.drawable.tab_channel_select, R.drawable.btn_favorite_icon_select, R.drawable.default_img_select, R.drawable.radio_select, R.drawable.tab_more_normal_select};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,12 +48,20 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 	}
 
 	public void initLayout() {
-		findViewById(R.id.home_first).setOnClickListener(this);
-		findViewById(R.id.home_two).setOnClickListener(this);
-		findViewById(R.id.home_three).setOnClickListener(this);
-		findViewById(R.id.home_four).setOnClickListener(this);
-		findViewById(R.id.home_five).setOnClickListener(this);
-		findViewById(R.id.home_six).setOnClickListener(this);
+		KKTV_HOME_MENU = new ImageButton[7];
+		KKTV_HOME_MENU[1] = (ImageButton)findViewById(R.id.home_first);
+		KKTV_HOME_MENU[1].setBackgroundResource(KKTV_HOME_MENU_Select[1]);
+		KKTV_HOME_MENU[1].setOnClickListener(this);
+		KKTV_HOME_MENU[2] = (ImageButton)findViewById(R.id.home_two);
+		KKTV_HOME_MENU[2].setOnClickListener(this);
+		KKTV_HOME_MENU[3] = (ImageButton)findViewById(R.id.home_three);
+		KKTV_HOME_MENU[3].setOnClickListener(this);
+		KKTV_HOME_MENU[4] = (ImageButton)findViewById(R.id.home_four);
+		KKTV_HOME_MENU[4].setOnClickListener(this);
+		KKTV_HOME_MENU[5] = (ImageButton)findViewById(R.id.home_five);
+		KKTV_HOME_MENU[5].setOnClickListener(this);
+		KKTV_HOME_MENU[6] = (ImageButton)findViewById(R.id.home_six);
+		KKTV_HOME_MENU[6].setOnClickListener(this);
 	}
 
 	public static int dip2px(float dpValue) {
@@ -62,6 +73,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 		switch (v.getId()) {
 		case R.id.home_first:
 			if (flag_from != 1) {
+				unCheckIcon(flag_from, 1);
 				flag_from = 1;
 				Intent first = new Intent();
 				first.setClass(this, KKTV_HOME.class);
@@ -70,6 +82,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 			break;
 		case R.id.home_two:
 			if (flag_from != 2) {
+				unCheckIcon(flag_from, 2);
 				flag_from = 2;
 				// 标记为直播电视媒体
 				editor.putBoolean("isLiveMedia", true);
@@ -81,6 +94,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 			break;
 		case R.id.home_three:
 			if (flag_from != 3) {
+				unCheckIcon(flag_from, 3);
 				flag_from = 3;
 				// 标记为直播电视媒体
 				editor.putBoolean("isLiveMedia", true);
@@ -92,6 +106,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 			break;
 		case R.id.home_four:
 			if (flag_from != 4) {
+				unCheckIcon(flag_from, 4);
 				flag_from = 4;
 				// 标记为直播电视媒体
 				editor.putBoolean("isLiveMedia", true);
@@ -102,25 +117,29 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 			}
 			break;
 		case R.id.home_five:
-			if (flag_from != 5) {
+			if (flag_from != 5 && checkNetwork()) {
+				unCheckIcon(flag_from, 5);
 				flag_from = 5;
 				Intent five = new Intent();
-				five.setClass(this, SetupActivity.class);
+				five.setClass(this, RadioActivity.class);
 				startActivity(five);
 			}
 			break;
 		case R.id.home_six:
-			if (flag_from != 6 && checkNetwork()) {
+			if (flag_from != 6) {
+				unCheckIcon(flag_from, 6);
 				flag_from = 6;
 				Intent six = new Intent();
-				six.setClass(this, RadioActivity.class);
+				six.setClass(this, SetupActivity.class);
 				startActivity(six);
 			}
 			break;
 		}
-		// mMenuDrawer.closeMenu();
 	}
-
+	public void unCheckIcon(int pre, int cur){
+		KKTV_HOME_MENU[pre].setBackgroundResource(KKTV_HOME_MENU_Normal[pre]);
+		KKTV_HOME_MENU[cur].setBackgroundResource(KKTV_HOME_MENU_Select[cur]);
+	}
 	public void showInfo(int info) {
 		Toast.makeText(this, info, Toast.LENGTH_SHORT).show();
 	}
@@ -141,7 +160,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 		if (!wifi && !internet) {
 			showInfo("请检查网络环境，稍后再试");
 			return false;
-		}else {
+		} else {
 			return true;
 		}
 	}

@@ -286,6 +286,7 @@ public class KKTV_HOME extends BaseActivity implements OnItemClickListener, Upda
 	
 	@Override
 	protected void onResume() {
+		unCheckIcon(flag_from, 1);
 		flag_from = 1;
 		
 		// 从服务器端获取当前用户的虚拟货币.
