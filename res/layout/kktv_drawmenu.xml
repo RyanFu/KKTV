@@ -66,4 +66,14 @@
         android:contentDescription="@string/app_name" >
     </ImageButton>
 
+    <ImageButton
+        android:id="@+id/home_senen"
+        android:layout_width="82dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/tab_more_normal"
+        android:contentDescription="@string/app_name" >
+    </ImageButton>
+
 </LinearLayout>

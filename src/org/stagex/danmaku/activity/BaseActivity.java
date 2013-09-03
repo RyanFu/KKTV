@@ -27,8 +27,8 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 	private SharedPreferences sharedPreferences;
 	private Editor editor;
 	public ImageButton[] KKTV_HOME_MENU;
-	public int[] KKTV_HOME_MENU_Normal = {0, R.drawable.tab_recommend_normal, R.drawable.tab_channel_normal, R.drawable.btn_favorite_icon, R.drawable.default_img, R.drawable.radio, R.drawable.tab_more_normal};
-	public int[] KKTV_HOME_MENU_Select = {0, R.drawable.tab_recommend_select, R.drawable.tab_channel_select, R.drawable.btn_favorite_icon_select, R.drawable.default_img_select, R.drawable.radio_select, R.drawable.tab_more_normal_select};
+	public int[] KKTV_HOME_MENU_Normal = {0, R.drawable.tab_recommend_normal, R.drawable.tab_channel_normal, R.drawable.btn_favorite_icon, R.drawable.default_img, R.drawable.radio, R.drawable.tab_more_normal, R.drawable.tab_more_normal};
+	public int[] KKTV_HOME_MENU_Select = {0, R.drawable.tab_recommend_select, R.drawable.tab_channel_select, R.drawable.btn_favorite_icon_select, R.drawable.default_img_select, R.drawable.radio_select, R.drawable.tab_more_normal_select, R.drawable.tab_more_normal_select};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -48,7 +48,7 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 	}
 
 	public void initLayout() {
-		KKTV_HOME_MENU = new ImageButton[7];
+		KKTV_HOME_MENU = new ImageButton[8];
 		KKTV_HOME_MENU[1] = (ImageButton)findViewById(R.id.home_first);
 		KKTV_HOME_MENU[1].setBackgroundResource(KKTV_HOME_MENU_Select[1]);
 		KKTV_HOME_MENU[1].setOnClickListener(this);
@@ -62,6 +62,8 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 		KKTV_HOME_MENU[5].setOnClickListener(this);
 		KKTV_HOME_MENU[6] = (ImageButton)findViewById(R.id.home_six);
 		KKTV_HOME_MENU[6].setOnClickListener(this);
+		KKTV_HOME_MENU[7] = (ImageButton)findViewById(R.id.home_senen);
+		KKTV_HOME_MENU[7].setOnClickListener(this);
 	}
 
 	public static int dip2px(float dpValue) {
@@ -131,6 +133,15 @@ public class BaseActivity extends AbsListViewBaseActivity implements
 				flag_from = 6;
 				Intent six = new Intent();
 				six.setClass(this, SetupActivity.class);
+				startActivity(six);
+			}
+			break;
+		case R.id.home_senen:
+			if (flag_from != 7) {
+				unCheckIcon(flag_from, 7);
+				flag_from = 7;
+				Intent six = new Intent();
+				six.setClass(this, ThreeCustomExpand.class);
 				startActivity(six);
 			}
 			break;

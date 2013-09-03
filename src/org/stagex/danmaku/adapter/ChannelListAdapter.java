@@ -6,7 +6,6 @@ import org.keke.player.R;
 import com.nmbb.oplayer.scanner.POChannelList;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;

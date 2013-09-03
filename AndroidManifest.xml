@@ -136,6 +136,12 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
+            android:name="org.stagex.danmaku.activity.ThreeCustomExpand"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name="org.stagex.danmaku.activity.ProvinceActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"

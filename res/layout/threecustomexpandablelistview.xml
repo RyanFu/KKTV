@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expandParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/style_header" >
+
+        <TextView
+            android:id="@+id/back_btn"
+            style="@style/style_header_text"
+            android:text="@string/live_btn" />
+
+        <include layout="@layout/layout_divider_header" />
+
+        <ImageView
+            android:id="@+id/refresh_btn"
+            style="@style/style_content_header_img"
+            android:src="@drawable/ic_refresh" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ExpandableListView>
+
+</LinearLayout>
