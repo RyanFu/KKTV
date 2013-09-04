@@ -2,11 +2,14 @@ package org.stagex.danmaku.activity;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,22 +28,26 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.Toast;
 
-public class ThreeCustomExpand extends Activity implements OnChildClickListener {
+public class ThreeCustomExpand extends Activity implements OnChildClickListener, OnClickListener {
 
 	private List<String> groupArray;
 	private List<List<String[]>> childArray;
 	ThreeCustomExpandableAdapter adapter;
-	public ProgressDialog progressDialog;
+	public ProgressDialog progress;
 	ExpandableListView listView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.threecustomexpandablelistview);
+		progress = new ProgressDialog(ThreeCustomExpand.this);
+		progress.setMessage("解析中...");
+		progress.show();
 		groupArray = new ArrayList<String>();
 		childArray = new ArrayList<List<String[]>>();
 		int flag = ReadSelfChannel("kekePlayer/three_tvlist.txt");
@@ -51,9 +58,8 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 		adapter = new ThreeCustomExpandableAdapter(this, groupArray, childArray);
 		listView.setAdapter(adapter);
 		listView.setOnChildClickListener(this);
-		progressDialog = new ProgressDialog(ThreeCustomExpand.this);
-		progressDialog.setMessage("解析中...");
-		// progressDialog.setCancelable(false);
+		findViewById(R.id.refresh_btn).setOnClickListener(this);
+		findViewById(R.id.back_btn).setOnClickListener(this);
 
 	}
 
@@ -76,15 +82,16 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 
 		@Override
 		protected void onPreExecute() {
+			progress.show();
 			super.onPreExecute();
-//			progressDialog.show();
 		}
 
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
 			ReadSelfChannel("kekePlayer/three_tvlist.txt");
-//			progressDialog.cancel();
+			adapter.setLists(groupArray, childArray);
+			progress.cancel();
 		}
 	}
 
@@ -95,12 +102,12 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 			if (divGroup != null) {
 				File file = new File(path);
 				if (!file.exists()) {
-					file.createNewFile();
 				}else {
 					file.delete();
-					file.createNewFile();
 				}
-				FileOutputStream fout = new FileOutputStream(file);
+				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+						new FileOutputStream(file), "GB2312"));
+				PrintWriter out = new PrintWriter(writer);
 				Elements videos = divGroup.getElementsByTag("a");
 				for (Element video : videos) {
 					String url = video.attr("href");
@@ -110,16 +117,16 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 					}
 					String name = video.text();
 
-					ParseChild(name, url, fout);
+					ParseChild(name, url, out);
 				}
-				fout.close();
+				out.close();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public boolean isFist = true;
-	public void ParseChild(String name1, String urlString, FileOutputStream fout) {
+	public void ParseChild(String name1, String urlString, PrintWriter fout) {
 		try {
 			Document doc = Jsoup.connect(urlString).get();
 			Element contentwrapper = doc.getElementById("contentwrapper");
@@ -130,10 +137,10 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 						String url = radio.attr("href");
 						String name = name1 + "," + radio.text() + "," + url
 								+ "\r\n";
-						fout.write(name.getBytes());
+						fout.write(name);
 					}else {
 						isFist = false;
-						fout.write("\r\n".getBytes());
+						fout.write("\r\n");
 					}
 				}
 			}
@@ -144,7 +151,7 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 
 	public int ReadSelfChannel(String filename) {
 		String path = null;
-		String code = "GBK";
+		String code = "UTF-8";
 		File file = null;
 		boolean sdCardExist = Environment.getExternalStorageState().equals(
 				android.os.Environment.MEDIA_MOUNTED);
@@ -277,5 +284,17 @@ public class ThreeCustomExpand extends Activity implements OnChildClickListener 
 		intent.putExtra("playlist", liveUrls);
 		intent.putExtra("title", name);
 		startActivity(intent);
+	}
+
+	@Override
+	public void onClick(View view) {
+		switch (view.getId()) {
+		case R.id.refresh_btn:
+			new InitData().execute();
+			break;
+		case R.id.back_btn:
+			finish();
+			break;
+		}
 	}
 }
