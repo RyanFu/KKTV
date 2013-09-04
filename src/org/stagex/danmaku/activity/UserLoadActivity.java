@@ -128,7 +128,7 @@ public class UserLoadActivity extends Activity {
 			// 解析本地的自定义列表
 			infos = ParseUtil.parseDef(path);
 
-			mSourceAdapter = new ChannelLoadAdapter(this, infos);
+			mSourceAdapter = new ChannelLoadAdapter(this, infos, false);
 			mTvList.setAdapter(mSourceAdapter);
 			// 设置监听事件
 			mTvList.setOnItemClickListener(new OnItemClickListener() {

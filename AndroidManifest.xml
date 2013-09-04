@@ -46,19 +46,19 @@
             android:label="@string/home_title"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="org.stagex.danmaku.activity.KKTV_HOME"
-            android:label="@string/home_title"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
+            android:name="org.stagex.danmaku.activity.KKTV_HOME"
+            android:label="@string/home_title"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name="org.stagex.danmaku.activity.RadioActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"

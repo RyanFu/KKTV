@@ -412,7 +412,6 @@ public class FavouriteActivity extends TabActivity implements
 			intent.putExtra("selected", 0);
 			intent.putExtra("playlist", all_url);
 			intent.putExtra("title", name);
-			intent.putExtra("isSelfTV", true);
 			// 标识是自定义的收藏频道
 			intent.putExtra("isSelfFavTV", true);
 			intent.putExtra("channelStar", isStar);

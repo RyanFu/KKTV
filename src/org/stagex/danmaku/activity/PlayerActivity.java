@@ -7,8 +7,11 @@ import java.util.TimerTask;
 
 import org.keke.player.R;
 import org.stagex.danmaku.adapter.ChannelDefFavAdapter;
+import org.stagex.danmaku.adapter.ChannelInfo;
 import org.stagex.danmaku.adapter.ChannelListAdapter;
+import org.stagex.danmaku.adapter.ChannelLoadAdapter;
 import org.stagex.danmaku.adapter.ChannelSourceAdapter;
+import org.stagex.danmaku.util.ParseUtil;
 import org.stagex.danmaku.util.SourceName;
 import org.stagex.danmaku.util.SystemUtility;
 
@@ -33,6 +36,7 @@ import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.text.format.DateFormat;
@@ -60,6 +64,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -164,8 +169,12 @@ public class PlayerActivity extends Activity implements
 	private Boolean isFavSort = false;
 	private ListView source_list;
 	private ListView channel_list;
+	// 官方频道数据结构
 	private List<POChannelList> channel_infos = null;
+	// 自定义收藏频道数据结构
 	private List<POUserDefChannel> userdef_infos = null;
+	// 自定义频道数据结构
+	private List<ChannelInfo> userload_infos = null;
 	private ImageButton mImageButtonList;
 	private ImageButton mImageButtonChannel;
 	private int mSourceNum = 0;
@@ -996,7 +1005,7 @@ public class PlayerActivity extends Activity implements
 		switch (id) {
 		case R.id.player_button_star: {
 			// TODO 决定是否收藏该频道
-			if (isSelfTV) {
+			if (isSelfTV || isSelfFavTV) {
 				// 用户自定义的频道
 				// TODO 2013-08-01 暂时不支持自定义的频道在播放界面收藏
 				// updateSelfFavDatabase(mTitleName);
@@ -1068,13 +1077,17 @@ public class PlayerActivity extends Activity implements
 			mLinearLayoutControlBar.setVisibility(View.GONE);
 
 			// 判断是自定义频道、收藏频道、官方频道等
-			if (isSelfFavTV) {
+			if (isSelfTV) {
+				// 自定义加载频道
+				createUserloadChannelList();
+			} else if (isSelfFavTV) {
 				// 如果是自定义频道，数据结构变了
 				/* 获取所有的自定义收藏频道 */
 				createUserdefChannelList();
-			}
-			else
+			} else {
+				// 官方频道
 				createChannelList(channelSort);
+			}
 
 			break;
 		}
@@ -1632,6 +1645,57 @@ public class PlayerActivity extends Activity implements
 	 * 自定义频道的数据，切台
 	 * @param sort
 	 */
+	private void createUserloadChannelList() {
+
+		if (userload_infos == null) {
+			// 解析本地的自定义列表
+			String path = Environment.getExternalStorageDirectory().getPath()
+					+ "/kekePlayer/tvlist.txt";
+			userload_infos = ParseUtil.parseDef(path);
+		}
+		
+		ChannelLoadAdapter mSourceAdapter = new ChannelLoadAdapter(this, userload_infos, true);
+		channel_list.setAdapter(mSourceAdapter);
+		// 突出显示当前频道
+		channel_list.setSelection(mChannelIndex);
+		// TODO 用一个全局的变量来记录当前是哪一个频道
+		
+		// 设置监听事件
+		channel_list.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				
+				mChannelIndex = arg2;
+				
+				// TODO Auto-generated method stub
+				ChannelInfo info = (ChannelInfo) channel_list
+						.getItemAtPosition(arg2);
+
+				mTitleName = info.getName();
+				reSetUserdefChannelData(info);
+			}
+		});
+		// 增加长按频道收藏功能
+		channel_list.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				ChannelInfo info = (ChannelInfo) channel_list
+						.getItemAtPosition(arg2);
+				// 转换为数据库数据结构
+				POUserDefChannel POinfo = new POUserDefChannel(info, true);
+				showFavMsg(arg1, POinfo);
+				return true;
+			}
+		});
+	}
+	
+	/**
+	 * 自定义收藏频道的数据，切台
+	 * @param sort
+	 */
 	private void createUserdefChannelList() {
 
 //		if (isFavSort)
@@ -1662,7 +1726,7 @@ public class PlayerActivity extends Activity implements
 						.getItemAtPosition(arg2);
 				
 				mTitleName = info.name;
-				reSetUserdefChannelData(info);
+				reSetUserdefFavChannelData(info);
 //				Log.i(LOGTAG, "===>>>" + mSourceName);
 
 				// 2013-08-31 隐藏源切换和切台的控件
@@ -1798,9 +1862,9 @@ public class PlayerActivity extends Activity implements
 	}
 	
 	/**
-	 * 自定义切换频道，重新设置相关数据
+	 * 自定义收藏切换频道，重新设置相关数据
 	 */
-	private void reSetUserdefChannelData(POUserDefChannel info) {
+	private void reSetUserdefFavChannelData(POUserDefChannel info) {
 		// 先清除原有的
 		mPlayListArray.clear();
 		// 再加载新的数据
@@ -1813,4 +1877,49 @@ public class PlayerActivity extends Activity implements
 		mSourceName = "地址" + Integer.toString(1) + "：" + SourceName.whichName(url);
 		reConnectSource(url);
 	}
+	
+	/**
+	 * 自定义切换频道，重新设置相关数据
+	 */
+	private void reSetUserdefChannelData(ChannelInfo info) {
+		// 先清除原有的
+		mPlayListArray.clear();
+		// 再加载新的数据
+		mPlayListArray = info.getAllUrl();
+		mSourceIndex = 0;
+		mSourceNum = mPlayListArray.size();
+		mPlayListSelected = 0;
+		
+		String url = mPlayListArray.get(mPlayListSelected);
+		mSourceName = "地址" + Integer.toString(1) + "：" + SourceName.whichName(url);
+		reConnectSource(url);
+	}
+	
+	/**
+	 * 提示是否收藏为个性频道
+	 */
+	private void showFavMsg(View view, POUserDefChannel info) {
+
+		final POUserDefChannel saveInfo = info;
+
+			new AlertDialog.Builder(PlayerActivity.this)
+					.setIcon(R.drawable.ic_dialog_alert)
+					.setTitle("温馨提示")
+					.setMessage("确定收藏该自定义频道吗？")
+					.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							// TODO 增加加入数据库操作
+							saveInfo.date = DateFormat.format("MM月dd日",
+									System.currentTimeMillis()).toString();
+							mSelfDbHelper.create(saveInfo);
+						}
+					})
+					.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.cancel();
+						}
+					}).show();
+		}
 }
